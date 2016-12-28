@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubdirectProductOfAlgebraicSystems}
+\pmcreated{2013-03-22 16:44:51}
+\pmmodified{2013-03-22 16:44:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subdirect product of algebraic systems}
+\pmrecord{10}{38972}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A62}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{08B26}
+\pmdefines{subdirect product}
+\pmdefines{subdirect power}
+\pmdefines{subdirectly irreducible}
+\pmdefines{trivial subdirect product}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+In this entry, all algebraic systems are of the same type.  For each algebraic system, we drop the associated operator set for simplicity.
+
+Let $A_i$ be algebraic systems indexed by $i\in I$.  $B$ is called a \emph{subdirect product} of $A_i$ if
+\begin{enumerate}
+\item $B$ is a subalgebra of the direct product of $A_i$.
+\item for each $i\in I$, $\pi_i(B)=A_i$.
+\end{enumerate}
+In the second condition, $\pi_i$ denotes the projection homomorphism $\prod A_i \to A_i$.  By restriction, we may consider $\pi_i$ as homomorphisms $B\to A_i$.  When $B$ is isomorphic to $\prod A_i$, then $B$ is a \emph{trivial subdirect product} of $A_i$.
+
+This generalizes the notion of a direct product, since in many instances, an algebraic system can not be decomposed into a direct product of algebras.
+
+When all $A_i=C$ for some algebraic system $C$ of the same type, then $B$ is called a \emph{subdirect power} of $C$.
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+A very simple example of a subdirect product is the following: let $A_1=A_2=\lbrace 1,2,3\rbrace$.  Then the subset $B=\lbrace (x,y)\in A_1\times A_2 \mid x\le y \rbrace$ is a subdirect product of the sets $A_1$ and $A_2$ (considered as algebraic systems with no operators).
+\item 
+Let $B$ is a subdirect product of $A_i$, and $p_i:=(\pi_i)_B$, the restriction of $\pi_i$ to $B$.  Then $B/\ker(p_i)\cong A_i$.  In addition, $$\bigcap \lbrace \ker(p_i)\mid i\in I\rbrace=\Delta,$$ where $\Delta$ is the diagonal relation.  To see the last equality, suppose $a,b\in B$ with $a\equiv b \pmod {p_i}$.  Then $a(i)=\pi_i(a)=p_i(a)=p_i(b)=\pi_i(b)=b(i)$.  Since this is true for every $i\in I$, $a=b$.
+\item 
+Conversely, if $A$ is an algebraic system and $\lbrace \mathfrak{C}_i\mid i\in I\rbrace$ is a set of congruences on $A$ such that $$\bigcap \lbrace \mathfrak{C}_i\mid i\in I\rbrace=\Delta.$$ 
+Then $A$ is isomorphic to a subdirect product of $A/\mathfrak{C}_i$.
+\item
+An algebraic system is said to be \emph{subdirectly irreducible} if, whenever $\mathfrak{C}_i$ are congruences on $A$ and $\bigcap \lbrace \mathfrak{C}_i\mid i\in I\rbrace=\Delta$, then one of $\mathfrak{C}_i=\Delta$.
+\item \textbf{Birkhoff's Theorem on the Decomposition of an Algebraic System}.  Every algebraic system is isomorphic to a subdirect product of subdirectly irreducible algebraic systems.  This works only when the algebraic system is finitary.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

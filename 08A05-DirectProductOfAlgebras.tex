@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectProductOfAlgebras}
+\pmcreated{2013-03-22 16:44:35}
+\pmmodified{2013-03-22 16:44:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{direct product of algebras}
+\pmrecord{9}{38967}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{08A62}
+\pmdefines{direct product}
+\pmdefines{direct factor}
+\pmdefines{direct power}
+\pmdefines{projection}
+\pmdefines{empty direct product}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+In this entry, let $O$ be a fixed operator set.  All algebraic systems have the same type (they are all $O$-algebras).
+
+Let $\lbrace A_i\mid i\in I\rbrace$ be a set of algebraic systems of the same type ($O$) indexed by $I$.  Let us form the Cartesian product of the underlying sets and call it $A$:
+$$A:=\prod_{i\in I} A_i.$$
+Recall that element $a$ of $A$ is a function from $I$ to $\bigcup A_i$ such that for each $i\in I$, $a(i)\in A_i$.  
+
+For each $\omega\in O$ with arity $n$, let $\omega_{A_i}$ be the corresponding $n$-ary operator on $A_i$.  Define $\omega_A: A^n\to A$ by 
+$$\omega_A(a_1,\ldots,a_n)(i)=\omega_{A_i}(a_1(i),\ldots,a_n(i))\quad\mbox{ for all }i\in I.$$
+One readily checks that $\omega_A$ is a well-defined $n$-ary operator on $A$.  $A$ equipped with all $\omega_A$ on $A$ is an $O$-algebra, and is called the \emph{direct product} of $A_i$.  Each $A_i$ is called a \emph{direct factor} of $A$.
+
+If each $A_i=B$, where $B$ is an $O$-algebra, then we call $A$ the direct power of $B$ and we write $A$ as $B^I$ (keep in mind the isomorphic identifications).
+
+If $A$ is the direct product of $A_i$, then for each $i\in I$ we can associate a  homomorphism $\pi_i:A\to A_i$ called a \emph{projection} given by $\pi_i(a)=a(i)$.  It is a homomorphism because $\pi_i(\omega_A(a_1,\ldots, a_n))=\omega_A(a_1,\ldots, a_n)(i)=\omega_{A_i}(a_1(i),\ldots,a_n(i))=\omega_{A_i}(\pi_i(a_1),\ldots, \pi_i(a_n))$.
+
+\textbf{Remark}.  The direct product of a single algebraic system is the algebraic system itself.  An \emph{empty direct product} is defined to be a trivial algebraic system (one-element algebra).
+%%%%%
+%%%%%
+\end{document}

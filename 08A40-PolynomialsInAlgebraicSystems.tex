@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialsInAlgebraicSystems}
+\pmcreated{2013-03-22 16:47:31}
+\pmmodified{2013-03-22 16:47:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{polynomials in algebraic systems}
+\pmrecord{16}{39025}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A40}
+\pmsynonym{absolutely free algebra}{PolynomialsInAlgebraicSystems}
+\pmrelated{TermAlgebra}
+\pmrelated{AlgebraicFunction}
+\pmdefines{polynomial}
+\pmdefines{equivalent polynomials}
+\pmdefines{polynomial symbol}
+\pmdefines{induced polynomial}
+\pmdefines{polynomial algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+\subsection*{Polynomials in an Algebraic System}
+Let $(A,O)$ be an algebraic system.  Given any non-negative integer $n$, let $S$ be a set of functions from $A^n$ to $A$, satisfying the following criteria:
+\begin{enumerate}
+\item the projection $\pi_i:A^n\to A$ is an element of $S$ for each $i$ between $1$ and $n$.
+\item for every $0$-ary operator symbol $c\in O$, the corresponding element $c_A\in A$ is an element of $S$. 
+\item for any $m$-ary operator $\omega_A$ on $A$, and any $p_1,\ldots,p_m\in S$, the function $\omega_A(p_1,\ldots,p_m):A^n\to A$, given by $$\omega_A(p_1,\ldots,p_m)(a_1,\ldots,a_n):=\omega_A(p_1(a_1,\ldots,a_n),\ldots, p_m(a_1,\ldots,a_n))$$
+is an element of $S$.
+\end{enumerate}
+Take the intersection of all such sets and call it $\textbf{P}_n(A)$.  Then $\textbf{P}_n(A)$ is the smallest set satisfying the above two conditions.  We call an element of $\textbf{P}_n(A)$ an \emph{$n$-ary polynomial} of the algebra $A$.  A \emph{polynomial} of $A$ is some $n$-ary polynomial of $A$.  Two polynomials $p,q$ are said to be \emph{equivalent} if they have the same arity $n$, and for any $\textbf{a}\in A^n$, $p(\textbf{a})=q(\textbf{a})$.
+
+\textbf{Examples}.
+\begin{itemize}
+\item Let $G$ be a group.  Then $f(x)=x$ is a unary polynomial.  In general, a unary polynomial of $G$ has the form $x^n$, $n\ge 1$.  For a binary polynomial, first note that $f(x,y)=x$ and $g(x,y)=y$ are both binary.  For this, a binary polynomial of $G$ looks like $$x^{n_1}y^{m_1}\cdots x^{n_k}y^{m_k},$$ where $n_1,m_k\ge 0$ and the rest are positive integers.  If $G$ is abelian, a binary polynomial has the simplified form $x^ny^m$, and more generally, an $n$-ary polynomial of an abelian group has the form $$x_1^{n_1}\cdots x_k^{n_k}.$$
+\item Let $R$ be a ring.  $f(x)=x$ is a unary polynomial, so are $g(x)=nx$ and $h(x)=x^m$ where $n,m$ are non-negative integers.  In general, a unary polynomial of $R$ looks like 
+$$n_mx^{m}+n_{m-1}x^{m-1}+\cdots + n_1x+n_0,$$
+where $n_i$ are non-negative integers with $n_m>0$, and $m$ is any positive integer.  This is the form of a polynomial that is familiar to most people.
+\item Continuing from the example above, note that, however, $$a_mx^{m}+a_{m-1}x^{m-1}+\cdots + a_1x+a_0$$ where $a_i\in R$ is in general \emph{not} a polynomial under this definition.  This is an example of an algebraic function in an algebraic system.
+\end{itemize}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+$\textbf{P}_0(A)$ is non-empty iff $O$ contains constant symbols (nullary function symbols).
+\item
+By virtue of the definition, $\textbf{P}_n(A)$ is an algebraic system for each non-negative integer $n$.
+\end{itemize}
+
+\subsection*{Polynomial Symbols}
+If we have two algebras $A,B$ of the same type, then, by the definition above, a polynomial of $A$ may be considered as a polynomial of $B$, and vice versa.  Putting this formally, we introduce \emph{polynomial symbols} for a class $K$ of algebras of the same type $O$.  Let $X=\lbrace x_1,x_2,\ldots\rbrace$ be a countably infinite set of variables, or symbols.  For any non-negative integer $n$, consider a set $S$ consisting of the following elements:
+\begin{enumerate}
+\item $x_1,\ldots,x_n$,
+\item every nullary operator symbol,
+\item if $\omega\in O$ is $m$-ary and $p_1,\ldots,p_m\in S$, then $\omega(p_1, \ldots, p_m)\in S$.
+\end{enumerate}
+Take the intersection of all such sets and we end up with a set satisfying the two conditions again, call it $\textbf{P}_n(O)$.  Any element of $\textbf{P}_n(O)$ is called an \emph{$n$-ary polynomial symbol} of $K$.  A \emph{polynomial symbol} of $K$ is just some $n$-ary polynomial symbol.  In model theory, a polynomial symbol is nothing more than a \PMlinkname{term}{Term} over $X$ in the $O$-language.
+
+Now, suppose $A\in K$.  For a given non-negative integer $n$, consider the function $f_A:\textbf{P}_n(O)\to \textbf{P}_n(A)$, defined recursively by 
+\begin{enumerate}
+\item $f_A(x_i):=\pi_i$,
+\item $f_A(c):=c_A$,
+\item $f_A(\omega(p_1,\ldots,p_n)):=\omega_A(f_A(p_1),\ldots,f_A(p_n))$.
+\end{enumerate}
+Then by the constructions of $\textbf{P}_n(O)$ and $\textbf{P}_n(A)$, $f_A$ is a surjection.  Any polynomial $p$ of $A$ is said to be \emph{induced} by a polynomial symbol $q$ of $K$ if $f_A(q)=p$.  We usually write $p=q_A$ to denote that the polynomial $p$ (of $A$) is induced by the polynomial symbol $q$ (of $K$).  It is not hard to see that, between two algebras of the same type, there is a one-to-one correspondence between their respective polynomials the same arities.  However, equivalence of polynomials in one algebra does not translate to equivalence in another.
+
+\textbf{Example}.  $x\vee(y\wedge z)$ and $(x\vee y)\wedge (x\vee z)$ are both polynomials symbols in the class of lattices.  In the subclass of distributive lattices, the induced polynomials are equivalent.  However, in the subclass of modular lattices, the equivalence no longer holds.
+
+\textbf{Remark}.  Like $\textbf{P}_n(A)$, $\textbf{P}_n(O)$ is also an algebraic system, called the $n$-ary \emph{polynomial algebra}, or \emph{absolutely free algebra}, of $O$.  Furthermore, the function $f_A$ above is an algebra homomorphism.
+
+\begin{thebibliography}{9}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\bibitem{bs} S. Burris, H.P. Sankappanavar: {\em A Course in Universal Algebra}, Springer, New York (1981).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

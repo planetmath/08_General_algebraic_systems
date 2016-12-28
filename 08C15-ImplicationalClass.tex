@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImplicationalClass}
+\pmcreated{2013-03-22 17:31:35}
+\pmmodified{2013-03-22 17:31:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{implicational class}
+\pmrecord{5}{39922}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08C15}
+\pmclassification{msc}{03C05}
+\pmsynonym{quasivariety}{ImplicationalClass}
+\pmsynonym{quasiprimitive class}{ImplicationalClass}
+\pmdefines{algebraic class}
+\pmdefines{equational implication}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{closed under}
+\PMlinkescapeword{algebraic}
+
+In this entry, we extend the notion of an equational class (or a variety) to a more general notion known as an implicational class (or a quasivariety).  Recall that an equational class $K$ is a class of algebraic systems satisfying a set $\Sigma$ of ``equations'' and that $K$ is the smallest class satisfying $\Sigma$.  Typical examples are the varieties of groups, rings, or lattices.
+
+An implicational class, loosely speaking, is the \emph{smallest} class of algebraic systems satisfying a set of ``implications'', where an implication has the form $P\to Q$, where $P$ and $Q$ are some sentences.  Formally, we define an \emph{equational implication} in an algebraic system to be a sentence of the form 
+$$(\forall x_1)\cdots (\forall x_n)(e_1\wedge \cdots \wedge e_p \to e_q),$$ 
+where each $e_i$ is an identity of the form $f_i(x_1,\ldots,x_n)=g_i(x_1,\ldots,x_n)$ for some $n$-ary polynomials $f_i$ and $g_i$, and $i=1,\ldots,p,q$.
+
+\textbf{Definition}.  A class $K$ of algebraic systems of the same type (signature) is called an \emph{implicational class} if there is a set $\Sigma$ of equational implications such that $$K=\lbrace A \mbox{ is a structure }\mid A \mbox{ is a model in } \Sigma\rbrace=\lbrace A\mid (\forall q\in \Sigma)\to (A\models q)\rbrace.$$
+
+\textbf{Examples}
+\begin{enumerate}
+\item Any equational class is implicational.  Each identity $p=q$ can be thought of as an equational implication $(p=p)\to (p=q)$.  In other words, every algebra satisfying the identity also satisfies the corresponding equational implication, and vice versa.  
+\item The class of all Dedekind-finite rings.  In addition to satisfying the identities for being a (unital) ring, each ring also satisfies the equational implication $$(\forall x)(\forall y)(xy=1)\to (yx=1).$$
+\item The class of all cancellation semigroups.  In addition to satisfying the identities for being a semigroup, each semigroup also satisfies the implications $$(\forall x)(\forall y)(\forall z)(xy=xz)\to (y=z)\quad \mbox{and} \quad (\forall x)(\forall y)(\forall z)(yx=zx)\to (y=z).$$
+\item The class $K$ of all torsion free abelian groups.  In addition to satisfying the identities for being abelian groups, each group also satisfies the set of all implications $$\lbrace \forall x (nx=0)\to (x=0) \mid n \mbox{ is a positive integer}\rbrace.$$
+\end{enumerate}
+
+There is an equivalent formulation of an implicational class.  Again, let $K$ be a class of algebraic systems of the same type (signature) $\tau$.  Define the following four ``operations'' on \emph{the} classes of algebraic systems of type $\tau$:
+
+\begin{enumerate}
+\item $I(K)$ is the class of all isomorphic copies of algebras in $K$,
+\item $S(K)$ is the class of all subalgebras of algebras in $K$,
+\item $P(K)$ is the class of all product of algebras in $K$ (including the empty products, which means $P(K)$ includes the trivial algebra), and
+\item $U(K)$ is the class of all ultraproducts of algebras in $K$.
+\end{enumerate}
+
+Suppose $X$ is any one of the operations above, we say that $K$ is \emph{closed} under operation $X$ if $X(K)\subseteq K$.
+
+\textbf{Definition}.  $K$ is said to be an \emph{algebraic class} if $K$ is closed under $I$, and $K$ is said to be a \emph{quasivariety} if it is algebraic and is closed under $S,P,U$.
+
+It can be shown that a class $K$ of algebraic systems of the same type is implicational iff it is a quasivariety.  Therefore, we may use the two terms interchangeably.  
+
+As we have seen earlier, a variety is a quasivariety.  However, the converse is not true, as can be readily seen in the last example above, since a homomorphic image of a torsion free abelian is in general not torsion free: the homomorphic image of $\phi: \mathbb{Z}\to \mathbb{Z}_n$ is a subgroup of $\mathbb{Z}_n$, hence not torsion free.
+%%%%%
+%%%%%
+\end{document}

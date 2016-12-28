@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectProductOfPartialAlgebras}
+\pmcreated{2013-03-22 18:43:40}
+\pmmodified{2013-03-22 18:43:40}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{direct product of partial algebras}
+\pmrecord{7}{41496}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A55}
+\pmclassification{msc}{08A62}
+\pmclassification{msc}{03E99}
+\pmdefines{direct product}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\boldsymbol{A}$ and $\boldsymbol{B}$ be two partial algebraic systems of type $\tau$.  The \emph{direct product} of $\boldsymbol{A}$ and $\boldsymbol{B}$, written $\boldsymbol{A}\times \boldsymbol{B}$, is a partial algebra of type $\tau$, defined as follows:
+\begin{itemize}
+\item the underlying set of $\boldsymbol{A}\times \boldsymbol{B}$ is $A\times B$,
+\item for each $n$-ary function symbol $f\in \tau$, the operation $f_{\boldsymbol{A}\times \boldsymbol{B}}$ is given by: 
+\begin{quote}
+for $(a_1,b_1), \ldots, (a_n,b_n) \in A\times B$, $f_{\boldsymbol{A}\times \boldsymbol{B}}((a_1,b_1) \ldots, (a_n,b_n))$  is defined iff both $f_{\boldsymbol{A}}(a_1, \ldots, a_n)$ and $f_{\boldsymbol{B}}(b_1, \ldots,b_n)$ are, and when this is the case,
+$$f_{\boldsymbol{A}\times \boldsymbol{B}}((a_1,b_1), \ldots, (a_n,b_n)):=(f_{\boldsymbol{A}}(a_1, \ldots, a_n), f_{\boldsymbol{B}}(b_1, \ldots,b_n)).$$
+\end{quote}
+\end{itemize}
+It is easy to see that the type of $\boldsymbol{A}\times \boldsymbol{B}$ is indeed $\tau$: pick $a_1,\ldots, a_n \in A$ and $b_1,\ldots, b_n \in B$ such that $f_{\boldsymbol{A}}(a_1, \ldots, a_n)$ and $f_{\boldsymbol{B}}(b_1, \ldots,b_n))$ are defined, then $f_{\boldsymbol{A}\times \boldsymbol{B}}((a_1,b_1), \ldots, (a_n,b_n))$ is defined, so that $f_{\boldsymbol{A}\times \boldsymbol{B}}$ is non-empty, where all operations are defined componentwise, and the two constants are $(0,0)$ and $(1,1)$.
+
+For example, suppose $k_1$ and $k_2$ are fields.  They are both partial algebras of type $\langle 2,2,1,1,0,0\rangle$, where the two $2$'s are the arity of addition and multiplication, the two $1$'s are the arity of additive and multiplicative inverses, and the two $0$'s are the constants $0$ and $1$.  Then $k_1\times k_2$, while no longer a field, is still an algebra of the same type. 
+
+Let $\boldsymbol{A},\boldsymbol{B}$ be partial algebras of type $\tau$.  Can we embed $\boldsymbol{A}$ into $\boldsymbol{A}\times \boldsymbol{B}$ so that $\boldsymbol{A}$ is some type of a subalgebra of $\boldsymbol{A}\times \boldsymbol{B}$?
+
+For example, if we fix an element $b\in B$, then the injection $i_b : \boldsymbol{A}\to \boldsymbol{A}\times\boldsymbol{B}$, given by $i_b(a)=(a,b)$ is in general not a homomorphism only unless $b$ is an idempotent with respect to every operation $f_{\boldsymbol{B}}$ on $B$ (that is, $f_{\boldsymbol{B}}(b,\ldots, b)=b)$.  In addition, $b$ would have to be \emph{the} constant for every constant symbol in $\tau$.  Following from the example above, if we pick any $r\in k_2$, then $r$ would have to be $0$, since, $(s_1+s_2,2r)=i_r(s_1)+i_r(s_2)=i_r(s_1+s_2)=(s_1+s_2,r)$, so that $2r=r$, or $r=0$.  But, on the other hand, $i_r(s^{-1})=(s,r)^{-1}=(s^{-1},r^{-1})$, forcing $r$ to be invertible, a contradiction!
+
+Now, suppose we have a homomorphism $\sigma:\boldsymbol{A}\to \boldsymbol{B}$, then we may embed $\boldsymbol{A}$ into $\boldsymbol{A}\times \boldsymbol{B}$, so that $\boldsymbol{A}$ is a subalgebra of $\boldsymbol{A}\times \boldsymbol{B}$.  The embedding is given by $\phi(a)=(a,\sigma(a))$.
+
+\begin{proof}  Suppose $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  Since $\sigma$ is a homomorphism, $f_{\boldsymbol{B}}(\sigma(a_1),\ldots, \sigma(a_n))$ is defined, which means $f_{\boldsymbol{A}\times \boldsymbol{B}}((a_1,\sigma(a_1)), \ldots, (a_n,\sigma(a_n)))= f_{\boldsymbol{A}\times \boldsymbol{B}}(\phi(a_1), \ldots, \phi(a_n))$ is defined.  Furthermore, we have that 
+\begin{eqnarray*}
+f_{\boldsymbol{A}\times \boldsymbol{B}}((a_1,\sigma(a_1)), \ldots, (a_n,\sigma(a_n))) &=& 
+(f_{\boldsymbol{A}}(a_1,\ldots, a_n),f_{\boldsymbol{B}}(\sigma(a_1),\ldots, \sigma(a_n))) \\ &=& (f_{\boldsymbol{A}}(a_1,\ldots, a_n),\sigma(f_{\boldsymbol{A}}(a_1, \ldots, a_n))) \\ &=& \phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n)),
+\end{eqnarray*}
+showing that $\phi$ is a homomorphism.  In addition, if $f_{\boldsymbol{A}\times \boldsymbol{B}}(\phi(a_1), \ldots, \phi(a_n))$ is defined, then it is clear that $f_{\boldsymbol{A}}(a_1, \ldots, a_n)$ is defined, so that $\phi$ is a strong homomorphism.  So $\phi(\boldsymbol{A})$ is a subalgebra of $\boldsymbol{A}\times \boldsymbol{B}$.  Clearly, $\phi$ is one-to-one, and therefore an embedding, so that $\boldsymbol{A}$ is isomorphic to $\phi(\boldsymbol{A})$, and we may view $\boldsymbol{A}$ as a subalgebra of $\boldsymbol{A}\times \boldsymbol{B}$.
+\end{proof}
+
+\textbf{Remark}.  Moving to the general case, let $\lbrace \boldsymbol{A_i} \mid i\in I\rbrace$ be a set of partial algebras of type $\tau$, indexed by set $I$.  The \emph{direct product} of these algebras is a partial algebra $\boldsymbol{A}$ of type $\tau$, defined as follows:
+\begin{itemize}
+\item the underlying set of $\boldsymbol{A}$ is $A:= \prod \lbrace A_i\mid i\in I\rbrace$,
+\item for each $n$-ary function symbol $f\in \tau$, the operation $f_{\boldsymbol{A}}$ is given by: for $a \in A$, $f_{\boldsymbol{A}}(a)$ is defined iff $f_{\boldsymbol{A_i}}(a(i))$ is defined for each $i\in I$, and when this is the case,
+$$f_{\boldsymbol{A}}(a)(i):= f_{\boldsymbol{A_i}}(a(i)).$$
+\end{itemize}
+Again, it is easy to verify that $\boldsymbol{A}$ is indeed a $\tau$-algebra: for each symbol $f\in \tau$, the domain of definition $\operatorname{dom}(f_{\boldsymbol{A_i}})$ is non-empty for each $i\in I$, and therefore the domain of definition $\operatorname{dom}(f_{\boldsymbol{A}})$, being $\prod \lbrace \operatorname{dom}(f_{\boldsymbol{A_i}}) \mid i\in I \rbrace$, is non-empty as well, by the axiom of choice.
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

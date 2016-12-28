@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PermutableCongruences}
+\pmcreated{2013-03-22 17:09:29}
+\pmmodified{2013-03-22 17:09:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{permutable congruences}
+\pmrecord{6}{39469}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A30}
+\pmdefines{completely permutable}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{permutable}
+
+Let $A$ be an algebraic system and $\Theta_1$ and $\Theta_2$ are two congruences on $A$.  $\Theta_1$ and $\Theta_2$ are said to be \emph{permutable} if $\Theta_1\circ \Theta_2=\Theta_2\circ\Theta_1$, where $\circ$ is the composition of relations.
+
+For example, let $A$ be the direct product of $A_1$ and $A_2$.  Define $\Theta_1$ on $A$ as follows: 
+$$(a,b)\equiv (c,d)\pmod {\Theta_1}\quad \mbox{ iff }\quad a=c.$$  
+Then $\Theta_1$ is clearly an equivalence relation on $A$.  For any $n$-ary operator $f$ on $A$, let $f_1$ and $f_2$ be the corresponding $n$-ary operators on $A_1$ and $A_2$ respectively: $f=(f_1,f_2)$.  Suppose $(a_i,b_i)\equiv (c_i,d_i)\pmod{\Theta_1}$, $i=1,\ldots,n$.  Then 
+\begin{eqnarray}
+f((a_1,b_1),\ldots,(a_n,b_n))&=& (f_1(a_1,\ldots, a_n),f_2(b_1,\ldots,b_n)) \\ &\equiv& (f_1(c_1,\ldots,c_n),f_2(d_1,\ldots,d_n))\\ &=& f((c_1,d_1),\ldots,(c_n,d_n)) \pmod {\Theta_1}.
+\end{eqnarray}
+The equivalence of (1) and (2) follows from the assumption that $a_i=c_i$ for each $i=1,\ldots,n$, so that $f_1(a_1,\ldots, a_n)=f_1(c_1,\ldots,c_n)$.  Similarly define 
+$$(a,b)\equiv (c,d)\pmod {\Theta_2}\quad \mbox{ iff }\quad b=d.$$  
+By a similar argument, $\Theta_2$ is a congruence on $A$ too.  Pick any $(a,b),(c,d)\in A$.  Then $(a,b)\equiv (a,d) \pmod{\Theta_1}$ and $(a,d)\equiv (c,d)\pmod {\Theta_2}$ so that $(a,b)(\Theta_1\circ \Theta_2) (c,d)$.  This implies that $\Theta_1\circ\Theta_2=A^2$.  Similarly $\Theta_2\circ\Theta_1=A^2$.  Therefore, $\Theta_1$ and $\Theta_2$ are permutable.
+
+In fact, we have the following:
+\begin{prop}  Let $A$ be an algebraic system with congruenes $\Theta_1$ and $\Theta_2$.  Then $\Theta_1$ and $\Theta_2$ are permutable iff $\Theta_1\circ\Theta_2=\Theta_1\vee\Theta_2$, where $\vee$ is the join operation on, $\operatorname{Con}(A)$, the lattice of congruences on $A$.
+\end{prop}
+\begin{proof}
+Clearly, if $\Theta_1\circ\Theta_2=\Theta_1\vee\Theta_2$, then they are permutable.  Conversely, suppose they are permutable.  Let $C=\Theta_1\circ \Theta_2$ and $D=\Theta_1\vee \Theta_2$.  We want to show that $C=D$.  If $(a,b)\in C$, then there is $c\in A$ such that $(a,c)\in \Theta_1$ and $(c,b)\in \Theta_2$, so $a\equiv b\pmod D$.  This shows $C\subseteq D$.  If $a\equiv b\pmod D$, then there is $c\in A$ such that $a\equiv c\pmod R$ and $c\equiv b\pmod S$ with $R,S\in \lbrace \Theta_1,\Theta_2\rbrace$.  If $R=S$, then we are done, since $\Theta_i\subseteq C$ (as an element $(a,b)$ belonging to, say $\Theta_1$, can be written as $(a,b)\circ(b,b)\in C$).  If $R=\Theta_1$ and $S=\Theta_2$ then we are done too, since this is just the definition of $C$.  If $R=\Theta_2$ and $S=\Theta_1$, then $(a,b)\in \Theta_2\circ\Theta_1=\Theta_1\circ\Theta_2=C$, by permutability. 
+\end{proof}
+
+\textbf{Remark}.  From the example above, it is not hard to see that an algebraic system $A$ is the direct product of two algebraic systems $B,C$ iff there are two permutable congruences $\Theta$ and $\Phi$ on $A$ such that $\Theta \vee \Phi = A^2$ and $\Theta\wedge \Phi=\Delta$, where $\Delta=\lbrace (a,a)\mid a\in A\rbrace$ is the diagonal relation on $A$, and that $B\cong A/\Theta$ and $C\cong A/\Phi$.  This result can be generalized to arbitrary direct products.
+%%%%%
+%%%%%
+\end{document}

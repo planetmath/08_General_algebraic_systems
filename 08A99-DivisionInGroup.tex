@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisionInGroup}
+\pmcreated{2013-03-22 15:08:01}
+\pmmodified{2013-03-22 15:08:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{division in group}
+\pmrecord{13}{36877}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20-00}
+\pmrelated{Group}
+\pmrelated{Division}
+\pmrelated{Groupoid}
+\pmrelated{AlternativeDefinitionOfGroup}
+\pmdefines{division groupoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+In any group $(G,\,\cdot)$ one can introduce a {\em division operation} ``:'' by setting
+            $$x:y = x \cdot y^{-1}$$
+for all elements $x$, $y$ of $G$. \,On the contrary, the group operation and the unary inverse forming operation may be expressed via the division by
+\begin{align}
+x \cdot y = x:((y:y):y), \quad x^{-1} = (x:x):x.
+\end{align}
+
+The division, which of course is not associative, has the properties
+\begin{enumerate} 
+\item \,$(x:z):(y:z) = x:y,$  
+\item \,$x:(y:y) = x,$
+\item \,$(x:x):(y:z) = z:y.$
+\end{enumerate}
+
+The above result may be conversed:
+\begin{thmplain}
+\,If the operation ``:'' of the non-empty groupoid $G$ has the properties 1, 2, and 3, then $G$ equipped with the ``multiplication'' and inverse forming by (1) is a group.
+\end{thmplain}
+
+{\em Proof.} \,Here we prove only the associativity of ``$\cdot$''. \,First we derive some auxiliary results. \,Using definitions and the properties 1 and 2 we obtain
+$$(x:y):y^{-1} = (x:y):((y:y):y) = x:(y:y) = x,$$
+$$(x:y^{-1}):y = (x:y^{-1}):((y:y):y^{-1}) = x:(y:y) = x$$
+and using the property 3, 
+$$(x:y)^{-1} = ((x:y):(x:y)):(x:y) = y:x.$$
+Then we get: 
+$$(xy)z = (x:y^{-1}):z^{-1} = ((x:y^{-1}):y):(z^{-1}:y) = 
+  x:(z^{-1}:y) = x:(y:z^{-1})^{-1} = x(yz)$$
+
+
+\begin{thebibliography}{7}
+\bibitem{AIM} \CYRA. \CYRI. \CYRM\cyra\cyrl\cyrsftsn\cyrc\cyre\cyrv: 
+{\em \CYRA\cyrl\cyrg\cyre\cyrb\cyrr\cyra\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyre \,
+\cyrs\cyri\cyrs\cyrt\cyre\cyrm\cyrery}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRN\cyra\cyru\cyrk\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

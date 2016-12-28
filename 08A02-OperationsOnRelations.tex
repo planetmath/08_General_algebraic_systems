@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OperationsOnRelations}
+\pmcreated{2013-03-22 16:26:40}
+\pmmodified{2013-03-22 16:26:40}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{operations on relations}
+\pmrecord{14}{38600}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A02}
+\pmclassification{msc}{03E20}
+\pmsynonym{inverse relation}{OperationsOnRelations}
+\pmsynonym{relation composition}{OperationsOnRelations}
+\pmsynonym{converse of a relation}{OperationsOnRelations}
+\pmsynonym{diagonal relation}{OperationsOnRelations}
+\pmrelated{GeneralAssociativity}
+\pmrelated{RelationAlgebra}
+\pmdefines{power of a relation}
+\pmdefines{relational composition}
+\pmdefines{inverse of a relation}
+\pmdefines{section}
+\pmdefines{domain}
+\pmdefines{range}
+\pmdefines{identity relation}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{composition}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{converse}
+\PMlinkescapeword{complement}
+\PMlinkescapeword{power}
+\PMlinkescapeword{identity}
+
+Recall that an $n$-ary relation ($n>0$) is a subset of a product of some $n$ sets.  In this definition, any $n$-ary relation for which $n>1$ is automatically an $(n-1)$-ary relation, and consequently a binary relation.  On the other hand, a unary, or $1$-ary relation, being the subset $B$ of some set $A$, can be viewed as a binary relation (either realized as $B\times B$ or $\Delta_B:=\lbrace (b,b)\mid b\in B\rbrace$) on $A$.  Hence, we shall concentrate our discussion on the most important kind of relations, the binary relations, in this entry.
+
+\subsubsection*{Compositions, Inverses, and Complements}
+
+Let $\rho \subseteq A\times B$ and $\sigma \subseteq B\times C$ be two binary relations.  We define the \emph{composition} of $\rho$ and $\sigma$, the \emph{inverse} (or \emph{converse}) and the \emph{complement} of $\rho$ by
+\begin{itemize}
+\item $\rho\circ\sigma := \lbrace (a,c)\mid (a,b)\in \rho \mbox{ and }(b,c)\in \sigma \mbox{ for some } b\in B\rbrace$, 
+\item $\rho^{-1}:=\lbrace (b,a)\mid (a,b)\in \rho\rbrace$, and
+\item $\rho':=\lbrace (a,b)\mid (a,b)\notin \rho\rbrace$.
+\end{itemize}
+$\rho\circ\sigma,\rho^{-1}$ and $\rho'$ are binary relations of $A\times C, B\times A$ and $A\times B$ respectively.
+
+\textbf{Properties}.
+Suppose $\rho,\sigma,\tau$ are binary relations of $A\times B,B\times C,C\times D$ respectively.
+\begin{enumerate}
+\item Associativity of relational compositions: $(\rho\circ\sigma)\circ \tau =\rho\circ (\sigma\circ\tau)$.
+\item $(\rho\circ\sigma)^{-1}=\sigma^{-1}\circ\rho^{-1}$.
+\item For the rest of the remarks, we assume $A=B$.  Define the \emph{power} of $\rho$ recursively by $\rho^1=\rho$, and $\rho^{n+1}=\rho\circ\rho^n$.  By 1 above, $\rho^{n+m}=\rho^n\circ\rho^m$ for $m,n\in \mathbb{N}$.
+\item $\rho^{-n}$ may be also be defined, in terms of $\rho^{-1}$ for $n>0$.
+\item However, $\rho^{n+m}\ne\rho^n\circ\rho^m$ for \emph{all} integers, since $\rho^{-1}\circ\rho\neq \rho\circ\rho^{-1}$ in general.
+\item Nevertheless, we may define $\Delta:=\lbrace (a,a)\mid a\in A\rbrace$.  This is called the \emph{identity} or \emph{diagonal relation} on $A$.  It has the property that $\Delta\circ \rho=\rho\circ\Delta=\rho$.  For this, we may define, for every relation $\rho$ on $A$, $\rho^0:=\Delta$.
+\item Let $\mathcal{R}$ be the set of all binary relations on a set $A$.  Then $(\mathcal{R},\circ)$ is a \PMlinkname{monoid}{Monoid} with $\Delta$ as the identity element.
+\end{enumerate}
+
+Let $\rho$ be a binary relation on a set $A$, below are some special relations definable from $\rho$:
+\begin{itemize}
+\item
+$\rho$ is reflexive if $\Delta\subseteq\rho$; 
+\item 
+$\rho$ is symmetric if $\rho=\rho^{-1}$; 
+\item
+$\rho$ is anti-symmetric if $\rho\cap\rho^{-1}\subseteq \Delta$; 
+\item
+$\rho$ is transitive if $\rho\circ\rho \subseteq \rho$;
+\item
+$\rho$ is a pre-order if it is reflexive and transitive  
+\item
+$\rho$ is a partial order if it is a pre-order and is anti-symmetric
+\item
+$\rho$ is an equivalence if it is a pre-order and is symmetric
+\end{itemize}
+Of these, only reflexivity is preserved by $\circ$ and both symmetry and anti-symmetry are preserved by the inverse operation.
+
+\subsubsection*{Other Operations}
+
+Some operations on binary relations yield unary relations.  The most common ones are the following:
+
+Given a binary relation $\rho\in A\times B$, and an elements $a\in A$ and $b\in B$, define 
+$$\rho(a,\cdot):=\lbrace y\mid (a,y)\in \rho\rbrace 
+\quad\mbox{ and }\quad
+\rho(\cdot,b):=\lbrace x\mid (x,b)\in \rho\rbrace.$$
+
+$\rho(a,\cdot)\subseteq B$ is called the \emph{section of $\rho$ in $B$ based at $a$}, and $\rho(\cdot,b)\subseteq A$ is the \emph{section of $\rho$ in $A$ (based) at $b$}.  When the base points are not mentioned, we simply say a section of $\rho$ in $A$ or $B$, or an $A$-section or a $B$-section of $\rho$.
+
+Finally, we define the domain and range of a binary relation $\rho\subseteq A\times B$, to be 
+\begin{itemize}
+\item $\operatorname{dom}(\rho):=\lbrace a\mid (a,b)\in \rho \mbox{ for some } b\in B\rbrace$, and 
+\item $\operatorname{ran}(\rho):=\lbrace b\mid (a,b)\in \rho \mbox{ for some } a\in A\rbrace.$
+\end{itemize}
+respectively.  When $\rho$ is a function, the domain and range of $\rho$ coincide with the domain of range of $\rho$ as a function.
+
+\textbf{Remarks}.  Given a binary relation $\rho\subseteq A\times B$.
+\begin{enumerate}
+\item $\rho(a,\cdot)$, realized as a binary relation $\lbrace a\rbrace \times \rho(a,\cdot)$ can be viewed as the composition of $\Delta_a\circ \rho$, where $\Delta_a=\lbrace (a,a)\rbrace$.  Similarly, $\rho\circ \Delta_b=\rho(\cdot,b) \times \lbrace b\rbrace$.
+\item $\operatorname{dom}(\rho)$ is the disjoint union of $A$-sections of $\rho$ and $\operatorname{ran}(\rho)$ is the disjoint union of $B$-sections of $\rho$.
+\item $\operatorname{dom}(\rho^{-1})=\operatorname{ran}(\rho)$ and $\operatorname{ran}(\rho^{-1})=\operatorname{dom}(\rho)$.
+\item $\rho\circ\rho^{-1}=\operatorname{dom}(\rho)\times \operatorname{dom}(\rho)$ and $\rho^{-1}\circ\rho=\operatorname{ran}(\rho)\times \operatorname{ran}(\rho)$.
+\item If $A=B$, then $\operatorname{dom}(\rho)\times A=\rho\circ A^2$ and $\operatorname{ran}(\rho) = A^2\circ \rho$.
+\item The composition of binary relations can be generalized: let $R$ be a subset of $A_1\times \cdots \times A_n$ and $S$ be a subset of $B_1\times \cdots \times B_m$, where $m,n$ are positive integers.  Further, we assume that $A_n=B_1=C$.  Define $R\circ S$, as a subset of $A_1\times \cdots \times A_{n-1} \times B_2 \times \cdots B_m$, to be the set $$\lbrace (a_1, \ldots, a_{n-1}, b_2, \ldots, b_m) \mid \exists c\in C \mbox{ with }(a_1, \ldots, a_{n-1}, c)\in R\mbox{ and }(c, b_2, \ldots, b_m) \in S\rbrace.$$
+If $m=n=2$, then we have the familiar composition of binary relations.  If $m=1$ and $n=2$, then $R\circ S=\lbrace a \mid (a,c)\in R\mbox{ and }c \in S\rbrace$.  The case where $m=2$ and $n=1$ is similar.  If $m=n=1$, then $R\circ S = \lbrace \mbox{ true }\rbrace$ if $R\cap S\ne \varnothing$.  Otherwise, it is set to $\lbrace \mbox{ false }\rbrace$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

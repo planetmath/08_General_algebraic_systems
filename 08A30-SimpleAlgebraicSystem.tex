@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleAlgebraicSystem}
+\pmcreated{2013-03-22 16:46:56}
+\pmmodified{2013-03-22 16:46:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{simple algebraic system}
+\pmrecord{5}{39013}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A30}
+\pmsynonym{simple}{SimpleAlgebraicSystem}
+\pmdefines{simple algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+An algebraic system $A$ is \emph{simple} if the only congruences on it are $A\times A$ and $\Delta$, the diagonal relation.
+
+For example, let's find out what are the simple algebras in the class of groups.  Let $G$ be a group that is simple in the sense defined above.  
+
+First, what are the congruences on $G$?  A congruence $C$ on $G$ is a subgroup of $G\times G$ and an equivalence relation on $G$ at the same time.  As an equivalence relation, $C$ corresponds to a partition of $G$ in the following manner: $G=\bigcup_{i\in I} N_i$ and $C=\bigcup_{i\in I} N_i^2$, where $N_i\cap N_j=\varnothing$ for $i\ne j$.  Each of the $N_i$ is an equivalence class of $C$.  Let $N$ be the equivalence class containing $1$.  If $a,b\in N$, then $[a]=[b]=[1]$, so that $[ab]=[a][b]=[1][1]=[1]$, or $ab\in N$.  In addition, $[a^{-1}]=[1][a^{-1}]=[a][a^{-1}]=[aa^{-1}]=[1]$, so $a^{1}\in N$.  $N$ is a subgroup of $G$.  Furthermore, if $c\in G$, $[cac^{-1}]=[c][a][c^{-1}]= [c][1][c^{-1}]= [cc^{-1}]=[1]$, so that $cac^{-1}\in N$, $N$ is a normal subgroup of $G$.  Conversely, given a normal subgroup $N$ of $G$, forming left (right) cosets $N_i$ of $N$, and taking $C=\bigcup_{i\in I} N_i^2$ gives us the congruence $C$ on $G$.
+
+Now, if $G$ is simple, then this says that the only congruences on $G$ are $G\times G$ and $\Delta$, which corresponds to $G$ having $G$ and $\langle 1\rangle$ as the only normal subgroups.  So, $G$ as a simple algebra is just a simple group.  Conversely, if $G$ is a simple group, then the only congruences on $G$ are those corresponding to $G$ and $\langle 1\rangle$, the only normal subgroups of $G$.  Therefore, a simple group is a simple algebra.
+
+\textbf{Remark}.  Any simple algebraic system is subdirectly irreducible.
+%%%%%
+%%%%%
+\end{document}

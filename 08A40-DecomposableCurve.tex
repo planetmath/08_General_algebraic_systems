@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecomposableCurve}
+\pmcreated{2013-03-22 19:19:38}
+\pmmodified{2013-03-22 19:19:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{decomposable curve}
+\pmrecord{7}{42268}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A40}
+\pmclassification{msc}{26A09}
+\pmrelated{Hyperbola2}
+\pmdefines{decomposable}
+\pmdefines{decomposable surface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An algebraic curve
+$$f(x,\,y) \;=\; 0$$
+is \emph{decomposable}, if the polynomial \,$f(x,\,y)$\, is \PMlinkescapetext{reducible} in\, $\mathbb{R}[x,\,y]$; that is, if there are polynomials\, $g(x,\,y)$\, and \,$h(x,\,y)$\, with positive degree in\, $\mathbb{R}[x,\,y]$\, such that 
+$$f(x,\,y) \;=\; g(x,\,y)\,h(x,\,y).$$
+
+\textbf{Example.}\, The quadratic curve
+\begin{align}
+\frac{x^2}{a^2}\!-\!\frac{y^2}{b^2} \;=\; 0
+\end{align}
+is decomposable, since the equation may be written
+$$\left(\frac{x}{a}\!+\!\frac{y}{b}\right)\!\left(\frac{x}{a}\!-\!\frac{y}{b}\right) \;=\; 0$$
+or equivalently
+$$\frac{x}{a}\!+\!\frac{y}{b} \;=\; 0 \quad \lor \quad \frac{x}{a}\!-\!\frac{y}{b} \;=\; 0.$$
+Thus the curve (1) consists of two intersecting lines.\\
+
+Analogically, one can say that an algebraic surface 
+$$g(x,\,y,\,z) \;=\; 0$$
+is \emph{decomposable}, e.g.\, $(x\!+\!y\!+\!z)^2\!-\!1 = 0$\, which consists of two parallel planes.
+
+%%%%%
+%%%%%
+\end{document}

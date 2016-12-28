@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectLimitOfAlgebraicSystems}
+\pmcreated{2013-03-22 16:53:56}
+\pmmodified{2013-03-22 16:53:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{direct limit of algebraic systems}
+\pmrecord{7}{39156}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B25}
+\pmsynonym{direct system of algebraic systems}{DirectLimitOfAlgebraicSystems}
+\pmsynonym{inverse system of algebraic systems}{DirectLimitOfAlgebraicSystems}
+\pmsynonym{projective system of algebraic systems}{DirectLimitOfAlgebraicSystems}
+\pmrelated{DirectLimitOfSets}
+\pmdefines{direct family of algebraic systems}
+\pmdefines{inverse family of algebraic systems}
+\pmdefines{inverse limit of algebraic systems}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+An immediate generalization of the concept of the direct limit of a direct family of sets is the direct limit of a direct family of algebraic systems.
+
+\subsubsection*{Direct Family of Algebraic Systems}
+
+The definition is almost identical to that of a direct family of sets, except that functions $\phi_{ij}$ are now homomorphisms.  For completeness, we will spell out the definition in its entirety.
+
+Let $\mathcal{A}=\lbrace A_i\mid i\in I\rbrace$ be a family of algebraic systems of the same type (say, they are all $O$-algebras), indexed by a non-empty set $I$.  $\mathcal{A}$ is said to be a \emph{direct family} if 
+\begin{enumerate}
+\item $I$ is a directed set,
+\item whenever $i\le j$ in $I$, there is a homomorphism $\phi_{ij}:A_i\to A_j$,
+\item $\phi_{ii}$ is the identity on $A_i$,
+\item if $i\le j\le k$, then $\phi_{jk}\circ \phi_{ij}=\phi_{ik}$.
+\end{enumerate}
+
+An example of this is a direct family of sets.  A homomorphism between two sets is just a function between the sets.
+
+\subsubsection*{Direct Limit of Algebraic Systems}
+
+Let $\mathcal{A}$ be a direct family of algebraic systems $A_i$, indexed by $I$ ($i\in I$).  Take the disjoint union of the underlying sets of each algebraic system, and call it $A$.  Next, a binary relation $\sim$ is defined on $A$ as 
+follows: 
+\begin{quote}
+given that $a\in A_i$ and $b\in A_j$, $a\sim b$ iff there is $A_k$ such that $\phi_{ik}(a)=\phi_{jk}(b)$.
+\end{quote}
+
+It is shown \PMlinkname{here}{DirectLimitOfSets} that $\sim$ is an equivalence relation on $A$, so we can take the quotient $A/\sim$, and denote it by $A_{\infty}$.  Elements of $A_{\infty}$ are denoted by $[a]_I$ or $[a]$ when there is no confusion, where $a\in A$.  So $A_{\infty}$ is just the direct limit of $A_i$ \emph{considered as sets}.
+
+Next, we want to turn $A_{\infty}$ into an $O$-algebra.  Corresponding to each set of $n$-ary operations $\omega_i$ defined on $A_i$ for all $i\in I$, we define an $n$-ary operation $\omega$ on $A_{\infty}$ as follows:
+\begin{quote}
+for $i=1,\ldots,n$, pick $a_i\in A_{j(i)}$, $j(i)\in I$.  Let $J:=\lbrace j(i)\mid i=1,\ldots,n\rbrace$.  Since $I$ is directed and $J$ is finite, $J$ has an upper bound $j\in I$.  Let $\alpha_i=\phi_{j(i)j}(a_i)$.  Define
+$$\omega([a_1],\ldots,[a_n]):=[\omega_j(\alpha_1,\ldots,\alpha_n)].$$
+\end{quote}
+
+\begin{prop} $\omega$ is a well-defined $n$-ary operation on $A_{\infty}$. \end{prop}
+\begin{proof}  Suppose $[b_1]=[a_1],\ldots, [b_n]=[a_n]$.  Let $\alpha_i$ be defined as above, and let $a:=\omega_j(\alpha_1,\ldots,\alpha_n)\in A_j$.  Similarly, $\beta_i$ are defined: $\beta_i:=\phi_{k(i)k}(b_i)\in A_k$, where $b_i\in A_{k(i)}$.  Let $b:=\omega_k(\beta_1,\ldots,\beta_n)\in A_k$.  We want to show that $a\sim b$.  
+
+Since $a_i\sim b_i$, $\alpha_i\sim \beta_i$.  So there is $c_i:= \phi_{j\ell(i)}(\alpha_i)=\phi_{k\ell(i)}(\beta_i)\in A_{\ell(i)}$.  Let $\ell$ be the upper bound of the set $\lbrace \ell(1),\ldots,\ell(n)\rbrace$ and define $\gamma_i:=\phi_{\ell(i)\ell}(c_i)\in A_{\ell}$.  Then 
+\begin{eqnarray*}
+\phi_{j\ell}(a)&=& 
+\phi_{j\ell}\big(\omega_j(\alpha_1,\ldots,\alpha_n)\big) \\ &=& 
+\omega_{\ell}\big(\phi_{j\ell}(\alpha_1),\ldots,\phi_{j\ell}(\alpha_n)\big) \\ &=& \omega_{\ell}\big(\phi_{\ell(1)\ell}\circ \phi_{j\ell(1)}(\alpha_1),\ldots, \phi_{\ell(n)\ell}\circ \phi_{j\ell(n)}(\alpha_n)\big) \\ &=& 
+\omega_{\ell}\big(\phi_{\ell(1)\ell}(c_1),\ldots,\phi_{\ell(n)\ell}(c_n)\big) \\ &=& \omega_{\ell}\big(\phi_{\ell(1)\ell}\circ \phi_{k\ell(1)}(\beta_1),\ldots, \phi_{\ell(n)\ell}\circ \phi_{k\ell(n)}(\beta_n)\big) \\ &=& 
+\omega_{\ell}\big(\phi_{k\ell}(\beta_1),\ldots,\phi_{k\ell}(\beta_n)\big) \\ &=& \phi_{k\ell}\big(\omega_k(\beta_1,\ldots,\beta_n)\big) \\ &=& \phi_{k\ell}(b),
+\end{eqnarray*}
+which shows that $a\sim b$.
+\end{proof}
+
+\textbf{Definition}.  Let $\mathcal{A}$ be a direct family of algebraic systems of the same type (say $O$) indexed by $I$.  The $O$-algebra $A_{\infty}$ constructed above is called the \emph{direct limit} of $\mathcal{A}$.  $A_{\infty}$ is alternatively written $\varinjlim A_i$.
+
+\textbf{Remark}.  Dually, one can define an \emph{inverse family of algebraic systems}, and its inverse limit.  The inverse limit of an inverse family $\mathcal{A}$ is written $A^{\infty}$ or $\varprojlim A_i$.
+%%%%%
+%%%%%
+\end{document}

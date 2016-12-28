@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicFunction}
+\pmcreated{2013-03-22 15:19:24}
+\pmmodified{2013-03-22 15:19:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{algebraic function}
+\pmrecord{15}{37131}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A40}
+\pmclassification{msc}{26A09}
+\pmrelated{ElementaryFunction}
+\pmrelated{PropertiesOfEntireFunctions}
+\pmrelated{PolynomialsInAlgebraicSystems}
+\pmdefines{transcendental function}
+\pmdefines{transcendental}
+\pmdefines{algebraic curve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\begin{document}
+\PMlinkescapeword{algebraic}%
+\PMlinkescapeword{transcendental}%
+%
+A function of one variable is said to be \emph{algebraic} if it satisfies a polynomial equation whose coefficients are polynomials in the same variable.
+Namely, the function $f(x)$ is algebraic if $y=f(x)$ is a solution of an equation of the form
+\[
+  p_n(x) y^n + \cdots + p_1(x) y + p_0(x) = 0,
+\]
+where the $p_0(x), p_1(x), \ldots, p_n(x)$ are polynomials in $x$. A function that satisfies no such equation is said to be \emph{transcendental}.
+
+The graph of an algebraic function is an \emph{algebraic curve}, which is, loosely speaking, the zero set of a polynomial in two variables.
+
+\subsection*{Examples}
+Any rational function $f(x) = P(x)/Q(x)$ is algebraic, since $y=f(x)$ is a solution to $Q(x)y - P(x) = 0$. 
+
+The function $f(x)=\sqrt{x}$ is algebraic, since $y=f(x)$ is a
+solution to $y^2 - x = 0$. The same is true for any power function
+$x^{n/m}$, with $n$ and $m$ integers, it satisfies the equation $y^m-x^n=0$.
+
+It is known that the functions $e^x$ and $\ln x$ are transcendental. Many special functions, such as Bessel functions, elliptic integrals, and others are known to be transcendental.
+
+\textbf{Remark}.  There is also a version of an algebraic function defined on algebraic systems.  Given an algebraic system $A$, an \emph{$n$-ary algebraic function} on $A$ is an $n$-ary operator $f(x_1,\ldots,x_n)$ on $A$ such that there is an \PMlinkname{$(n+m)$-ary polynomial}{PolynomialsInAlgebraicSystems} $p(x_1,\ldots,x_n,x_{n+1},\ldots, x_{n+m})$ on $A$ for some non-negative integer $m$, and elements $a_1,\ldots, a_m\in A$ such that $$f(x_1,\ldots,x_n) = p(x_1,\ldots,x_n,a_1,\ldots, a_m).$$
+
+Equivalently, given an algebraic system $A$, if we associate each element $a$ of $A$ a corresponding symbol, also written $a$, we may form an algebraic system $A'$ from $A$ by adjoining every symbol $a$ to the type of $A$ considered as a unary operator symbol, and leaving everything else the same.  Then an algebraic function on $A$ is just a polynomial on $A'$ (and vice versa).
+
+For example, in a ring $R$, a function $f$ on $R$ given by $f(x)=a_nx^n+\cdots + a_1x+a_0$ where $a_i\in R$ is a unary algebraic function on $R$, as $f(x)=p(x,a_0,\ldots,a_n)$, where $p$ is an $(n+2)$-ary polynomial on $R$ given by $p(x,x_0,\ldots,x_n)=x_nx^n+\cdots + x_1x+x_0$.
+
+\begin{thebibliography}{9}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\bibitem{bs} S. Burris, H.P. Sankappanavar: {\em A Course in Universal Algebra}, Springer, New York (1981).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

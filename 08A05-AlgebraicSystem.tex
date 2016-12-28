@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicSystem}
+\pmcreated{2013-03-22 15:44:37}
+\pmmodified{2013-03-22 15:44:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{algebraic system}
+\pmrecord{50}{37695}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{03E99}
+\pmclassification{msc}{08A62}
+\pmsynonym{algebraic structure}{AlgebraicSystem}
+\pmsynonym{universal algebra}{AlgebraicSystem}
+\pmsynonym{signature}{AlgebraicSystem}
+\pmsynonym{trivial algebra}{AlgebraicSystem}
+\pmrelated{RelationalSystem}
+\pmrelated{Model}
+\pmrelated{StructuresAndSatisfaction}
+\pmrelated{PartiallyOrderedAlgebraicSystem}
+\pmdefines{$n$-ary operator}
+\pmdefines{finitary operator}
+\pmdefines{infinitary operator}
+\pmdefines{operator set}
+\pmdefines{constant operator}
+\pmdefines{operator symbol}
+\pmdefines{nullary operator}
+\pmdefines{type}
+\pmdefines{trivial algebraic system}
+\pmdefines{finite algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+An algebraic system, loosely speaking, is a set, together with some operations on the set.  Before formally defining what an algebraic system is, let us recall that a $n$-ary operation (or operator) on a set $A$ is a function whose domain is $A^n$ and whose range is a subset of $A$.  Here, $n$ is a non-negative integer.  When $n=0$, the operation is usually called a nullary operation, or a constant, since one element of $A$ is singled out to be the (sole) value of this operation.  A finitary operation on $A$ is just an $n$-ary operation for some non-negative integer $n$.
+
+\textbf{Definition}.  An \emph{algebraic system} is an ordered pair $(A,O)$, where $A$ is a set, called the underlying set of the algebraic system, and $O$ is a set, called the operator set, of finitary operations on $A$.  
+
+We usually write $\boldsymbol{A}$, instead of $(A,O)$, for brevity.
+
+A prototypical example of an algebraic system is a group, which consists of the underlying set $G$, and a set $O$ consisting of three operators: a constant $e$ called the multiplicative identity, a unary operator called the multiplicative inverse, and a binary operator called the multiplication.  
+
+For a more comprehensive listing of examples, please see this \PMlinkname{entry}{ExamplesOfAlgebraicSystems}.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+An algebraic system is also called an algebra for short.  Some authors require that $A$ be non-empty.  Note that $A$ is automatically non-empty if $O$ contains constants.  A \emph{finite algebra} is an algebra whose underlying set is finite.
+\item
+By definition, all operators in an algebraic system are finitary.  If we allow $O$ to contain infinitary operations, we have an \emph{infinitary algebraic system}.  Other generalizations are possible.  For example, if the operations are allowed to be multivalued, the algebra is said to be a \emph{multialgebra}.  If the operations are not everywhere defined, we get a \emph{partial algebra}.  Finally, if more than one underlying set is involved, then the algebra is said to be \emph{many-sorted}.
+\end{itemize}
+
+The study of algebraic systems is called the theory of universal algebra.  The first important thing in studying algebraic system is to compare systems that are of the same ``type''.  Two algebras are said to have the same \emph{type} if there is a one-to-one correspondence between their operator sets such that an $n$-ary operator in one algebra is mapped to an $n$-ary operator in the other algebra.  A more formal way of doing this is to define what a \emph{type} is:
+
+\textbf{Definition}.  A \emph{type} is a set $\tau$, whose elements are called operator symbols, such that there is a function $a:\tau \to \mathbb{N}\cup \lbrace 0\rbrace$.  Given an operator symbol $f$, its image $a(f)$ is called the arity of $f$.
+
+\textbf{Remark}.  It is often the practice to well-order $\tau$, and write $\tau$ as a sequence of non-negative integers $\langle a(f_1), a(f_2), \ldots, \rangle$.  When $\tau$ is finite, the convention is to order the sequence in non-increasing order: $a(f_1)\ge a(f_2)\ge \cdots \ge a(f_n)$.
+
+\textbf{Definition}.  An algebraic system $\boldsymbol{A}$ is said to be of type $\tau$ if there is a bijection between $O$ and $\tau$ so that every operator symbol $f$ in $\tau$ corresponds to an operator $f_{\boldsymbol{A}}$ of arity $a(f)$ in $O$.  When the algebra $\boldsymbol{A}$ is said to be of type $\tau$, we also say that $\boldsymbol{A}$ is a $\tau$-algebra.
+
+For example, a group is an algebraic system of type $\langle 2,1,0\rangle$, where $2$ is the arity of the group multiplication, $1$ is the arity of the group inverse, and $0$ is the arity of the group multiplicative identity.
+
+
+%However, because we want to be able to compare various algebraic systems with the same $O$, the dependency of $O$ on $X$ is undesirable.  Therefore, to define an algebraic system formally, one employs the \PMlinkescapetext{language} of model theory, which requires two stages: (1) define what $O$ is, and (2) define what $(X,O)$ is.
+
+%\begin{enumerate}
+%\item 
+%A set $O$ is called an \emph{operator set} if there is a function $f$ from $O$ to $\mathbb{N}\cup \lbrace 0\rbrace$.  %Each element $\omega\in O$ is called an \emph{operator symbol} and $f(\omega)$ is its arity.
+%\item
+%Given an operator set $O$ and a set $X$, the pair $(X,O)$ is called an $O$-algebra if there is a set $O_X$ such that
+%\begin{itemize}
+%\item $O_X$ consists of finitary operators on $X$ 
+%\item there is a one-to-one correspondence between $O$ and $O_X$, with mapping $\omega\mapsto \omega_X$, such that the %arity of $\omega_X$ is the arity of the operator symbol $\omega$
+%\end{itemize}
+%An \emph{algebraic system} (variously called an \emph{algebraic structure}, \emph{universal algebra}, or simply %\emph{algebra}), is an $O$-algebra $(X,O)$ for some set $X$ and some operator set $O$.
+%\end{enumerate}
+
+%In an algebraic system $(X,O)$, $X$ is called the \emph{underlying set} of $(X,O)$, and $O_X$ the \emph{operator set} of $(X,O)$.  When there is no confusion, we shall simply say that $\omega$ (instead of $\omega_X$) is an operator on $X$.  If the underlying set $X$ is a singleton, then $(X,O)$ is called a \emph{trivial algebraic system}.
+
+%\textbf{Remarks}
+%In any algebra $X$, we typically adopt the convention that the constant operators are identifed with their values in $X$.  Also, we write $x^*$ as the value of a unary operator $*$ applied to\, $x\in X$.\,  Finally,\, $x\circ y$ denotes the value of a binary operator $\circ$ applied to\, $(x,y)\in X^2$.
+
+%All of the examples are trivially algebraic structures, if we ``forget'' one or more (or all) of the operators.  For example, a field is by definition a ring with an additional operator (multiplicative inverse).  Therefore, as a ring, a field is an algebraic structure.  But as a field, it is not.  Formally, if $O^{\prime}\subseteq O$, then any $O$-algebra is an $O^{\prime}$-algebra.
+
+\begin{thebibliography}{7}
+\bibitem{AIM} \CYRA. \CYRI. \CYRM\cyra\cyrl\cyrsftsn\cyrc\cyre\cyrv: 
+{\em \CYRA\cyrl\cyrg\cyre\cyrb\cyrr\cyra\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyre \,
+\cyrs\cyri\cyrs\cyrt\cyre\cyrm\cyrery}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRN\cyra\cyru\cyrk\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\bibitem{pc} P. M. Cohn: {\em Universal Algebra}, Harper \& Row, (1965).
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\bibitem{pj} P. Jipsen: {\em \PMlinkexternal{Mathematical Structures: Homepage}{http://math.chapman.edu/cgi-bin/structures?HomePage}}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

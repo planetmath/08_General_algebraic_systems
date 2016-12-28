@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FilteredAlgebra}
+\pmcreated{2013-03-22 13:23:55}
+\pmmodified{2013-03-22 13:23:55}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{filtered algebra}
+\pmrecord{11}{33938}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+\begin{defn}
+A filtered algebra over the field $k$ is an algebra $(A,\cdot)$ over $k$
+which is endowed with a filtration $\mathcal{F}=\{F_i\}_{i\in \mathbb{N}}$
+by subspaces,  compatible with the multiplication in
+the following sense
+$$\forall m,n \in \mathbb{N},\qquad F_m\cdot F_n\subset F_{n+m}.$$
+\end{defn}
+
+A special case of filtered algebra is a graded algebra. In general there is
+the following construction that produces a graded algebra out of a filtered
+algebra.
+
+\begin{defn}
+Let $(A,\cdot,\mathcal{F})$ be a filtered algebra then the \emph{associated \PMlinkid{graded algebra}{3071}} $ \mathcal{G}(A)$ is defined as follows:
+\begin{itemize}
+\item As a vector space  
+$$ \mathcal{G}(A)=\bigoplus_{n\in \mathbb{N}}G_n\,, $$
+where,
+$$G_0=F_0,\quad \text{and } \forall n>0, \quad G_n=F_n/F_{n-1}\,,$$
+\item the multiplication is defined by
+$$(x+F_{n})(y+F_{m})=x\cdot y+F_{n+m}$$   
+\end{itemize}
+\end{defn}
+
+\begin{thm}
+The multiplication is well defined and endows $\mathcal{G}(A)$ with the 
+\PMlinkescapetext{structure} of a graded algebra, with gradation 
+$\{G_n\}_{n \in \mathbb{N}}$.
+Furthermore if  $A$ is associative then so is $\mathcal{G}(A)$.
+\end{thm}
+
+An example of a filtered algebra is the Clifford algebra $\mathrm{Cliff}(V,q)$
+of a vector space $V$ endowed with a quadratic form $q$. The associated
+graded algebra is $\bigwedge V$, the exterior algebra of $V$.
+
+
+As algebras
+$A$ and $\mathcal{G}(A)$ are distinct (with the exception of the trivial
+case that $A$ is graded) but as vector spaces they are isomorphic.  
+
+\begin{thm}
+ The underlying vector spaces of $A$ and $\mathcal{G}(A)$ are isomorphic. 
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

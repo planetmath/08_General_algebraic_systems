@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumeratingAlgebras}
+\pmcreated{2013-03-22 15:50:48}
+\pmmodified{2013-03-22 15:50:48}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{enumerating algebras}
+\pmrecord{9}{37829}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B99}
+\pmclassification{msc}{05A16}
+\pmrelated{EnumeratingGroups}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+\section{How many algebras are there?}
+
+Unlike categories of discrete objects, such as simple graphs with $n$ vertices, (see \PMlinkname{article on enumerating graphs}{EnumeratingGraphs}) such a question is a little malposed as the quantity can be infinite.  However the spirit of the question can be addressed by appealing to algebraic varieties and considering their dimension.
+
+Let $A$ be an non-associative algebra over a field $k$ of dimension $n$.  For example, $A$ could be a Lie algebra, an associative algebra, or a commutative algebra.  
+
+From every basis $e_1,\dots, e_n$ for $A$, the addition of the algebra is completely understood as all $n$-dimensional $k$-vector spaces are isomorphic.  Thus we must consider only the multiplication.  For this the structure constants of the algebra are considered.  That is:
+\[e_i e_j = \sum_{k=1}^n c^k_{ij} e_k\]
+for $c^k_{ij}\in k$.  These structure constants completely define the algebra $A$.
+
+Due to the axioms of multiplication, the structure constants satisfy certain relations.  For example, if $A$ is a Lie algebra then multiplication is via the associated Lie bracket and we know 
+\[ [e_i,e_i]=0\]
+Hence we find
+\[c^k_{ii}=0\]
+for all $1\leq i\leq n$.  Likewise the Jacobi identity/associativity/commutative conditions each imply their particular relations.  If one replaces the structure constants with variables $x_{ijk}$ we find that each algebra $A$ of a given type (Lie/Associative/Commutative/etc.) is a solution to the polynomial equations given by the relations of the algebra.  Thus the algebras themselves are parameterized by the algebraic variety, in $n^3$-dimensional affine space, of these equations.
+
+\begin{thm}[Neretin, 1987]
+The dimension of the algebraic variety for $n$-dimensional Lie algebras, associative
+algebras, and commutative algebras is respectively
+ \[\frac{2}{27}n^3 + O(n^{8/3}), \quad \frac{4}{27}n^3 + O(n^{8/3}),\]
+ 	\[\textnormal{ and }	\frac{2}{27}n^3 + O(n^{8/3}).\]
+\end{thm}
+
+Lower bounds of $\frac{2}{27}n^3+O(n^2)$ (and/or $\frac{4}{27}+O(n^2)$) are attainable by exhibiting large families of algebras.  For example, class 2 nilpotent Lie algebras attain the lower bound.  
+
+As with the related problems for $p$-groups, it is also expected that the true upper bound has error term $O(n^2)$ [Neretin,Sims].
+
+
+Neretin, Yu. A., \emph{An estimate for the number of parameters defining an
+              {$n$}-dimensional algebra}, Izv. Akad. Nauk SSSR Ser. Mat., vol. 51,1987, no. 2, pp. 306--318, 447.\\
+
+Mann, Avinoam, \emph{Some questions about {$p$}-groups},
+  J. Austral. Math. Soc. Ser. A, vol. 67, 1999, no. 3, pp. 356--379.
+
+%%%%%
+%%%%%
+\end{document}

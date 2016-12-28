@@ -1,0 +1,571 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakHopfAlgebra}
+\pmcreated{2013-03-22 18:12:43}
+\pmmodified{2013-03-22 18:12:43}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{weak Hopf algebra}
+\pmrecord{35}{40793}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08C99}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{57T05}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{16W30}
+\pmsynonym{quantum groupoids v.1}{WeakHopfAlgebra}
+%\pmkeywords{bialgebras}
+%\pmkeywords{extensions of Hopf algebras}
+%\pmkeywords{Grassmann-Hopf algebras}
+\pmrelated{HopfAlgebra}
+\pmrelated{WeakHopfCAlgebra2}
+\pmrelated{WeakHopfCAlgebra2}
+\pmrelated{CommutativeDiagram}
+\pmrelated{GroupoidAndGroupRepresentationsRelatedToQuantumSymmetries}
+\pmrelated{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}
+\pmrelated{WeakHopfCAlgebra2}
+\pmdefines{weak bialgebra}
+\pmdefines{commutant of a set}
+\pmdefines{counit axiom}
+\pmdefines{antipode map}
+\pmdefines{counity}
+\pmdefines{twisted tensor product}
+\pmdefines{quantum double}
+\pmdefines{QOA}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% there are many more packages, add them here as you need 
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,enumerate}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\geometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\textbf{Definition 0.1}: 
+In order to define a \emph{weak Hopf algebra}, one weakens, or relaxes certain axioms of a Hopf algebra as follows~: 
+
+\begin{itemize}
+\item[(1)]
+The comultiplication is not necessarily unit--preserving.
+
+\item[(2)]
+The counit $\vep$ is not necessarily a homomorphism of algebras.
+
+\item[(3)]
+The axioms for the antipode map $S : A \lra A$ with respect to the
+counit are as follows. For all $h \in H$,
+\begin{equation}
+\begin{aligned} m(\ID \otimes S) \Delta (h) &= (\vep \otimes
+\ID)(\Delta (1) (h \otimes 1)) \\ m(S \otimes \ID) \Delta (h) &=
+(\ID \otimes \vep)((1 \otimes h) \Delta(1)) \\ S(h) &= S(h_{(1)})
+h_{(2)}  S(h_{(3)}) ~.
+\end{aligned}
+\end{equation}
+\end{itemize}
+
+These axioms may be appended by the following commutative diagrams
+\begin{equation}
+{\begin{CD} A \otimes A @> S\otimes \ID >> A \otimes A
+\\ @A \Delta AA   @VV m V
+ \\ A @ > u \circ \vep >> A
+\end{CD}} \qquad
+{\begin{CD} A \otimes A @> \ID\otimes S >> A \otimes A
+\\ @A \Delta AA   @VV m V
+ \\ A @ > u \circ \vep >> A
+\end{CD}}
+\end{equation}
+along with the counit axiom:
+\begin{equation}
+\xymatrix@C=3pc@R=3pc{ A \otimes A \ar[d]_{\vep \otimes 1} & A
+\ar[l]_{\Delta} \ar[dl]_{\ID_A} \ar[d]^{\Delta}
+\\ A  & A \otimes A \ar[l]^{1 \otimes \vep}}
+\end{equation}
+
+Some authors substitute the term \emph{quantum groupoid} for a weak Hopf algebra.
+Therefore, the weak Hopf algebra is considered by some authors as an important
+concept in quantum operator algebra (QOA).
+
+
+\subsection{Examples of weak Hopf algebras}
+\begin{itemize}
+\item [(1)]
+We refer here to Bais et al. (2002). Let $G$ be a non-Abelian group
+and $H \subset G$ a discrete subgroup. Let $F(H)$ denote the space
+of functions on $H$ and $\bC H$ the group algebra (which consists
+of the linear span of group elements with the group structure).
+
+The \emph{quantum double} $D(H)$ (Drinfeld, 1987) is defined by
+\begin{equation}
+D(H) = F(H)~ \wti{\otimes}~ \bC H~,
+\end{equation}
+where, for $x \in H$, the {\em twisted tensor product} is specified by
+\begin{equation}
+\wti{\otimes} \mapsto ~(f_1 \otimes h_1) (f_2 \otimes h_2)(x) =
+f_1(x) f_2(h_1 x h_1^{-1}) \otimes h_1 h_2 ~.
+\end{equation}
+The physical interpretation is often to take $H$ as the `electric gauge group' and $F(H)$ as the `magnetic symmetry' generated by $\{f \otimes e\}$~. In terms of the counit $\vep$, the double
+$D(H)$ has a trivial representation given by $\vep(f \otimes h) =
+f(e)$~. We next look at certain features of this construction.
+
+\med
+For the purpose of braiding relations there is an $R$ matrix, $R
+\in D(H) \otimes D(H)$, leading to the operator
+\begin{equation}
+\mathcal R \equiv \sigma \cdot (\Pi^A_{\a} \otimes \Pi^B_{\be})
+(R)~,
+\end{equation}
+in terms of the Clebsch--Gordan series $\Pi^A_{\a} \otimes
+\Pi^B_{\be} \cong N^{AB \gamma}_{\a \be C}~ \Pi^C_{\gamma}$, and
+where $\sigma$ denotes a flip operator. The operator $\mathcal
+R^2$ is sometimes called the \emph{monodromy} or
+\emph{Aharanov--Bohm phase factor}. In the case of a condensate in
+a state $\vert v \rangle$ in the carrier space of some
+representation $\Pi^A_{\a}$~. One considers the maximal Hopf
+subalgebra $T$ of a Hopf algebra $A$ for which $\vert v \rangle$
+is $T$--invariant; specifically ~:
+\begin{equation}
+\Pi^A_{\a} (P)~\vert v \rangle = \vep(P) \vert v \rangle~,~
+\forall P \in T~.
+\end{equation}
+
+\med
+\item[(2)]
+For the second example, consider $A = F(H)$~. The algebra of
+functions on $H$ can be broken to the algebra of functions on
+$H/K$, that is, to $F(H/K)$, where $K$ is normal in $H$, that is,
+$HKH^{-1} =K$~. Next, consider $A = D(H)$~. On breaking a purely
+electric condensate $\vert v \rangle$, the magnetic symmetry
+remains unbroken, but the electric symmetry $\bC H$ is broken to
+$\bC N_v$, with $N_v \subset H$, the stabilizer of $\vert v
+\rangle$~. From this we obtain $T = F(H) \wti{\otimes} \bC N_v$~.
+
+\med
+\item[(3)]
+In Nikshych and Vainerman (2000) quantum groupoids (as weak
+C*--Hopf algebras, see below) were studied in relationship to the
+noncommutative symmetries of depth 2 von Neumann subfactors. If
+\begin{equation}
+A \subset B \subset B_1 \subset B_2 \subset \ldots
+\end{equation}
+is the Jones extension induced by a finite index depth $2$
+inclusion $A \subset B$ of $II_1$ factors, then $Q= A' \cap B_2$
+admits a quantum groupoid structure and acts on $B_1$, so that $B
+= B_1^{Q}$ and $B_2 = B_1 \rtimes Q$~. Similarly, in Rehren (1997)
+`paragroups' (derived from weak C*--Hopf algebras) comprise
+(quantum) groupoids of equivalence classes such as associated with
+6j--symmetry groups (relative to a fusion rules algebra). They
+correspond to type $II$ von Neumann algebras in quantum mechanics,
+and arise as symmetries where the local subfactors (in the sense
+of containment of observables within fields) have depth 2 in the
+Jones extension. Related is how a von Neumann algebra $N$, such as
+of finite index depth 2, sits inside a weak Hopf algebra formed as
+the crossed product $N \rtimes A$ (B\"ohm et al. 1999).
+
+\med
+\item[(4)]
+In Mack and Schomerus (1992) using a more general notion of the
+Drinfeld construction, develop the notion of a \emph{quasi
+triangular quasi--Hopf algebra} (QTQHA) is developed with the aim
+of studying a range of essential symmetries with special
+properties, such the quantum group algebra $\U_q (\rm{sl}_2)$ with
+$\vert q \vert =1$~. If $q^p=1$, then it is shown that a QTQHA is
+canonically associated with $\U_q (\rm{sl}_2)$. Such QTQHAs are
+claimed as the true symmetries of minimal conformal field
+theories.
+\end{itemize}
+
+
+\section{Definitions of Related Concepts}
+Let us recall two basic concepts of quantum operator algebra that are essential to Algebraic Quantum Theories. \\
+
+\subsection {Definition of a Von Neumann Algebra.}
+\med
+Let $\H$ denote a complex (separable) Hilbert space. A \emph{von
+Neumann algebra} $\A$ acting on $\H$ is a subset of the algebra of
+all bounded operators $\cL(\H)$ such that:
+
+\begin{itemize}
+
+\item[(1)] $\A$ is closed under the adjoint operation (with the
+adjoint of an element $T$ denoted by $T^*$).
+
+\med
+\item[(2)]
+$\A$ equals its bicommutant, namely:
+
+\begin{equation}
+\A= \{A \in \cL(\H) : \forall B \in \cL(\H), \forall C\in \A,~
+(BC=CB)\Rightarrow (AB=BA)\}~.
+\end{equation}
+\end{itemize}
+
+If one calls a \emph{commutant} of a set $\A$ the special set of
+bounded operators on $\cL(\H)$ which commute with all elements in
+$\A$, then this second condition implies that the commutant of the
+commutant of $\A$ is again the set $\A$.
+
+\med
+On the other hand, a von Neumann algebra $\A$ inherits a
+\emph{unital} subalgebra from $\cL(\H)$, and according to the
+first condition in its definition $\A$ does indeed inherit a
+\emph{*-subalgebra} structure, as further explained in the next
+section on C*-algebras. Furthermore, we have notable
+\emph{Bicommutant Theorem} which states that $\A$ \emph{is a von
+Neumann algebra if and only if $\A$ is a *-subalgebra of
+$\cL(\H)$, closed for the smallest topology defined by continuous
+maps $(\xi,\eta)\longmapsto (A\xi,\eta)$ for all $<A\xi,\eta)>$
+where $<.,.>$ denotes the inner product defined on $\H$}~. For
+further instruction on this subject, see e.g. Aflsen and Schultz
+(2003), Connes (1994).
+
+
+\subsection{Definition of a Hopf algebra}
+\med
+Firstly, a {\em unital associative algebra} consists of a linear space
+$A$ together with two linear maps
+
+\begin{equation}
+\begin{aligned} m &: A \otimes A \lra A~,~(multiplication) \\
+\eta &: \bC \lra A~,~ (unity)
+\end{aligned}
+\end{equation}
+satisfying the conditions
+\begin{equation}
+\begin{aligned}
+m(m \otimes \mathbf 1) &= m (\mathbf 1 \otimes m)  \\  m(\mathbf 1
+\otimes \eta) &= m (\eta \otimes \mathbf 1) = \ID~.
+\end{aligned}
+\end{equation}
+This first condition can be seen in terms of a commuting diagram~:
+\begin{equation}
+\begin{CD}
+A \otimes A \otimes A @> m \otimes \ID>> A \otimes A
+\\ @V \ID \otimes mVV   @VV m V
+ \\ A \otimes A  @ > m >> A
+\end{CD}
+\end{equation}
+Next suppose we consider `reversing the arrows', and take an
+algebra $A$ equipped with a linear homorphisms $\Delta : A \lra A
+\otimes A$, satisfying, for $a,b \in A$ :
+
+\begin{equation}
+\begin{aligned} \Delta(ab) &= \Delta(a) \Delta(b)
+\\ (\Delta \otimes \ID) \Delta &= (\ID \otimes \Delta) \Delta~.
+\end{aligned}
+\end{equation}
+
+We call $\Delta$ a \emph{comultiplication}, which is said to be
+\emph{coasociative} in so far that the following diagram commutes
+\begin{equation}
+\begin{CD}
+A \otimes A \otimes A @< \Delta\otimes \ID<< A \otimes A
+\\ @A \ID \otimes \Delta AA  @AA \Delta A
+ \\ A \otimes A  @ < \Delta << A
+\end{CD}
+\end{equation}
+
+There is also a counterpart to $\eta$, the \emph{counity} map
+$\vep : A \lra \bC$ satisfying
+\begin{equation}
+(\ID \otimes \vep) \circ \Delta = (\vep \otimes \ID) \circ \Delta
+= \ID~.
+\end{equation}
+A \emph{bialgebra} $(A, m, \Delta, \eta,
+\vep)$ is a linear space $A$ with maps $m, \Delta, \eta, \vep$
+satisfying the above properties.
+
+\med
+Now to recover anything resembling a group structure, we must
+append such a bialgebra with an antihomomorphism $S : A \lra A$,
+satisfying $S(ab) = S(b) S(a)$, for $a,b \in A$~. This map is
+defined implicitly via the property~:
+\begin{equation} m(S \otimes
+\ID) \circ \Delta = m(\ID \otimes S) \circ \Delta = \eta \circ
+\vep~~.
+\end{equation}
+We call $S$ the \emph{antipode map}. A \emph{Hopf algebra} is then
+a bialgebra $(A,m, \eta, \Delta, \vep)$ equipped with an antipode
+map $S$~.
+
+\med
+Commutative and noncommutative Hopf algebras form the backbone of
+quantum `groups' and are essential to the generalizations of
+symmetry. Indeed, in most respects a quantum `group' is identifiable
+with a Hopf algebra. When such algebras are actually
+associated with proper groups of matrices there is
+considerable scope for their representations on both finite
+and infinite dimensional Hilbert spaces.
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{AS}
+E. M. Alfsen and F. W. Schultz: \emph{Geometry of State Spaces of Operator Algebras}, Birkh\"auser, Boston--Basel--Berlin (2003).
+
+\bibitem{ICB71}
+I. Baianu : Categories, Functors and Automata Theory: A Novel Approach to Quantum Automata through Algebraic--Topological Quantum Computations., \textit{Proceed. 4th Intl. Congress LMPS}, (August-Sept. 1971).
+
+\bibitem{BGB07}
+I. C. Baianu, J. F. Glazebrook and R. Brown.: A Non--Abelian, Categorical Ontology of Spacetimes and Quantum Gravity., \emph{Axiomathes} \textbf{17},(3-4): 353-408(2007).
+
+\bibitem{BBGGk8}
+I.C.Baianu, R. Brown J.F. Glazebrook, and G. Georgescu, Towards Quantum Non--Abelian Algebraic Topology. \textit{in preparation}, (2008).
+
+\bibitem{BSS}
+F.A. Bais, B. J. Schroers and J. K. Slingerland: Broken quantum symmetry and confinement phases in planar physics, \emph{Phys. Rev. Lett.} \textbf{89} No. 18 (1--4): 181--201 (2002).
+
+\bibitem{BJW}
+J.W. Barrett.: Geometrical measurements in three-dimensional quantum gravity.
+Proceedings of the Tenth Oporto Meeting on Geometry, Topology and Physics (2001).
+\textit{Intl. J. Modern Phys.} \textbf{A 18} , October, suppl., 97--113 (2003).
+
+\bibitem{BRM2k3}
+M. R. Buneci.: \emph{Groupoid Representations}, (orig. title ``Reprezentari de Grupoizi''),
+Ed. Mirton: Timishoara (2003). 
+
+\bibitem{Chaician}
+M. Chaician and A. Demichev: \emph{Introduction to Quantum Groups}, World Scientific (1996).
+
+\bibitem{Coleman}
+Coleman and De Luccia: Gravitational effects on and of vacuum decay., \emph{Phys. Rev. D} \textbf{21}: 3305 (1980).
+
+\bibitem{CF}
+L. Crane and I.B. Frenkel. Four-dimensional topological quantum field theory, Hopf categories, and the canonical bases. Topology and physics. \textit{J. Math. Phys}. \textbf{35} (no. 10): 5136--5154 (1994).
+
+\bibitem{DT96}
+W. Drechsler and P. A. Tuckey:  On quantum and parallel transport in a Hilbert bundle over spacetime., \emph{Classical and Quantum Gravity}, \textbf{13}:611-632 (1996).
+doi: 10.1088/0264--9381/13/4/004
+
+\bibitem{Drinfeld}
+V. G. Drinfel'd: Quantum groups, In \emph{Proc. Intl. Congress of
+Mathematicians, Berkeley 1986}, (ed. A. Gleason), Berkeley, 798-820 (1987).
+
+\bibitem{Ellis}
+G. J. Ellis: Higher dimensional crossed modules of algebras,
+\emph{J. of Pure Appl. Algebra} \textbf{52} (1988), 277-282.
+
+\bibitem{Etingof1}
+P.. I. Etingof and A. N. Varchenko, Solutions of the Quantum Dynamical Yang-Baxter Equation and Dynamical Quantum Groups, \emph{Comm.Math.Phys.}, \textbf{196}: 591-640 (1998).
+
+\bibitem{Etingof2}
+P. I. Etingof and A. N. Varchenko: Exchange dynamical quantum
+groups, \emph{Commun. Math. Phys.} \textbf{205} (1): 19-52 (1999)
+
+\bibitem{Etingof3}
+P. I. Etingof and O. Schiffmann: Lectures on the dynamical Yang--Baxter equations, in \emph{Quantum Groups and Lie Theory (Durham, 1999)}, pp. 89-129, Cambridge University Press, Cambridge, 2001.
+
+\bibitem{Fauser2002}
+B. Fauser: \emph{A treatise on quantum Clifford Algebras}. Konstanz,
+Habilitationsschrift. \\ arXiv.math.QA/0202059 (2002).
+
+\bibitem{Fauser2004}
+B. Fauser: Grade Free product Formulae from Grassman--Hopf Gebras.
+Ch. 18 in R. Ablamowicz, Ed., \emph{Clifford Algebras: Applications to Mathematics, Physics and Engineering}, Birkh\"{a}user: Boston, Basel and Berlin, (2004).
+
+\bibitem{Fell}
+J. M. G. Fell.: The Dual Spaces of  C*--Algebras., \emph{Transactions of the American
+Mathematical Society}, \textbf{94}: 365--403 (1960).
+
+\bibitem{FernCastro}
+F.M. Fernandez and E. A. Castro.:  \emph{(Lie) Algebraic Methods in Quantum Chemistry and Physics.}, Boca Raton: CRC Press, Inc  (1996).
+
+\bibitem{Feynman}
+ R. P. Feynman: Space--Time Approach to Non--Relativistic Quantum Mechanics, {\em Reviews 
+of Modern Physics}, 20: 367--387 (1948). [It is also reprinted in (Schwinger 1958).]
+
+\bibitem{frohlich:nonab}
+A.~Fr{\"o}hlich: Non--Abelian Homological Algebra. {I}.
+{D}erived functors and satellites.\/, \emph{Proc. London Math. Soc.}, \textbf{11}(3): 239--252 (1961).
+
+\bibitem{GR02}
+R. Gilmore: \emph{Lie Groups, Lie Algebras and Some of Their Applications.},
+Dover Publs., Inc.: Mineola and New York, 2005.
+
+\bibitem{Hahn1}
+P. Hahn: Haar measure for measure groupoids., \textit{Trans. Amer. Math. Soc}. \textbf{242}: 1--33(1978).
+
+\bibitem{Hahn2}
+P. Hahn: The regular representations of measure groupoids., \textit{Trans. Amer. Math. Soc}. \textbf{242}:34--72(1978).
+
+\bibitem{HeynLifsctz}
+R. Heynman and S. Lifschitz. 1958. \emph{Lie Groups and Lie Algebras}., New York and London: Nelson Press.
+
+\bibitem{HLS2k8}
+C. Heunen, N. P. Landsman, B. Spitters.: A topos for algebraic quantum theory, (2008)   \\ 
+arXiv:0709.4364v2 [quant--ph]
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

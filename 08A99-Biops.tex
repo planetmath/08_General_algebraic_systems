@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Biops}
+\pmcreated{2013-03-22 14:44:49}
+\pmmodified{2013-03-22 14:44:49}
+\pmowner{HkBst}{6197}
+\pmmodifier{HkBst}{6197}
+\pmtitle{biops}
+\pmrecord{7}{36385}
+\pmprivacy{1}
+\pmauthor{HkBst}{6197}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmdefines{semigroup}
+\pmdefines{monoid}
+\pmdefines{group}
+\pmdefines{rig}
+\pmdefines{ring}
+\pmdefines{quasigroup}
+\pmdefines{loop}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be a set and $n \in \mathbf{N}$. Set $\mathbf{N}_n := \{i \in \mathbf{N} | i < n \}$. If there exists a map $\cdot : \mathbf{N}_n \to (S^2 \to S) : i \mapsto \cdot_i$ where $\cdot_i : S^2 \to S : (a, b) \mapsto a \cdot_i b$ is a binary operation, then I shall say that $(S, \cdot)$ is an \emph{$n$-biops}.  In other words, an $n$-biops is an algebraic system with $n$ binary operations defined on it, and the operations are labelled $0,1,\ldots, n-1$.
+
+Let $(S, \cdot)$ be an $n$-biops. If $\cdot$ has the property $p$, then I shall say that $(S, \cdot)$ is a $p$ $n$-biops. 
+
+For example if $(S, \cdot)$ is an $n$-biops and $\cdot$ is $0$-commutative, $0$-associative, $0$-alternative or $(0, 1)$-distributive, then I shall say that $(S, \cdot)$ is a $0$-commutative $n$-biops, $0$-associative $n$-biops, $0$-alternative $n$-biops or $(0, 1)$-distributive $n$-biops respectively.
+
+If an $n$-biops $B$ is $i$-$p$ for each $i \in \mathbf{N}_n$ then I shall say that $B$ is a $p$ $n$-biops.
+
+A $0$-associative $1$-biops is called a semigroup.
+A semigroup with identity element is called a monoid.
+A monoid with inverses is called a group.
+
+A $(0, 1)$-distributive $2$-biops $(S, +, \cdot)$, such that both $(S, +)$ and $(S, \cdot)$ are monoids, is called a rig.
+
+A $(0, 1)$-distributive $2$-biops $(S, +, \cdot)$, such that $(S, +)$ is a group and $(S, \cdot)$ is a monoid, is called a ring.
+
+A rig with $0$-inverses is a ring. 
+
+A $0$-associative $2$-biops $(S, \cdot, /)$ with $0$-identity such that for every $\{a, b\} \subset S$ we have
+$$b = (b / a) \cdot a = (b \cdot a) / a$$
+is called a group.
+
+A $3$-biops $(S, \cdot, /, \backslash)$ such that for every $\{a, b\} \subset S$ we have
+$$a \backslash (a \cdot b) = a \cdot (a \backslash b) = b = (b / a) \cdot a = (b \cdot a) / a$$
+is called a quasigroup.
+
+A quasigroup such that for every $\{a, b\} \subset S$ we have $a / a = b \backslash b$  is called a loop.
+
+A $0$-associative loop is a group.
+%%%%%
+%%%%%
+\end{document}

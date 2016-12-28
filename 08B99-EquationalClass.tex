@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquationalClass}
+\pmcreated{2013-03-22 16:48:02}
+\pmmodified{2013-03-22 16:48:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{equational class}
+\pmrecord{19}{39034}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B99}
+\pmclassification{msc}{03C05}
+\pmsynonym{variety of algebras}{EquationalClass}
+\pmsynonym{primitive class}{EquationalClass}
+\pmrelated{VarietyOfGroups}
+\pmdefines{variety}
+\pmdefines{subvariety}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+
+\begin{document}
+Let $K$ be a class of algebraic systems of the same type.  Consider the following ``operations'' on $K$:
+\begin{enumerate}
+\item $S(K)$ is the class of subalgebras of algebras in $K$,
+\item $P(K)$ is the class of direct products of non-empty collections of algebras in $K$, and
+\item $H(K)$ is the class of homomorphic images of algebras in $K$.
+\end{enumerate}
+
+It is clear that $K$ is a subclass of $S(K),P(K)$, and $H(K)$.
+
+An \emph{equational class} is a class $K$ of algebraic systems such that $S(K),P(K)$, and $H(K)$ are subclasses of $K$.  An equational class is also called a \emph{variety}.
+
+A subclass $L$ of a variety $K$ is called a \emph{subvariety} of $K$ if $L$ is a variety itself.
+
+\textbf{Examples}.
+\begin{itemize}
+\item In the variety of groups, the classes of abelian groups is equational.  However, the following classes are not: simple groups, cyclic groups, finite groups, and divisible groups.
+\item In the variety of rings, the classes of commutative rings and Boolean rings are varieties.  Most classes of rings, however, are not equational.  For example, the class of Noetherian rings is not equational, as infinite products of Noetherian rings are not Noetherian.
+\item In the variety of lattices, the classes of modular lattices and distributive lattices are equational, while complete lattices and complemented lattices are not.
+\item The class of Heyting algebras is equational, and so is the subclass of Boolean algebras.
+\item The class of torsion free abelian groups is \emph{not} equational.  For example, the homomorphic image of $\mathbb{Z}$ under the canonical map $\mathbb{Z}\mapsto \mathbb{Z}_n$ is not torsion free.
+\end{itemize}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item If $A,B$ are any of $H,S,P$, we define $AB(K):=A(B(K))$ for any class $K$ of algebras, and write $A\subseteq B$ iff $A(K)\subseteq B(K)$.  Then $SH\subseteq HS$, $PH\subseteq HP$ and $PS\subseteq SP$.
+\item If $C$ is any one of $H,S,P$, then $C^2:=CC=C$.
+\item If $K$ is any class of algebras, then $HSP(K)$ is an equational class.
+\item For any class of algebras, let $P_S(K)$ be the family of all subdirect products of all non-empty collections of algebras of $K$.  Then $HSP(K)=HP_S(K)$.
+\item
+The reason for call such classes ``equational'' is due to the fact that algebras within the same class all satisfy a set of ``equations'', or ``\PMlinkname{identities}{IdentityInAClass}''.  Indeed, a famous theorem of Birkhoff says:
+\begin{quote}
+a class $V$ of algebras is equational iff there is a set $\Sigma$ of identities (or equations) such that $K$ is the smallest class of algebras where each algebra $A\in V$ is satisfied by every identity $e\in \Sigma$.  In other words, $V$ is the set of all models of $\Sigma$: $$V=\operatorname{Mod}(\Sigma)=\lbrace A \mbox{ is a structure }\mid (\forall e\in \Sigma)\to(A\models e) \rbrace.$$
+\end{quote}
+\end{itemize}
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdentityInAClass}
+\pmcreated{2013-03-22 16:48:05}
+\pmmodified{2013-03-22 16:48:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{identity in a class}
+\pmrecord{7}{39035}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B99}
+\pmdefines{identity}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+Let $K$ be a class of algebraic systems of the same type.  An \emph{identity} on $K$ is an expression of the form $p=q$, where $p$ and $q$ are $n$-ary polynomial symbols of $K$, such that, for every algebra $A\in K$, we have $$p_A(a_1,\ldots, a_n)=q_A(a_1,\ldots,a_n)\qquad\mbox{ for all }a_1,\ldots, a_n\in A,$$
+where $p_A$ and $q_A$ denote the induced polynomials of $A$ by the corresponding polynomial symbols.  An identity is also known sometimes as an \emph{equation}.
+
+\textbf{Examples}.
+\begin{itemize}
+\item Let $K$ be a class of algebras of the type $\lbrace e, ^{-1}, \cdot \rbrace$, where $e$ is nullary, $^{-1}$ unary, and $\cdot$ binary.  Then
+\begin{enumerate}
+\item $x\cdot e=x$,
+\item $e\cdot x=e$,
+\item $(x\cdot y)\cdot z=x\cdot (y\cdot z)$,
+\item $x\cdot x^{-1}=e$,
+\item $x^{-1}\cdot x=e$, and
+\item $x\cdot y= y\cdot x$.
+\end{enumerate}
+can all be considered identities on $K$.  For example, in the fourth equation, the right hand side is the unary polynomial $q(x)=e$.  Any algebraic system satisfying the first three identities is a monoid.  If a monoid also satisfies identities 4 and 5, then it is a group.  A group satisfying the last identity is an abelian group.
+\item Let $L$ be a class of algebras of the type $\lbrace \vee, \wedge \rbrace$ where $\vee$ and $\wedge$ are both binary.  Consider the following possible identities
+\begin{enumerate}
+\item $x\vee x=x$,
+\item $x\vee y=y\vee x$,
+\item $x\vee (y\vee z)=(x\vee y)\vee z$,
+\item $x\wedge x=x$,
+\item $x\wedge y=y\wedge x$,
+\item $x\wedge (y\wedge z)=(x\wedge y)\wedge z$,
+\item $x\vee (y\wedge x)=x$,
+\item $x\wedge (y\vee x)=x$,
+\item $x\vee (y\wedge (x\vee z))=(x\vee y)\wedge (x\vee z)$, 
+\item $x\wedge (y\vee (x\wedge z))=(x\wedge y)\vee (x\wedge z)$,
+\item $x\vee (y\wedge z)=(x\vee y)\wedge (x\vee z)$, and 
+\item $x\wedge (y\vee z)=(x\wedge y)\vee (x\wedge z)$.
+\end{enumerate}
+If algebras of $K$ satisfy identities 1-8, then $K$ is a class of lattices.  If 9 and 10 are satisfied as well, then $K$ is a class of modular lattices.  If every identity is satisified by algebras of $K$, then $K$ is a class of distributive lattices.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

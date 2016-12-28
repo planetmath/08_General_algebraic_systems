@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KernelOfAHomomorphismBetweenAlgebraicSystems}
+\pmcreated{2013-03-22 16:26:20}
+\pmmodified{2013-03-22 16:26:20}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{kernel of a homomorphism between algebraic systems}
+\pmrecord{11}{38593}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmsynonym{induced congruence}{KernelOfAHomomorphismBetweenAlgebraicSystems}
+\pmrelated{KernelOfAHomomorphismIsACongruence}
+\pmrelated{KernelPair}
+\pmdefines{congruence induced by a homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $f:(A,O)\to (B,O)$ be a homomorphism between two algebraic systems $A$ and $B$ (with $O$ as the operator set).  Each element $b\in B$ corresponds to a subset $K(b):=f^{-1}(b)$ in $A$.  Then $\lbrace K(b)\mid b\in B\rbrace$ forms a partition of $A$.  The \emph{kernel} $\ker(f)$ of $f$ is defined to be 
+$$\ker(f):=\bigcup_{b\in B}K(b)\times K(b).$$
+
+It is easy to see that $\ker(f)=\lbrace (x,y)\in A\times A\mid f(x)=f(y)\rbrace$.  Since it is a subset of $A\times A$, it is relation on $A$.  Furthermore, it is an equivalence relation on $A$:
+{\footnote{In general, $\lbrace N_i\rbrace$ is a partition of a set $A$ iff $\bigcup N_i^2$ is an equivalence relation on $A$.}}
+
+\begin{enumerate}
+\item $\ker(f)$ is reflexive: for any $a\in A$, $a\in K(f(a))$, so that $(a,a)\in K(f(a))^2\subseteq \ker(f)$
+\item $\ker(f)$ is symmetric: if $(a_1,a_2)\in \ker(f)$, then $f(a_1)=f(a_2)$, so that $(a_2,a_1)\in \ker(f)$
+\item $\ker(f)$ is transitive: if $(a_1,a_2),(a_2,a_3)\in \ker(f)$, then $f(a_1)=f(a_2)=f(a_3)$, so $(a_1,a_3)\in \ker(f)$.
+\end{enumerate}
+
+We write $a_1 \equiv a_2 \pmod {\ker(f)}$ to denote $(a_1,a_2)\in \ker(f)$. 
+
+In fact, $\ker(f)$ is a congruence relation: for any $n$-ary operator symbol $\omega\in O$, suppose $c_1,\ldots,c_n$ and $d_1,\ldots,d_n$ are two sets of elements in $A$ with $c_i\equiv d_i \mod \ker(f)$.  Then $$f(\omega_A(c_1,\ldots,c_n) = \omega_B(f(c_1),\ldots,f(c_n))=\omega_B(f(d_1),\ldots,f(d_n)) = f(\omega_A(d_1,\ldots,d_n)),$$ so $\omega_A(c_1,\ldots,c_n)\equiv \omega_A(d_1,\ldots,d_n) \pmod {\ker(f)}$.  For this reason, $\ker(f)$ is also called the \emph{congruence induced by} $f$.
+
+\textbf{Example}.  If $A,B$ are groups and $f:A\to B$ is a group homomorphism.  Then the kernel of $f$, using the definition above is just the union of the square of the cosets of $$N=\lbrace x\mid f(x)=e\rbrace,$$ the traditional definition of the kernel of a group homomorphism (where $e$ is the identity of $B$).
+
+\textbf{Remark}.  The above can be generalized.  See the \PMlinkname{analog}{KernelOfAHomomorphismIsACongruence} in model theory.
+%%%%%
+%%%%%
+\end{document}

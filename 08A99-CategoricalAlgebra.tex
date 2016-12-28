@@ -1,0 +1,299 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalAlgebra}
+\pmcreated{2013-03-22 18:13:27}
+\pmmodified{2013-03-22 18:13:27}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{categorical algebra}
+\pmrecord{79}{40810}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{08A70}
+\pmsynonym{algebraic categories}{CategoricalAlgebra}
+%\pmkeywords{representations}
+%\pmkeywords{categorical algebra}
+%\pmkeywords{algebra or algebraic representations}
+%\pmkeywords{representable functors}
+%\pmkeywords{algebraic categories}
+%\pmkeywords{categories of algebraic structures}
+%\pmkeywords{categories of logic algebras}
+%\pmkeywords{universal-algebras}
+%\pmkeywords{operator algebras}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{NonAbelianStructures}
+\pmrelated{AbelianCategory}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{CategoricalOntology}
+\pmrelated{NonCommutingGraphOfAGroup}
+\pmrelated{NonAbelianStructures}
+\pmdefines{algebraic representation}
+\pmdefines{functor representation}
+\pmdefines{representable functor}
+\pmdefines{category of algebraic structures}
+\pmdefines{category of logic algebras}
+
+% this is the default PlanetMath preamble.
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\midsqn}[1]{\ar@{}[dr]|{#1}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+
+\begin{document}
+\subsection{Introduction: An Outline of Categorical Algebra}
+This topic entry provides an outline of an important mathematical field called {\em categorical algebra}; although  specific definitions are in use for various applications of categorical algebra to specific algebraic structures, they do not cover the entire field. In the most general sense, \emph{categorical algebras}-- as introduced by Mac Lane in 1965 -- can be described as the study of representations of algebraic structures, either concrete or abstract, in terms of categories, functors and natural transformations. 
+
+In a narrow sense, a \emph{categorical algebra} is an associative algebra, defined for any locally finite category and a commutative ring with unity. This notion may be considered as a generalization of both the concept of group algebra and that of an incidence algebra, much as the concept of category generalizes the notions of group and partially ordered set.
+
+
+\subsection{Extensions of categorical algebra} 
+
+\begin{itemize}
+\item Thus, ultimately, since categories are interpretations of the \emph{axiomatic elementary theory of abstract categories (ETAC)}, so are categorical algebras. 
+
+ The general definition of representation introduced above can be still further extended by introducing \emph{supercategorical algebras as interpretations of ETAS}, as explained next. 
+
+\item Mac Lane (1976) wrote in his {\em Bull. AMS} review cited here as a verbatim quotation: 
+
+
+ \emph{``On some occasions I have been tempted to try to define what algebra is,
+can, or should be - most recently in concluding a survey [72] on Recent
+advances in algebra. But no such formal definitions hold valid for long, since
+algebra and its various subfields steadily change under the influence of ideas
+and problems coming not just from logic and geometry, but from analysis,
+other parts of mathematics, and extra mathematical sources. The progress of
+mathematics does indeed depend on many interlocking, unexpected and
+multiform developments.''}  
+\end{itemize}
+
+\subsection{Basic definitions}
+
+ An \emph{algebraic representation} is generally defined as a \emph{morphism $\rho$ from an abstract algebraic structure  $\mathcal{A}_S$ to a concrete algebraic structure $A_c$}, a Hilbert space $\mathcal{H}$, or a family of linear operator spaces. 
+
+The key notion of \PMlinkname{representable functor}{RepresentableFunctor} was first reported by Alexander Grothendieck in 1960.
+
+\begin{definition}
+Thus, when the latter concept is extended to categorical algebra, one has  a \emph{representable} functor $S$ from an arbitrary category $\mathcal{C}$ to the category of sets $Set$ if $S$ admits a \emph{functor representation} defined as follows. A \emph{functor representation of $S$} is defined as a pair, $({R}, \phi)$, which consists of an object $R$ of $\mathcal{C}$ and a family $\phi$ of equivalences $\phi (C): \Hom_{\mathcal{C}}(R,C) \cong S(C)$, which is natural in C, with C being any object in $\mathcal{C}$. When the functor $S$ has such a representation, it is also said to be \emph{represented by the object $R$} of $\mathcal{C}$. For each object $R$ of $\mathbf{C}$
+one writes $h_{R}: \mathcal{C} \lra Set$ for the covariant $\Hom$--functor $h_{R}(C)\cong \Hom_{\mathcal{C}}(R,C)$. A \emph{representation} $(R, \phi)$ of ${S}$ is therefore \emph{a natural equivalence of functors}: 
+\begin{equation}
+\phi:  h_{R} \cong {S}~.
+\end{equation}
+\end{definition}
+
+\begin{remark}
+ The equivalence classes of such functor representations (defined as natural equivalences) determine directly an algebraic (\emph{groupoid}) structure.
+\end{remark}
+
+\subsection{Note:}
+See also  in Expositions the entry about abstract and concrete algebras. 
+
+\subsection{Application: Quantum Categories}
+
+\begin{thebibliography}{9}
+
+\bibitem{SML65}
+Saunders Mac Lane: Categorical algebra., {\em Bull. AMS}, \textbf{71} (1965), 40-106., Zbl 0161.01601, MR 0171826, 
+
+\bibitem{SML76}
+Saunders Mac Lane: Topology and Logic as a Source of Algebras., {\em Bull. AMS}, \textbf{82}, Number 1, 1-36,
+January 1, 1976.
+
+\bibitem{WK2k10}
+\PMlinkexternal{Categorical algebra- basic definitions}{http://en.wikipedia.org/wiki/Categorical_algebra}
+
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

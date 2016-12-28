@@ -1,0 +1,472 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopicOnTheAlgebraicFoundationsOfQuantumAlgebraicTopology}
+\pmcreated{2013-03-22 18:14:21}
+\pmmodified{2013-03-22 18:14:21}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{topic on the algebraic foundations of quantum algebraic topology}
+\pmrecord{34}{40829}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{08A70}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{55-02}
+\pmclassification{msc}{81Q60}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{81R15}
+\pmsynonym{Algebraic Foundations of Quantum Algebraic Topology topic}{TopicOnTheAlgebraicFoundationsOfQuantumAlgebraicTopology}
+%\pmkeywords{research topics in Algebraic Foundations of Quantum Algebraic Topology}
+\pmrelated{QuantumAlgebraicTopology}
+\pmrelated{NonAbelianTheories}
+\pmrelated{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+ \newcommand{\<}{{\langle}}
+\pagestyle{myheadings}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\geometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+\subsection{Topic entry on the algebraic foundations of Quantum Algebraic Topology.}
+
+\textbf{(a). Quantum Algebraic Topology (QAT)} is defined as \emph{the mathematical and physical study of  general theories of quantum algebraic structures from the standpoint of Algebraic Topology, Category Theory and their Non-Abelian extensions in Higher Dimensional Algebra and Supercategories}
+
+\textbf{(b). Several suggested new QAT topics are:}
+
+\begin{enumerate}
+
+\item Poisson algebras, Quantization methods and Hamiltonian algebroids
+
+\item K-S Theorem and its Quantum algebraic consequences in QAT
+
+\item Logic Lattice algebras or Many-Valued (MV)  Logic algebras 
+
+\item Quantum MV-Logic algebras and $\L{}-M_n$-noncommutative lattice algebras
+
+\item Quantum Operator Algebras ( such as :   involution, *-algebras, or $*$-algebras, von Neumann algebras,
+, JB- and JL- algebras,   $C^*$ - or C*- algebras, 
+
+\item Quantum von Neumann algebra and subfactors
+
+\item Kac-Moody and K-algebras
+
+\item Hopf algebras, Quantum Groups and Quantum group algebras
+
+\item Quantum Groupoids and weak Hopf $C^*$-algebras
+
+\item Groupoid C*-Convolution algebras and *-Convolution Algebroids
+
+\item Quantum Spacetimes and Quantum Fundamental Groupoids 
+
+\item Quantum Double Algebras
+
+\item Quantum Gravity, supersymmetries, supergravity, superalgebras and graded `Lie' algebras
+
+\item Quantum Categorical algebra and Higher Dimensional, $\L{}-M_n$- Toposes
+
+\item Quantum R-categories, R-supercategories and Symmetry Breaking
+
+\item  Extended Quantum Symmetries in Higher Dimensional Algebras (HDA), such as:  \\
+algebroids, double algebroids, categorical algebroids, double groupoids, \\
+convolution algebroids, groupoid $C^*$ -convolution algebroids
+
+\item Universal algebras in R-Supercategories
+
+\item Supercategorical algebras (SA) as concrete interpretations of the Theory of Elementary Abstract Supercategories (ETAS). 
+
+\item  Quantum Non-Abelian Algebraic Topology (QNAAT)
+
+\item Noncommutative Geometry, Quantum Geometry, and Non-Abelian Quantum Algebraic Geometry
+
+\item Other -- Miscellaneous \textbf{[please add here your additions, changes, editing, 
+remarks, proofs, conjectures, and so on...]}
+
+\end{enumerate}
+
+\begin{thebibliography} {9}
+
+\bibitem{AS}
+Alfsen, E.M. and F. W. Schultz: \emph{Geometry of State Spaces of Operator Algebras}, Birk\"auser, Boston--Basel--Berlin (2003).
+
+\bibitem{AMF56}
+Atyiah, M.F. 1956. On the Krull-Schmidt theorem with applications to sheaves.
+\emph{Bull. Soc. Math. France}, \textbf{84}: 307--317.
+
+\bibitem{AMF56}
+Auslander, M. 1965. Coherent Functors. \emph{Proc. Conf. Cat. Algebra, La Jolla},
+189--231.
+  
+\bibitem{AS-BC2k}
+Awodey, S. \& Butz, C., 2000, Topological Completeness for Higher Order Logic., Journal of Symbolic Logic, 65, 3, 1168--1182. 
+
+
+\bibitem{AS96}
+Awodey, S., 1996, "Structure in Mathematics and Logic: A Categorical Perspective", Philosophia Mathematica, 3, 209--237. 
+
+\bibitem{AS2k4}
+Awodey, S., 2004, "An Answer to Hellman's Question: Does Category Theory Provide a Framework for Mathematical Structuralism", Philosophia Mathematica, 12, 54--64. 
+
+\bibitem{AS2k6}
+Awodey, S., 2006, Category Theory, Oxford: Clarendon Press. 
+
+\bibitem{BAJ-DJ98a}
+Baez, J. \& Dolan, J., 1998a, "Higher-Dimensional Algebra III. n-Categories and the Algebra of Opetopes", Advances in Mathematics, 135, 145--206.  
+
+
+\bibitem{BAJ-DJ2k1}
+Baez, J. \& Dolan, J., 2001, "From Finite Sets to Feynman Diagrams", Mathematics Unlimited -- 2001 and Beyond, Berlin: Springer, 29--50.  
+
+\bibitem{BAJ-DJ97}
+Baez, J., 1997, "An Introduction to n-Categories", Category Theory and Computer Science, Lecture Notes in Computer Science, 1290, Berlin: Springer-Verlag, 1--33. 
+
+\bibitem{ICB3}
+Baianu, I.C.: 1970, Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32}: 539-561.
+ 
+\bibitem{ICB4}
+Baianu, I.C.: 1971b, Categories, Functors and Quantum Algebraic
+Computations, in P. Suppes (ed.), \emph{Proceed. Fourth Intl. Congress Logic-Mathematics-Philosophy of Science}, September 1--4, 1971, Bucharest.
+
+\bibitem{ICBs5}
+Baianu, I.C. and D. Scripcariu: 1973, On Adjoint Dynamical Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{35}(4), 475--486.
+
+\bibitem{ICB5}
+Baianu, I.C.: 1973, Some Algebraic Properties of \emph{\textbf{(M,R)}} -- Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{35}, 213-217.
+
+\bibitem{ICB6}
+Baianu, I.C.: 1977, A Logical Model of Genetic Activities in \L ukasiewicz Algebras: The Non-linear Theory. \emph{Bulletin of Mathematical Biology},
+\textbf{39}: 249-258.
+
+\bibitem{Bgg2}
+Baianu, I. C., Glazebrook, J. F. and G. Georgescu: 2004, Categories of Quantum Automata and N-Valued \L ukasiewicz Algebras in Relation to Dynamic Bionetworks, \textbf{(M,R)}--Systems and Their Higher Dimensional Algebra, \emph{Abstract and Preprint of Report}: $\\http://www.ag.uiuc.edu/fs401/QAuto.pdf $ and $http://www.medicalupapers.com/quantum+automata+math+categories+baianu/$
+
+\bibitem{Bbg3}
+Baianu, I.C., R. Brown and J.F. Glazebrook. : 2007a, Categorical Ontology of Complex Spacetime Structures: The Emergence of Life and Human Consciousness, Axiomathes, 17: 35-168.
+
+\bibitem{Bggb4}
+Baianu, I.C.,  R. Brown and J. F. Glazebrook: 2007b, A Non-Abelian, Categorical Ontology of Spacetimes and Quantum Gravity, Axiomathes, 17: 169-225.
+
+\bibitem{Ba-We85}
+Barr, M. and Wells, C., 1985, Toposes, Triples and Theories, New York: Springer-Verlag.
+ 
+\bibitem{BM-CW99}
+Barr, M. and Wells, C., 1999, Category Theory for Computing Science, Montreal: CRM. 
+
+\bibitem{BJL81}
+Bell, J. L., 1981, "Category Theory and the Foundations of Mathematics", British Journal for the Philosophy of Science, 32, 349--358. 
+ 
+\bibitem{BJL82}
+Bell, J. L., 1982, "Categories, Toposes and Sets", Synthese, 51, 3, 293--337. 
+ 
+\bibitem{BJL86}
+Bell, J. L., 1986, "From Absolute to Local Mathematics", Synthese, 69, 3, 409--426. 
+
+\bibitem{BJL88} 
+Bell, J. L., 1988, Toposes and Local Set Theories: An Introduction, Oxford: Oxford University Press. 
+
+\bibitem{BG-MCLS99}
+Birkoff, G. \& Mac Lane, S., 1999, Algebra, 3rd ed., Providence: AMS.  
+
+\bibitem{Borceux94}
+Borceux, F.: 1994, \emph{Handbook of Categorical Algebra}, vols: 1--3, 
+in {\em Encyclopedia of Mathematics and its Applications} \textbf{50} to \textbf{52}, Cambridge University Press.
+
+\bibitem{Bourbaki1}
+Bourbaki, N. 1961 and 1964: \emph{Alg\`{e}bre commutative.},
+in \`{E}l\'{e}ments de Math\'{e}matique., Chs. 1--6., Hermann: Paris.
+
+\bibitem (BJk4)
+Brown, R. and G. Janelidze: 2004, Galois theory and a new homotopy
+double groupoid of a map of spaces, \emph{Applied Categorical
+Structures} \textbf{12}: 63-80.
+
+\bibitem{BHR2}
+Brown, R., Higgins, P. J. and R. Sivera,: 2007a, \emph{Non-Abelian
+Algebraic Topology}, in preparation.\\
+http://www.bangor.ac.uk/~mas010/nonab-a-t.html ; \\
+http://www.bangor.ac.uk/~mas010/nonab-t/partI010604.pdf
+
+\bibitem{BGB2k7b}
+Brown, R., Glazebrook, J. F. and I.C. Baianu.: 2007b, A Conceptual, Categorical and Higher Dimensional Algebra Framework of Universal Ontology and the Theory of Levels for Highly Complex Structures and Dynamics., \emph{Axiomathes} (17): 321--379.
+
+\bibitem{Br-Har-Ka-Po2k2}
+Brown, R., Hardie, K., Kamps, H. and T. Porter: 2002, The homotopy double groupoid of a Hausdorff space., \emph{Theory and Applications of Categories} \textbf{10}, 71-93.
+
+\bibitem{Br-Hardy76}
+Brown, R., and Hardy, J.P.L.:1976, Topological groupoids I: universal constructions, \emph{Math. Nachr.}, 71: 273-286.
+
+\bibitem{Br-Sp76}
+Brown, R. and Spencer, C.B.: 1976, Double groupoids and crossed modules, \emph{Cah.  Top. G\'{e}om. Diff.} \textbf{17}, 343-362.
+
+\bibitem{BR-SCB76}
+Brown R and Razak Salleh A (1999) Free crossed resolutions of groups and presentations of modules of
+identities among relations. {\em LMS J. Comput. Math.}, \textbf{2}: 25--61.
+
+\bibitem{BDA55}
+Buchsbaum, D. A.: 1955, Exact categories and duality., Trans. Amer. Math. Soc. \textbf{80}: 1-34.
+
+\bibitem{BDA55}
+Buchsbaum, D. A.: 1969, A note on homology in categories., Ann. of Math. \textbf{69}: 66-74.
+
+\bibitem{BL2k3}
+Bunge, M. and S. Lack: 2003, Van Kampen theorems for toposes, \emph{Adv. in Math.} \textbf{179}, 291-317.
+
+\bibitem{BM84}
+Bunge, M., 1984, "Toposes in Logic and Logic in Toposes", Topoi, 3, no. 1, 13-22. 
+
+\bibitem{BM-LS2k3}
+Bunge M, Lack S (2003) Van Kampen theorems for toposes. {\em Adv Math}, \textbf {179}: 291-317.
+
+\bibitem{CH-ES56}
+Cartan, H. and Eilenberg, S. 1956. {\em Homological Algebra}, Princeton Univ. Press: Pinceton. 
+
+
+\bibitem{CPM65}
+Cohen, P.M. 1965. {\em Universal Algebra}, Harper and Row: New York, London and Tokyo.
+
+\bibitem{CA94}
+Connes A 1994. \emph{Noncommutative geometry}. Academic Press: New York.
+
+\bibitem{CR-LL63}
+Croisot, R. and Lesieur, L. 1963. \emph{Alg\`ebre noeth\'erienne non-commutative.},
+Gauthier-Villard: Paris.
+
+\bibitem{QNAAT}
+Baianu, I. C. et al. 2008. Quantum Non-Abelian Algebraic Topology (QNAAT): PM Exposition lec $id=68$.
+
+\end{thebibliography}
+
+\textbf{[This is an entry-in-progress for a new topic entry on the Algebraic Foundations of Quantum Algebraic Topology.]}
+
+%%%%%
+%%%%%
+\end{document}

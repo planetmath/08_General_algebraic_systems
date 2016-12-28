@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroundedRelation}
+\pmcreated{2013-03-22 17:48:38}
+\pmmodified{2013-03-22 17:48:38}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{grounded relation}
+\pmrecord{11}{40273}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A70}
+\pmclassification{msc}{08A02}
+\pmclassification{msc}{03G15}
+\pmclassification{msc}{03E20}
+\pmclassification{msc}{03C05}
+\pmclassification{msc}{03B10}
+\pmrelated{Relation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \textbf{grounded relation} over a sequence of sets is a mathematical object consisting of two components.  The first component is a subset of the cartesian product taken over the given sequence of sets, which sets are called the \textit{domains} of the relation.  The second component is just the cartesian product itself.
+
+For example, if $L$ is a grounded relation over a finite sequence of sets, $X_1, \ldots, X_k$, then $L$ has the form $L = (F(L), G(L))$, where $F(L) \subseteq G(L) = X_1 \times \ldots \times X_k$.
+
+\section{Remarks}
+
+\begin{itemize}
+\item
+In various language that is used, $F(L)$ may be called the \textit{figure} or the \textit{graph} of $L$, while $G(L)$ may be called the \textit{ground} of $L$.
+\item
+The default assumption in almost all applications is that the domains of the grounded relation are nonempty sets, hence departures from this assumption need to be noted explicitly.
+\item
+In many applications all relations are considered relative to explicitly specified grounds.  In these settings it is conventional to refer to grounded relations somewhat more simply as ``relations".
+\item
+One often hears or reads the usage $``L \subseteq X_1 \times \ldots \times X_k"$ when the speaker or writer really means $``F(L) \subseteq X_1 \times \ldots \times X_k"$.  Be charitable in your interpretations.
+\item
+The cardinality of $G(L)$ is referred to as the \textit{adicity} or the \textit{arity} of the relation.  For example, in the finite case, $L$ may be described as $k$\textit{-adic} or $k$\textit{-ary}.
+\item
+The set $\mathrm{dom}_j(L) := X_j$ is referred to as the $j^{\mbox{\small{th}}}$ \textit{domain} of the relation.
+\item
+In the special case where $k = 2$, the set $X_1$ is called ``the domain" and the set $X_2$ is called ``the codomain" of the relation.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

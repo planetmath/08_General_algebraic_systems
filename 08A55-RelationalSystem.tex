@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationalSystem}
+\pmcreated{2013-03-22 16:35:33}
+\pmmodified{2013-03-22 16:35:33}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{relational system}
+\pmrecord{16}{38788}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A55}
+\pmclassification{msc}{03C07}
+\pmclassification{msc}{08A02}
+\pmsynonym{relational structure}{RelationalSystem}
+\pmrelated{AlgebraicSystem}
+\pmrelated{PartialAlgebraicSystem}
+\pmrelated{Structure}
+\pmrelated{StructuresAndSatisfaction}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{relational system}, loosely speaking, is a pair $(A,R)$ where $A$ is a set and $R$ is a set of finitary relations defined on $A$ (a finitary relation is just an $n$-ary relation where $n\in\mathbb{N}$; when $n=1$, it is called a property).  Since an $n$-ary operator on a set is an $(n+1)$-ary \PMlinkescapetext{relation on} the set, a relational system can be thought of as a generalization of an algebraic system.  We can formalize the notion of a relation system as follows:
+\begin{quote}
+Call a set $R$ a relation set, if there is a function $f:R\to \mathbb{N}$, the set of natural numbers.  For each $r\in R$, call $f(r)$ the arity of $r$.
+
+Let $A$ be a set and $R$ a \emph{relation set}.  The pair $(A,R)$ is called an $R$-relational system if there is a set $R_A$ such that
+\begin{itemize}
+\item $R_A$ is a set of finitary relations on $A$, called the \emph{relation set} of $A$, and
+\item there is a one-to-one correspondence between $R$ and $R_A$, given by $r \mapsto r_A$, such that the $f(r)=$ the arity of $r_A$.
+\end{itemize}
+\end{quote}
+
+Since operators and partial operators are special types of relations.  algebraic systems and partial algebraic systems can be treated as relational systems.
+
+Below are some exmamples of relational systems:
+\begin{itemize}
+\item any algebraic or partial algebraic system.
+\item a poset $(P,\lbrace \le_P\rbrace)$, where $\le_P$ is a binary relation, called the partial ordering, on $P$.  A lattice, generally considered an algebraic system, can also be considered as a relational system, because it is a poset, and that $\le$ alone defines the algebraic operations ($\vee$ and $\wedge$).
+\item a pointed set $(A,\lbrace a\rbrace)$ is also a relational system, where a unary relation, or property, is the singled-out element $a\in A$.  A pointed set is also an algebraic system, if we treat $a$ as the lone nullary operator (constant).
+\item a bounded poset $(P,\le_P,0,1)$ is a relational system.  It is a poset, with two unary relations $\lbrace 0\rbrace$ and $\lbrace 1\rbrace$.
+\item a Buekenhout-Tits geometry can be thought of as a relational system.  It consists of a set $\Gamma$ with two binary relations on it: one is an equivalence relation $T$ called type, and the other is a symmetric reflexive relation $\#$ called incidence, such that if $a\#b$ and $aTb$, then $a=b$ (incident objects of the same type are identical).
+\item ordered algebraic structures, such as ordered groups $(G,\lbrace \cdot\mbox{, }^{-1}\mbox{, }e\mbox{, }\le_G\rbrace)$ and ordered rings $(R,\lbrace +\mbox{, }-\mbox{, }\cdot\mbox{, }^{-1}\mbox{, }0\mbox{, }\le_R\rbrace)$ are also relational systems.  They are not algebraic systems because of the additional ordering relations ($\le_G$ and $\le_R$) defined on these objects.  Note that these orderings are generally considered total orders.
+\item ordered partial algebras such as ordered fields $(D,\lbrace +\mbox{, }-\mbox{, }\cdot\mbox{, }^{-1}\mbox{, }0\mbox{, }1\mbox{, }\le_F\rbrace)$, etc...  
+\item structures that are not relational are \PMlinkname{complete lattices}{CompleteLattice} and topological spaces, because the operations involved are infinitary.
+\end{itemize}
+
+\textbf{Remark}.  Relational systems and algebraic systems are both examples of structures in model theory.  Although an algebraic system is a relational system in the sense discussed above, they are treated as distinct entities.   A structure involves three objects, a set $A$, a set of function symbols $F$, and a set of relation symbols $R$, so a relational system is a structure where $F=\varnothing$ and an algebraic system is a structure where $R=\varnothing$.
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

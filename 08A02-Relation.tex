@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Relation}
+\pmcreated{2013-03-22 11:43:28}
+\pmmodified{2013-03-22 11:43:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{relation}
+\pmrecord{33}{30122}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A02}
+\pmclassification{msc}{03E20}
+\pmclassification{msc}{82C35}
+%\pmkeywords{cartesian ordered pair}
+\pmrelated{Poset}
+\pmrelated{PartialOrder}
+\pmrelated{TotalOrder}
+\pmrelated{OrderingRelation}
+\pmrelated{Function}
+\pmrelated{WellFoundedRelation}
+\pmrelated{Property2}
+\pmrelated{GroundedRelation}
+\pmrelated{RelationBetweenObjects}
+\pmdefines{unary relation}
+\pmdefines{binary relation}
+\pmdefines{ternary relation}
+\pmdefines{$n$-ary relation}
+\pmdefines{domain}
+\pmdefines{range}
+\pmdefines{nullary relation}
+\pmdefines{field}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\Z{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{mean}
+
+\subsubsection*{Binary Relations}
+
+Before describing what a \emph{relation} is generally, let us define a more specific kind of a relation: a \emph{binary relation}.  Basically, a binary relation $R$ involves objects coming from two collections $A,B$, where the objects are paired up so that each pair consists of an object from $A$, and an object from $B$.  
+
+More formally, a \emph{binary relation} is a subset $R$ of the \PMlinkname{Cartesian product}{CartesianProduct} of two sets $A$ and $B$.  One may write $$a\: R\: b$$ to indicate that the ordered pair $(a, b)$ is an element of $R$.  A subset of $A\times A$ is simply called a binary relation on $A$.  If $R$ is a binary relation on $A$, then we write $$a_1 \: R \: a_2 \: R \: a_3 \: \cdots \: a_{n-1} \: R \: a_n $$ to mean $a_1 \: R\: a_2, a_2\: R\: a_3, \ldots,$ and $a_{n-1}\: R \: a_n$.
+
+Given a binary relation $R\subseteq A\times B$, the \emph{domain} $\operatorname{dom}(R)$ of $R$ is the set of elements in $A$ forming parts of the pairs in $R$.  In other words, $$\operatorname{dom}(R):=\lbrace x\in A\mid (x,y)\in R \mbox{ for some }y \in B \rbrace$$ and the \emph{range} $\operatorname{ran}(R)$ of $R$ is the set of parts of pairs of $R$ coming from $B$: $$\operatorname{ran}(R):=\lbrace y\in B\mid (x,y)\in R \mbox{ for some }x\in A \rbrace.$$
+
+An example of a binary relation is the less-than relation on the integers, i.e.,
+$<$ $\subseteq\Z\times\Z$.  $(1, 2) \in$ $<$, but $(2, 1) \notin$ $<$.
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+In set theory, a binary relation is simply a set of ordered pairs (of sets or classes, depending on the axiom system used).  Notice that, unlike the previous definition, sets (or classes) $A$ and $B$ are not specified in advance.  Given a (binary) relation $R$, the domain of $R$ is the set (or class) of elements $a$ such that $a R b$ for some $b$, and the range of $R$ is the set (or class) or elements $b$ such that $a R b$ for some $a$.  The union and the domain and the range of $R$ is called the \emph{field} of $R$.
+\item
+It may be possible to define a relation over a class.  For example, if $\mathcal{C}$ is the class of all sets, then $\in$ can be thought of as a binary relation on $\mathcal{C}$.
+\item
+In term rewriting theory, a binary relation on a set is sometimes called a \emph{reduction}, and is written $\to$.  This is to signify that $a\to b$ means that the element $a$ is being ``reduced'' to $b$ via $\to$.
+\end{enumerate}
+
+\subsubsection*{Arbitrary Relations}
+
+From the definition of a binary relation, we can easily generalize it to that of an arbitrary relation.  Since a binary relation involves two sets, an arbitrary relation involves an arbitrary collection of sets.  More specifically, a \emph{relation} $R$ is a subset of some \PMlinkname{Cartesian product}{GeneralizedCartesianProduct} of a collection of sets.  In symbol, this is $$R\subseteq \prod_{i\in I} A_i$$ where each $A_i$ is a set, indexed by some set $I$.
+
+From this more general definition, we see that a binary relation is just a relation where $I$ has two elements.  In addition, an \emph{$n$-ary relation} is a relation where the cardinality of $I$ is $n$ ($n$ finite).  In symbol, we have $$R\subseteq\prod_{i=1}^n A_i.$$
+It is not hard to see that any $n$-ary relation where $n>1$ can be viewed as a binary relation in $n-1$ different ways, for $$R\subseteq A_1\times A_2\times \cdots \times A_n= \prod_{i=1}^j A_i\times \prod_{i=j+1}^n A_i,$$ where $j$ ranges from $1$ through $n-1$.
+
+A common name for a $3$-ary relation is a \emph{ternary relation}.  It is also possible to have a \emph{$1$-ary relation}, or commonly known as a \emph{unary relation}, which is nothing but a subset of some set.
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+Following from the first remark from the previous section, relations of higher arity can be inductively defined: for $n>1$, an $(n+1)$-ary relation is a binary relation whose domain is an $n$-ary relation.  In this setting, a ``unary relation'' and relations whose arity is of ``arbitrary'' cardinality are not defined.
+\item
+A relation can also be viewed as a function (which itself is a relation).  Let $R\subseteq A:=\prod_{i\in I} A_i$.  As a subset of $A$, $R$ can be identified with the characteristic function $$\chi_R:A\to \lbrace 0,1\rbrace,$$ where $\chi_R(x)=1$ iff $x\in R$ and $\chi_R(x)=0$ otherwise.  Therefore, an $n$-ary relation is equivalent to an $(n+1)$-ary characteristic function.  From this, one may say that a $0$-ary, or a \emph{nullary relation} is a unary characteristic function.  In other words, a nullary relation is just a an element in $\lbrace 0,1\rbrace$ (or truth/falsity).
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

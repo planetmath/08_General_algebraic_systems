@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubalgebraOfAPartialAlgebra}
+\pmcreated{2013-03-22 18:42:54}
+\pmmodified{2013-03-22 18:42:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subalgebra of a partial algebra}
+\pmrecord{10}{41481}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A55}
+\pmclassification{msc}{03E99}
+\pmclassification{msc}{08A62}
+\pmdefines{weak subalgebra}
+\pmdefines{relative subalgebra}
+\pmdefines{subalgebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Unlike an algebraic system, where there is only one way to define a subalgebra, there are several ways to define a subalgebra of a partial algebra.  
+
+Suppose $\boldsymbol{A}$ and $\boldsymbol{B}$ are partial algebras of type $\tau$:
+\begin{enumerate}
+\item $\boldsymbol{B}$ is a \emph{weak subalgebra} of $\boldsymbol{A}$ if $B\subseteq A$, and $f_{\boldsymbol{B}}$ is a subfunction of $f_{\boldsymbol{A}}$ for every operator symbol $f\in \tau$.
+
+In words, $\boldsymbol{B}$ is a weak subalgebra of $\boldsymbol{A}$ iff $B\subseteq A$, and for each $n$-ary symbol $f\in \tau$, if $b_1,\ldots, b_n \in B$ such that $f_B(b_1,\ldots, b_n)$ is defined, then $f_A(b_1,\ldots, b_n)$ is also defined, and is equal to $f_B(b_1, \ldots, b_n)$.
+\item $\boldsymbol{B}$ is a \emph{relative subalgebra} of $\boldsymbol{A}$ if $B\subseteq A$, and $f_{\boldsymbol{B}}$ is a \PMlinkname{restriction of $f_{\boldsymbol{A}}$ relative to $B$}{Subfunction} for every operator symbol $f\in \tau$.
+
+In words, $\boldsymbol{B}$ is a relative subalgebra of $\boldsymbol{A}$ iff $B\subseteq A$, and for each $n$-ary symbol $f\in \tau$, given $b_1,\ldots, b_n \in B$, $f_B(b_1,\ldots, b_n)$ is defined iff $f_A(b_1,\ldots, b_n)$ is and belongs to $B$, and they are equal.
+\item $\boldsymbol{B}$ is a \emph{subalgebra} of $\boldsymbol{A}$ if $B\subseteq A$, and $f_{\boldsymbol{B}}$ is a \PMlinkname{restriction}{Subfunction} of $f_{\boldsymbol{A}}$ for every operator symbol $f\in \tau$.
+
+In words, $\boldsymbol{B}$ is a subalgebra of $\boldsymbol{A}$ iff $B\subseteq A$, and for each $n$-ary symbol $f\in \tau$, given $b_1,\ldots, b_n \in B$, $f_B(b_1,\ldots, b_n)$ is defined iff $f_A(b_1,\ldots, b_n)$ is, and they are equal.
+\end{enumerate}
+
+Notice that if $\boldsymbol{B}$ is a weak subalgebra of $\boldsymbol{A}$, then every constant of $\boldsymbol{B}$ is  a constant of $\boldsymbol{A}$, and vice versa.
+
+Every subalgebra is a relative subalgebra, and every relative subalgebra is a weak subalgebra.  But the converse is false for both statements.  Below are two examples.
+
+\begin{enumerate}
+\item  Let $F$ be a field.  Then every subalgebra of $F$ is a subfield, and every relative subalgebra of $F$ is a subring.
+\item
+Let $A$ be the set of all non-negative integers, and $-_A$ the ordinary subtraction on integers.  Consider the partial algebra $(A, -_A)$.
+\begin{itemize}
+\item Let $B=A$ and $-_B$ the usual subtraction on integers, but $x-_B y$ is only defined when $x,y\in B$ have the same parity.  Then $(B, -_B)$ is a weak subalgebra of $(A, -_A)$.  
+\item Let $C$ be the set of all positive integers, and $-_C$ the ordinary subtraction.  Then $(C,-_C)$ is a relative subalgebra of $(A,-_A)$.  
+\item Let $D$ be the set $\lbrace 0,1,\ldots, n\rbrace$ and $-_D$ the ordinary subtraction.  Then $(D,-_D)$ is a subalgebra of $(A,-_A)$.
+\end{itemize}
+Notice that $(B,-_B)$ is not a relative subalgebra of $(A,-_A)$, since $7-_B 6$ is not defined, even though $7 -A 6 = 1\in B$, and and $(C,-_C)$ is not a subalgebra of $(A,-_A)$, since $1 -_C 1$ is not defined in $C$, even though $1 -A 1$ is defined in $A$.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+A weak subalgebra $\boldsymbol{B}$ of $\boldsymbol{A}$ is a relative subalgebra iff given $b_1,\ldots, b_n\in B$ such that $f_A(b_1,\ldots, b_n)$ is defined and is in $B$, then $f_B(b_1,\ldots, b_n)$ is defined.  A relative subalgebra $\boldsymbol{B}$ of $\boldsymbol{A}$ is a subalgebra iff whenever $f_A(b_1,\ldots, b_n)$ is defined for $b_i\in B$, it is in $B$.
+\item
+Let $\boldsymbol{A}$ be a partial algebra of type $\tau$, and $B\subseteq A$.  For each $n$-ary function symbol $f\in \tau$, define $f_{\boldsymbol{B}}$ on $B$ as follows: $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$ is defined in $B$ iff $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined in $A$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n)\in B$.  This turns $\boldsymbol{B}$ into a partial algebra.  However, $\boldsymbol{B}$ may not be of type $\tau$, since $f_{\boldsymbol{B}}$ may not be defined at all on $B$.  When $\boldsymbol{B}$ is a partial algebra of type $\tau$, it is a relative subalgebra of $\boldsymbol{A}$.
+\item
+When $\boldsymbol{A}$ is an algebra, all three notions of subalgebras are equivalent (assuming that the partial operations on a weak subalgebra are all total).
+\end{enumerate}
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

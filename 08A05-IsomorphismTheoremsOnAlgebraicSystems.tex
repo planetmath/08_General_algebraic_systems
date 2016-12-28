@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsomorphismTheoremsOnAlgebraicSystems}
+\pmcreated{2013-03-22 16:45:28}
+\pmmodified{2013-03-22 16:45:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{isomorphism theorems on algebraic systems}
+\pmrecord{8}{38984}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+In this entry, all algebraic systems are of the same type; they are all $O$-algebras.  We list the generalizations of three famous isomorphism theorems, familiar to those who have studied abstract algebra in college.
+
+\begin{thm}  If $f:A\to B$ is a homomorphism from algebras $A$ and $B$.  Then $$A/\ker(f)\cong f(A).$$
+\end{thm}
+
+\begin{thm}  If $B\subseteq A$ are algebras and $\mathfrak{C}$ is a \PMlinkname{congruence}{CongruenceRelationOnAnAlgebraicSystem} on $A$, then $$B/\mathfrak{C}_B\cong B^{\mathfrak{C}}/\mathfrak{C},$$
+where $\mathfrak{C}_B$ is the congruence restricted to $B$, and $B^{\mathfrak{C}}$ is the extension of $B$ by $\mathfrak{C}$.
+\end{thm}
+
+\begin{thm}  If $A$ is an algebra and $\mathfrak{C}\subseteq \mathfrak{D}$ are congruences on $A$.  Then 
+\begin{enumerate}
+\item
+there is a unique homomorphism $f:A/\mathfrak{C}\to A/\mathfrak{D}$ such that 
+$$\xymatrix{
+& A \ar[dl]_{[\cdot]_{\mathfrak{C}}} \ar[dr]^{[\cdot]_{\mathfrak{D}}} & \\
+A/\mathfrak{C} \ar[rr]^f && A/\mathfrak{D}
+}
+$$
+where the downward pointing arrows are the natural projections of $A$ onto the quotient algebras (induced by the respective congruences).  
+\item
+Furthermore, if $ker(f)=\mathfrak{D}/\mathfrak{C}$, then 
+\begin{itemize}
+\item
+$\mathfrak{D}/\mathfrak{C}$ is a congruence on $A/\mathfrak{C}$, and 
+\item
+there is a unique isomorphism $f':A/\mathfrak{C} \to (A/\mathfrak{C})/(\mathfrak{D}/\mathfrak{C})$ satisfying the equation $f=[\cdot]_{\mathfrak{D}/\mathfrak{C}}\circ f'$.  In other words, 
+$$(A/\mathfrak{C})/(\mathfrak{D}/\mathfrak{C})\cong A/\mathfrak{D}.$$
+\end{itemize}
+\end{enumerate}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

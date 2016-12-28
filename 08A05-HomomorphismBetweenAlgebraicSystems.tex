@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomomorphismBetweenAlgebraicSystems}
+\pmcreated{2013-03-22 15:55:36}
+\pmmodified{2013-03-22 15:55:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{homomorphism between algebraic systems}
+\pmrecord{8}{37934}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmdefines{compatible function}
+\pmdefines{homomorphism}
+\pmdefines{monomorphism}
+\pmdefines{epimorphism}
+\pmdefines{endomorphism}
+\pmdefines{isomorphism}
+\pmdefines{automorphism}
+\pmdefines{homomorphic image}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+Let $(A,O),(B,O)$ be two algebraic systems with operator set $O$.  Given operators $\omega_A$ on $A$ and $\omega_B$ on $B$, with $\omega\in O$ and $n=$ arity of $\omega$, a function $f:A\to B$ is said to be \emph{compatible} with $\omega$ if $$f(\omega_A(a_1,\ldots,a_n))=\omega_B(f(a_1),\ldots,f(a_n)).$$
+
+Dropping the subscript, we now simply identify $\omega\in O$ as an operator for both algebras $A$ and $B$.  If a function $f:A\to B$ is compatible with every operator $\omega\in O$, then we say that $f$ is a \emph{homomorphism} from $A$ to $B$.  If $O$ contains a constant operator $\omega$ such that $a\in A$ and $b\in B$ are two constants assigned by $\omega$, then any homomorphism $f$ from $A$ to $B$ maps $a$ to $b$.
+
+\textbf{Examples}.
+\begin{enumerate}
+\item When $O$ is the empty set, any function from $A$ to $B$ is a homomorphism.  
+\item When $O$ is a singleton consisting of a constant operator, a homomorphism is then a function $f$ from one pointed set $(A,p)$ to another $(B,q)$, such that $f(p)=q$.
+\item A homomorphism defined in any one of the well known algebraic systems, such as groups, modules, rings, and \PMlinkname{lattices}{Lattice} is consistent with the more general definition given here.  The essential thing to remember is that a homomorphism preserves constants, so that between two rings with 1, both the additive identity 0 and the multiplicative identity 1 are preserved by this homomorphism.  Similarly, a homomorphism between two \PMlinkname{bounded lattices}{BoundedLattice} is called a $\lbrace 0,1\rbrace$-\PMlinkname{lattice homomorphism}{LatticeHomomorphism} because it preserves both 0 and 1, the bottom and top elements of the lattices.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Like the familiar algebras, once a homomorphism is defined, special types of homomorphisms can now be named: 
+\begin{itemize}
+\item a homomorphism that is one-to-one is a \emph{monomorphism}; 
+\item an onto homomorphism is an \emph{epimorphism}; 
+\item an \emph{isomorphism} is both a monomorphism and an epimorphism; 
+\item a homomorphism such that its codomain is its domain is called an \emph{endomorphism}; 
+\item finally, an \emph{automorphism} is an endomorphism that is also an isomorphism.
+\end{itemize}
+\item All trivial algebraic systems (of the same type) are isomorphic.
+\item
+If $f:A\to B$ is a homomorphism, then the image $f(A)$ is a subalgebra of $B$.  If $\omega_B$ is an $n$-ary operator on $B$, and $c_1,\ldots,c_n\in f(A)$, then $\omega_B(c_1,\ldots,c_n)=\omega_B(f(a_1),\ldots,f(a_n))=f(\omega_A(a_1,\ldots, a_n))\in f(A)$.  $f(A)$ is sometimes called the \emph{homomorphic image} of $f$ in $B$ to emphasize the fact that $f$ is a homomorphism.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

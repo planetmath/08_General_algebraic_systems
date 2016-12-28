@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfAlgebraicSystems}
+\pmcreated{2013-03-22 18:40:11}
+\pmmodified{2013-03-22 18:40:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{examples of algebraic systems}
+\pmrecord{16}{41414}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{03E99}
+\pmclassification{msc}{08A62}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Selected examples of algebraic systems are specified below.
+
+\begin{enumerate}
+\item A set is an algebra where $\tau=\varnothing$.
+\item A pointed set is an algebra of type $\langle 0\rangle$, where $0$ corresponds to the designated element in the set.
+\item An algebra of type $\langle 2\rangle$ is called a groupoid.  Another algebra of this type is a semigroup.
+\item A monoid is an algebra of type $\langle 2,0\rangle$.  However, not every algebra of type $\langle 2,0\rangle$ is a monoid.
+\item A group is an algebraic system of type $\langle 2,1,0\rangle$, where $ 2$ corresponds to the arity of the multiplication, $1$ the multiplicative inverse, and $0$ the multiplicative identity.
+\item A ring is an algebraic system of type $\langle 2,2,1,0,0\rangle$, where the two $2$'s represent the arities of  addition and multiplication, $1$ the additive inverse, and $0$'s the additive and multiplicative identities. 
+\item A lattice is an algebraic system of type $\langle 2,2\rangle$.  The two binary operations are meet and join.
+\item A bounded lattice is an algebraic system of type $\langle 2,2,0,0\rangle$.  Besides the meet and join operations, it has two constants, its top $1$ and bottom $0$.
+\item A uniquely complemented lattice is an algebraic system of the type $\langle 2,2,1,0,0\rangle$.  In addition to having the operations of a bounded lattice, there is a unary operator taking each element to its unique complement.  Note that it has the same type as the type of a group.
+\item A quandle is an algebraic system of type $\langle 2,2,\rangle$.  It has the same type as a lattice.
+\item A quasigroup may be thought of as a algebraic system of type $\langle 2\rangle$, that of a groupoid, or $\langle 2,2,2\rangle$, depending on the definition used.  A loop, as a quasigroup with an identity, is an algebraic system of type $\langle 0,q\rangle$, where $q$ is the type of a quasigroup.
+\item An \PMlinkname{$n$-group}{PolyadicSemigroup} is an algebraic system of type $\langle n\rangle$.
+\item A left module over a ring $R$ is an algebraic system.  Its type is $\langle 2, 1, (1)_{r\in R}, 0\rangle$, where $2$ is the arity of addition, the first $1$ the additive inverse, and the rest of the $1$'s represent the arity of left scalar multiplication by $r$, for each $r\in R$, and finally $0$ the (arity) of additive identity.
+\item The set $\overline{V}$ of all well-formed formulas over a set $V$ of propositional variables can be thought of as an algebraic system, as each of the logical connectives as an operation on $\overline{V}$ may be associated with a finitary operation on $\overline{V}$.  In classical propositional logic, the algebraic system may be of type $\langle 1,2\rangle$, if we consider $\neg$ and $\vee$ as the only logical connectives; or it may be of type $\langle 1,2,2,2,2\rangle$, if the full set $\lbrace \neg, \vee, \wedge, \to, \leftrightarrow \rbrace$ is used.
+\end{enumerate}
+
+Below are some non-examples of algebraic systems:
+
+\begin{enumerate}
+\item A complete lattice is not, in general, an algebraic system because the arbitrary meet and join operations are not finitary.
+\item A field is not an algebraic system, since, in addition to the five operations of a ring, there is the multiplicative inverse operation, which is not defined for $0$.
+\item A small category may be defined as a set with one partial binary operation on it.  Unless the category has only one object (so that the operation is everywhere defined), it is in general not an algebraic system.
+\end{enumerate}
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\bibitem{pj} P. Jipsen: {\em \PMlinkexternal{Mathematical Structures: Homepage}{http://math.chapman.edu/cgi-bin/structures?HomePage}}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

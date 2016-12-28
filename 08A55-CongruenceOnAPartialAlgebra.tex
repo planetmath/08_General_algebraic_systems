@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CongruenceOnAPartialAlgebra}
+\pmcreated{2013-03-22 18:43:01}
+\pmmodified{2013-03-22 18:43:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{congruence on a partial algebra}
+\pmrecord{14}{41483}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A55}
+\pmclassification{msc}{03E99}
+\pmclassification{msc}{08A62}
+\pmsynonym{congruence}{CongruenceOnAPartialAlgebra}
+\pmsynonym{strong congruence}{CongruenceOnAPartialAlgebra}
+\pmsynonym{quotient algebra}{CongruenceOnAPartialAlgebra}
+\pmdefines{congruence relation}
+\pmdefines{strong congruence relation}
+\pmdefines{quotient partial algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsubsection*{Definition}
+
+There are two types of congruences on a partial algebra $\boldsymbol{A}$, both are special types of a certain equivalence relation on $A$:
+\begin{enumerate}
+\item 
+$\Theta$ is a \emph{congruence relation} on $\boldsymbol{A}$ if, given that 
+\begin{itemize}
+\item $a_1\equiv b_1 \pmod{\Theta}, \ldots, a_n \equiv b_n \pmod{\Theta}$,
+\item both $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ are defined,
+\end{itemize}
+then $f_{\boldsymbol{A}}(a_1,\ldots, a_n) \equiv f_{\boldsymbol{A}}(b_1,\ldots, b_n) \pmod{\Theta}$.
+\item
+$\Theta$ is a \emph{strong congruence relation} on $\boldsymbol{A}$ if it is a congruence relation on $\boldsymbol{A}$, and, given 
+\begin{itemize}
+\item $a_1\equiv b_1 \pmod{\Theta}, \ldots, a_n \equiv b_n \pmod{\Theta}$, 
+\item $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined,
+\end{itemize}
+then $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined.
+\end{enumerate}
+
+\begin{prop} If $\phi:\boldsymbol{A}\to \boldsymbol{B}$ is a homomorphism, then the equivalence relation $E_{\phi}$ induced by $\phi$ on $A$ is a congruence relation.  Furthermore, if $\phi$ is a strong, so is $E_{\phi}$. \end{prop}
+
+\begin{proof}  
+Let $f\in \tau$ be an $n$-ary function symbol.  Suppose $a_i \equiv b_i \pmod{E_{\phi}}$ and both $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ are defined.  Then $\phi(a_i)=\phi(b_i)$, and therefore $$\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))= f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))= f_{\boldsymbol{B}}(\phi(b_1),\ldots, \phi(b_n)) = \phi(f_{\boldsymbol{A}}(b_1,\ldots, b_n)),$$ so $f_{\boldsymbol{A}}(a_1,\ldots, a_n) \equiv f_{\boldsymbol{A}}(b_1,\ldots, b_n) \pmod{E_{\phi}}$.  In other words, $E_{\phi}$ is a congruence relation.
+
+Now, suppose in addition that $\phi$ is a strong homomorphism.  Again, let $a_i \equiv b_i \pmod{E_{\phi}}$.  Assume $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  Since $\phi(a_i)=\phi(b_i)$, we get $$\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))= f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))=f_{\boldsymbol{B}}(\phi(b_1),\ldots, \phi(b_n)).$$  Since $\phi$ is strong, $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined, which means that $E_{\phi}$ is strong.
+\end{proof}
+
+\subsubsection*{Congruences as Subalgebras}
+
+If $\boldsymbol{A}$ is a partial algebra of type $\tau$, then the direct power $\boldsymbol{A}^2$ is a partial algebra of type $\tau$.  A binary relation $\Theta$ on $A$ may be viewed as a subset of $A^2$.  For each $n$-ary operation $f_{\boldsymbol{A}^2}$ on $\boldsymbol{A}^2$, take the restriction on $\Theta$, and call it $f_{\boldsymbol{\Theta}}$.  For $a_i\in \Theta$, $f_{\boldsymbol{\Theta}}(a_1,\ldots, a_n)$ is defined in $\Theta$ iff $f_{\boldsymbol{A}^2}(a_1,\ldots, a_n)$ is defined at all, and its value is in $\Theta$.  When $f_{\boldsymbol{\Theta}}(a_1,\ldots, a_n)$ is defined in $\Theta$, its value is set as $f_{\boldsymbol{A}^2}(a_1,\ldots, a_n)$.  This turns $\boldsymbol{\Theta}$ into a partial algebra.  However, the type of $\boldsymbol{\Theta}$ is $\tau$ only when $f_{\boldsymbol{\Theta}}$ is non-empty for each function symbol $f\in \tau$.  In particular, 
+
+\begin{prop} If $\Theta$ is reflexive, then $\boldsymbol{\Theta}$ is a relative subalgebra of $\boldsymbol{A}^2$. \end{prop}
+\begin{proof}  Pick any $n$-ary function symbol $f\in \tau$.  Then $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined for some $a_i \in A$.  Then $f_{\boldsymbol{A}^2}((a_1,a_1), \ldots, (a_n,a_n))$ is defined and is equal to $(f_{\boldsymbol{A}}(a_1, \ldots, a_n),f_{\boldsymbol{A}}(a_1, \ldots, a_n))$, which is in $\Theta$, since $\Theta$ is reflexive.  This shows that $f_{\boldsymbol{\Theta}}((a_1,a_1), \ldots, (a_n,a_n))$ is defined.  As a result, $\boldsymbol{\Theta}$ is a partial algebra of type $\tau$.  Furthermore, by virtue of the way $f_{\boldsymbol{\Theta}}$ is defined for each $f\in \tau$, $\boldsymbol{\Theta}$ is a relative subalgebra of $\boldsymbol{A}$.
+\end{proof}
+
+\begin{prop} An equivalence relation $\Theta$ on $A$ is a congruence iff $\boldsymbol{\Theta}$ is a subalgebra of $\boldsymbol{A}^2$. \end{prop}
+\begin{proof}  First, assume that $\Theta$ is a congruence relation on $A$.  Since $\Theta$ is reflexive, $\boldsymbol{\Theta}$ is a relative subalgebra of $\boldsymbol{A}^2$.  Now, suppose $f_{\boldsymbol{A}^2}((a_1,b_1),\ldots, (a_n,b_n))$ exists, where $a_i\equiv b_i \pmod{\Theta}$.  Then $f_{\boldsymbol{A}}(a_1,\ldots, a_n), f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ both exist.  Since $\Theta$ is a congruence, $f_{\boldsymbol{A}}(a_1,\ldots, a_n) \equiv f_{\boldsymbol{A}}(b_1,\ldots, b_n) \pmod{\Theta}$.  In other words, $(f_{\boldsymbol{A}}(a_1,\ldots, a_n), f_{\boldsymbol{A}}(b_1,\ldots, b_n)) \in \Theta$.  Hence $\boldsymbol{\Theta}$ is a subalgebra of $\boldsymbol{A}^2$.
+
+Conversely, assume $\boldsymbol{\Theta}$ is a subalgebra of $\boldsymbol{A}^2$.  Suppose $(a_i,b_i)\in \Theta$ and both $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ are defined.  Then $f_{\boldsymbol{A}^2}((a_1,b_1),\ldots, (a_n,b_n))$ is defined.  Since $\boldsymbol{\Theta}$ is a subalgebra of $\boldsymbol{A}^2$, $f_{\boldsymbol{\Theta}}((a_1,b_1),\ldots, (a_n,b_n))$ is also defined, and $(f_{\boldsymbol{A}}(a_1,\ldots, a_n), f_{\boldsymbol{A}}(b_1,\ldots, b_n))  = f_{\boldsymbol{A}^2}((a_1,b_1),\ldots, (a_n,b_n)) = f_{\boldsymbol{\Theta}}((a_1,b_1),\ldots, (a_n,b_n)) \in \Theta$.  This shows that $\Theta$ is a congruence relation on $A$.
+\end{proof}
+
+\subsubsection*{Quotient Partial Algebras}
+
+With congruence relations defined, one may then define quotient partial algebras: given a partial algebra $\boldsymbol{A}$ of type $\tau$ and a congruence relation $\Theta$ on $A$, the \emph{quotient partial algebra} of $\boldsymbol{A}$ by $\Theta$ is the partial algebra $\boldsymbol{A/\Theta}$ whose underlying set is $A/\Theta$, the set of congruence classes, and for each $n$-ary function symbol $f\in \tau$, $f_{\boldsymbol{A/\Theta}}([a_1],\ldots, [a_n])$ is defined iff there are $b_1,\ldots, b_n \in A$ such that $[a_i]=[b_i]$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined.  When this is the case: $$f_{\boldsymbol{A/\Theta}}([a_1],\ldots, [a_n]):=[f_{\boldsymbol{A}}(b_1,\ldots, b_n)].$$
+Suppose there are $c_1,\ldots, c_n\in A$ such that $[a_i]=[c_i]$, or $a_i\equiv c_i \pmod{\Theta}$, and $f_{\boldsymbol{A}}(c_1,\ldots, c_n)$ is defined, then $b_i\equiv c_i\pmod{\Theta}$ and $f_{\boldsymbol{A}}(b_1,\ldots, b_n) \equiv f_{\boldsymbol{A}}(c_1,\ldots, c_n) \pmod{\Theta}$, or, equivalently, $[f_{\boldsymbol{A}}(b_1,\ldots, b_n)]=[f_{\boldsymbol{A}}(c_1,\ldots, c_n)]$, so that $f_{\boldsymbol{A/\Theta}}$ is a well-defined operation.
+
+In addition, it is easy to see that $\boldsymbol{A/\Theta}$ is in fact a $\tau$-algebra.  For each $n$-ary $f\in \tau$, pick $a_1,\ldots, a_n\in A$ such that $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  Then $f_{\boldsymbol{A/\Theta}}([a_1],\ldots, [a_n])$ is defined, and is equal to $[f_{\boldsymbol{A}}(a_1,\ldots, a_n)]$.
+
+\begin{prop} Let $\boldsymbol{A}$ and $\Theta$ be defined as above.  Then $[\cdot]:\boldsymbol{A}\to \boldsymbol{A/\Theta}$, given by $[\cdot](a)=[a]$, is a surjective full homomorphism, and $E_{[\cdot]}=\Theta$.  Furthermore, $[\cdot]$ is a strong homomorphism iff $\Theta$ is a strong congruence relation. \end{prop}
+\begin{proof}  $[\cdot]$ is obviously surjective.  The fact that $[\cdot]$ is a full homomorphism follows directly from the definition of $f_{\boldsymbol{A/\Theta}}$, for each $f\in \tau$.  Next, $a E_{[\cdot]} b$ iff $[a]=[b]$ iff $a\equiv b \pmod{\Theta}$.  This proves the first statement.
+
+The next statement is proved as follows:
+
+$(\Rightarrow)$.  If $a_i\equiv b_i\pmod{\Theta}$ and $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined, then $f_{\boldsymbol{A/\Theta}}([a_1],\ldots, [a_n])$ is defined, which is just $f_{\boldsymbol{A/\Theta}}([b_1],\ldots, [b_n])$, and, as $[\cdot]$ is strong, $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined, showing that $\Theta$ is strong.
+
+$(\Leftarrow)$.  Suppose $f_{\boldsymbol{A/\Theta}}([a_1],\ldots, [a_n])$ is defined.  Then there are $b_1,\ldots, b_n \in A$ with $a_i\equiv b_i \pmod{\Theta}$ such that $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined.  Since $\Theta$ is strong, $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined as well, which shows that $[\cdot]$ is strong.
+\end{proof}
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,234 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeAssociativeAlgebra}
+\pmcreated{2013-03-22 16:51:07}
+\pmmodified{2013-03-22 16:51:07}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{free associative algebra}
+\pmrecord{10}{39098}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B20}
+\pmrelated{Algebras}
+\pmrelated{TensorAlgebra}
+\pmdefines{free associative algebra}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Fix a commutative unital ring $K$ and a set $X$.  Then a $K$-algebra $F$ is
+said to be \emph{free on $X$} if there exists an injection $\iota:X\rightarrow F$ such that for all functions $f:X\rightarrow A$ where $A$ is an $K$-algebra
+determine a unique algebra homomorphism $\hat{f}:F\rightarrow A$ such that
+$\iota\hat{f}=f$.  This is an example of a universal mapping property for
+free associative algebras and in categorical settings is often explained
+with the following commutative diagram:
+\[\xymatrix{
+  &  X\ar[ld]_{\iota}\ar[rd]^{f} & \\
+F\ar[rr]^{\hat{f}} & & A.
+}\]
+
+To prove that free associative algebras exist in the category of all
+associative algebras we provide a couple standard constructions.  It
+is a standard categorical procedure to conclude any two free objects
+on the same set are naturally equivalent and thus each construction
+below is equivalent.
+
+\section{Tensor algebra}
+
+Let $X$ be a set and $K$ a commutative unital ring.  Then take $M$ to be
+any free $K$-module with basis $X$, and injection $\iota:X\rightarrow M$.  
+Then we may form the tensor algebra of $M$, 
+   \[T(M)=\bigoplus_{i\in\mathbb{N}} T^i(M),\qquad 
+                T^i(M)=M^{\otimes i}= \bigotimes_{j=1}^i M.\]
+[Note, $0\in\mathbb{N}$ and the empty tensor we define as $K$.]
+Furthermore, define the injection $\iota':X\rightarrow T(M)$ as the map $\iota:X\rightarrow M$ followed by the embedding of $M$ into $T(M)$.
+
+\begin{remark}
+To make $M$ concrete use the set of all functions $f:X\rightarrow K$, or 
+equivalently, the direct product $\prod_{X} K$.  Then the tensor algebra
+of $M$ is the free algebra on $X$.
+\end{remark}
+
+\begin{prop}
+$(T(M),\iota')$ is a free associative algebra on $X$.
+\end{prop}
+\begin{proof}
+Given any associative $K$-algebra $A$ and function $f:X\rightarrow A$, then 
+$A$ is a $K$-module and $M$ is free on $X$ so $f$ extends to a unique 
+$K$-linear homomorphism $\hat{f}:M\rightarrow A$.  
+
+Next we define $K$-multilinear maps $f^{(i)}:M^i\rightarrow A$ by 
+   \[f^{(i)}(m_1,\dots,m_i)=f(m_1)\cdots f(m_i).\]
+Then by the universal mapping property of tensor products (used inductively)
+we have a unique $K$-linear map $\hat{f}^{(i)}:T^i(M)\rightarrow A$ for which
+   \[\hat{f}^{(i)}(m_1\otimes\cdots\otimes m_i)=f(m_1)\cdots f(m_i).\]
+Thus we have a unique algebra homomorphism 
+$\hat{f}^{(\infty)}:T(M)\rightarrow A$ such that $\iota\hat{f}=f$.
+\end{proof}
+
+This construction provides an obvious grading on the free algebra where
+the homogeneous components are 
+   \[T^n(M)=M^{\otimes n}=\bigotimes_{j=1}^n M.\]
+
+\section{Non-commutative polynomials}
+
+An alternative construction is to model the methods of constructing free
+groups and semi-groups, that is, to use words on the set $X$.  We will
+denote the result of this construction by $K\langle X\rangle$ and we will
+find many parallels to polynomial algebras with indeterminants in $X$.
+
+Let $FM\langle X\rangle$ be the set of all words on $X$.  This makes
+$FM\langle X\rangle$ a free monoid with identity the empty word and 
+associative product the juxtaposition of words.  Then define 
+$K\langle X\rangle$ as the $K$-semi-group algebra on $FM\langle X\rangle$.
+This means $K\langle X\rangle$ is the free $K$-modules oN $FM\langle X\rangle$
+and the product is defined as:
+   \[\left(\sum_{w\in FM\langle X\rangle} l_w w\right)
+     \left(\sum_{v\in FM\langle X\rangle} l_v v\right)
+     =\sum_{w,v\in FM\langle X\rangle} l_v l_w wv.\] 
+
+For example, $\mathbb{Q}\langle x,y\rangle$ contains elements of the form
+   \[x^2+4yxy,\qquad -7xy+2yx,\qquad 1+x+xy+xyx+x^2y+x^2y^2.\]
+
+This model of a free associative algebra encourages a mapping to polynomial
+rings.  Indeed, $K\langle X\rangle\rightarrow K[X]$ is uniquely determined by
+the free property applied to the natural inclusion of $X$ into $K[X]$.
+What we realize this mapping in a practical fashion we note that this simply
+allows all indeterminants to commute.  It follows from this that $K[X]$ is
+a free commutative associaitve algebra.
+
+For example, under this map we translate the above elements into:
+   \[x^2+4xy^2,\qquad -5xy,\qquad 1+x+xy+2x^2y+x^2y^2.\]
+
+
+We also note that the grading detected in the tensor algebra construction
+persists in the non-commuting polynomial model.  In particular, we say an
+element in $K\langle X\rangle$ is homogeneous if it contained in
+$FM\langle X\rangle$.  Then the degree of a homogeneous element is the
+length of the word.  Then the $K$-linear span of elements of degree $i$
+form the $i$-th graded component of $K\langle X\rangle$.
+
+
+\begin{remark}
+We note that the free properties of both of these constructions depend
+in turn on the free properties of modules, the universal property of
+tensors and free semi-groups.  An inspection of the common construction
+of tensors and free modules reveals both of these have universal properties
+implied from the universal mapping property of free semi-groups.  Thus
+we may assert that free of associative algebras are a direct result of
+the existence of free semi-groups.  
+
+For non-associative algebras such as Lie and Jordan algebras, the 
+universal properties are more subtle.
+\end{remark}
+
+
+%%%%%
+%%%%%
+\end{document}

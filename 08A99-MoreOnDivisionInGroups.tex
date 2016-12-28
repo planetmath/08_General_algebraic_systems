@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MoreOnDivisionInGroups}
+\pmcreated{2013-03-22 17:38:22}
+\pmmodified{2013-03-22 17:38:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{more on division in groups}
+\pmrecord{8}{40061}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20-00}
+\pmrelated{AlternativeDefinitionOfGroup}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, it is shown that a non-empty set $G$ equipped a binary operation ``$/$'' called ``division'' satisfying three identities has the structure of a group.  In this entry, we show that two identities are enough.  Associated with every $x,y\in G$, we set 
+\begin{enumerate}
+\item $E(x):=x/x$,
+\item (inverse) $x^{-1}:=E(x)/x$, and 
+\item (multiplication) $x\cdot y:=x/y^{-1}$ (we also write $xy$ for $x\cdot y$ for simplicity)
+\end{enumerate}
+
+\begin{thm}  Let $G$ be a non-empty set with a binary operation $/$ on it such that
+\begin{enumerate}
+\item $(x/z)/(y/z)=x/y$
+\item $(x/x)/((y/y)/y)=y$
+\end{enumerate}
+hold for all $x,y,z\in G$.  Then $G$ has the structure of a group
+\end{thm}
+\begin{proof}  From 1, we have $E(x/z)=(x/z)/(x/z)=x/x=E(x)$, so $E(E(x))=E(x/x)=E(x)$.  From 2, we have $y=E(x)/y^{-1}$, so $E(y)=E(E(x)/y^{-1})=E(E(x))=E(x)$.  This shows that $E:G\to G$ is a constant function, whose value we denote by $e$.
+
+Note that $x=e/x^{-1}$ by rewriting condition 2.  This implies that $e\cdot x=e/x^{-1}=x$.  In addition, $x^{-1}=e/x$ by rewriting the definition of the inverse.  In particular, $e^{-1}=e/e=e$.  Furthermore, since $x/e= (e/x^{-1})/(x^{-1}/x^{-1})= e/x^{-1}=x$, this implies that $x\cdot e=x/e^{-1}=x/e=x$.  So $e$ is the ``identity'' in $G$ with respect to $\cdot$.
+
+Next, $x^{-1}\cdot x= x^{-1}/x^{-1}=e$.  To see that $x\cdot x^{-1}=e$, first observe that $(x^{-1})^{-1}=e/x^{-1} =x$, so $x\cdot x^{-1}=x/(x^{-1})^{-1}=x/e=x$.  This shows that $x^{-1}$ is the ``inverse'' of $x$ in $G$ with respect to $\cdot$.
+
+Finally, we need to verify $(xy)z=x(yz)$.  To see this, first note that 
+\begin{enumerate}
+\item $(xy)/y=(x/y^{-1})/y=(x/y^{-1})/(e/y^{-1}) =x/e=x$, and 
+\item $(xy)^{-1}=e/(xy)=e/(x/y^{-1})=(y^{-1}/y^{-1})/(x/y^{-1})=y^{-1}/x=y^{-1}x^{-1}$.
+\end{enumerate}
+From the two identities above, we deduce 
+\begin{eqnarray*}
+(xy)z &=& (xy)/z^{-1}=(x/y^{-1})/z^{-1}=(x/y^{-1})/((z^{-1}y^{-1})/y^{-1}) \\ &=& x/(z^{-1}y^{-1})=x/(yz)^{-1}=x(yz),
+\end{eqnarray*}
+completing the proof.
+\end{proof}
+
+There is also a companion theorem for abelian groups:
+
+\begin{thm}  Let $G$ be a non-empty set with a binary operation $/$ on it such that
+\begin{enumerate}
+\item $x/(x/y)=y$
+\item $(x/y)/z=(x/z)/y$
+\end{enumerate}
+hold for all $x,y,z\in G$.  Then $G$ has the structure of an abelian group
+\end{thm}
+\begin{proof}  First, note that $E(x/y)=(x/y)/(x/y)=(x/(x/y))/y=y/y=E(y)$, so $E(x)=E((x/y)/x)=E((x/x)/y)=E(y)$, implying that $E$ is a constant function on $G$.  Again, denote its value by $e$.  Below are some simple consequences:
+\begin{enumerate}
+\item $x/e=x/(x/x)=x$
+\item $e^{-1}=e/e=e$
+\item $(x^{-1})^{-1}=(e/x)^{-1}=e/(e/x)=x$
+\end{enumerate}
+So, $xe=x/e^{-1}=x/e=x$.  Also, $ex=e/x^{-1}=e/(e/x)=x$.  This shows that $e$ is the ``identity'' of $G$ with respect to $\cdot$.  In addition, $x^{-1}x=x^{-1}/x^{-1}=e$ and $xx^{-1}=x/(x^{-1})^{-1}=x/x=e$, showing that $x^{-1}$ is the ``inverse'' of $x$ in $G$ with respect to $\cdot$.
+
+Finally, we show that $\cdot$ is commutative and associative.  For commutativity, we have $xy=(ex)y=(e/x^{-1})/y^{-1}=(e/y^{-1})/x^{-1}=(ey)x=yx$, and associativity is shown by $x(yz)=(yz)x=(y/z^{-1})/x^{-1}=(y/x^{-1})/z^{-1}=(yx)z=(xy)z$.
+\end{proof}
+
+\textbf{Remark}.  Remarkably, it can be shown (see reference) that a non-empty set $G$ with binary operation $/$ satisfying a single identity: $$x/((((x/x)/y)/z)/(((x/x)/x)/z))=y$$ has the structure of a group, and satisfying $$x/((y/z)/(y/x))=z$$ has the structure of an abelian group.
+
+\begin{thebibliography}{7}
+\bibitem{hn} G. Higman, B. H. Neumann {\em Groups as groupoids with one law}.  Publ. Math. Debrecen 2 pp. 215-221, (1952).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

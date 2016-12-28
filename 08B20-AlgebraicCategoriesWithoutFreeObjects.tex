@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicCategoriesWithoutFreeObjects}
+\pmcreated{2013-03-22 16:51:25}
+\pmmodified{2013-03-22 16:51:25}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{algebraic categories without free objects}
+\pmrecord{4}{39104}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08B20}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+An initial object is always a free object.  So in the context of algebraic
+systems with a trivial object, such as groups, or modules, there is always
+at least one free object.  However, we usually dismiss this example as it
+does not lead to any useful results such as the existence of presentations.
+
+However, there are many ways in which a cateogry of algebraic objects can
+fail to include non-trivial free objects.
+
+\section{Restriction to finite sets}
+
+The restriction of a category which naturally includes infinite objects
+can often be restricted to just the finite objects and in so doing often
+remove all non-trivial free objects.
+\begin{itemize}
+\item The category of finite groups has only the trivial free object.  Indeed,
+even the rank 1 free group, the integers $\mathbb{Z}$ is already infinite.
+\item Similarly, finite modules of in a module category over an infinite 
+ring are never free. For examples use the rings $\mathbb{Z}$, $\mathbb{Z}_m[x]$,
+etc.
+\end{itemize}
+
+However, this is not always the case.  For example, if we consider finite
+$\mathbb{Z}_p$-modules (vector spaces) each of these are free.
+
+\section{Homomorphism restrictions}
+
+In the category of rings with 1 it is often beneficial to force all ring
+homomorphisms to be unital.  However, this restriction can prevent
+the construction of free objects.
+
+Suppose $F$ is a free ring in the category of rings with positive characteristic.  Then we ask, what is the characteristic of $F$?
+
+If it is $m>0$ then we choose another ring $R$ of a different characteristic,
+a characteristic relatively prime to $m$, and then there can be no 
+unital homomorphism from $F$ to $R$.  So $F$ must have characteristic 0.
+In contrast to the above examples we have not excluded infinite objects
+in this restriction.  This example is even more powerful than those
+above as it also exclude the existance of an initial object, so indeed
+NO free objects exist in this category.
+
+If we return to the full category of unital rings we observe
+every ring is a $\mathbb{Z}$-algebra we can use the free associative
+algebras $\mathbb{Z}\langle X\rangle$ does exist here.
+
+%%%%%
+%%%%%
+\end{document}

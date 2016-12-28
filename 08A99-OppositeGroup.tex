@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OppositeGroup}
+\pmcreated{2013-03-22 17:09:56}
+\pmmodified{2013-03-22 17:09:56}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{opposite group}
+\pmrecord{10}{39477}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{20-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Let $G$ be a group under the operation $*$.  The \emph{opposite group} of $G$, denoted $G^{\mathrm{op}}$, has the same underlying set as $G$, and its group operation is $*'$ defined by $g_1*'g_2=g_2*g_1$.
+
+If $G$ is abelian, then it is equal to its opposite group.  Also, every group $G$ (not necessarily abelian) is isomorphic to its opposite group:  The \PMlinkname{isomorphism}{GroupIsomorphism} $\varphi \colon G \to G^{\mathrm{op}}$ is given by $\varphi(x)=x^{-1}$.  More generally, any anti-automorphism $\psi \colon G \to G$ gives rise to a corresponding isomorphism $\psi' \colon G \to G^{\mathrm{op}}$ via $\psi'(g)=\psi(g)$, since $\psi'(g*h)=\psi(g*h)=\psi(h)*\psi(g)=\psi(g)*'\psi(h)=\psi'(g)*'\psi'(h)$.
+
+Opposite groups are useful for converting a right action to a left action and vice versa.  For example, if $G$ is a group that acts on $X$ on the \PMlinkescapetext{right}, then a left action of $G^{\mathrm{op}}$ on $X$ can be defined by $g^{\mathrm{op}}x=xg$.
+
+\PMlinkescapetext{Similar} constructions occur in opposite ring and opposite category.
+
+
+
+%%%%%
+%%%%%
+\end{document}

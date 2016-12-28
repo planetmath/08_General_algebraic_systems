@@ -1,0 +1,449 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JordanBanachAndJordanLieAlgebras}
+\pmcreated{2013-03-22 18:14:05}
+\pmmodified{2013-03-22 18:14:05}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Jordan-Banach and Jordan-Lie algebras}
+\pmrecord{32}{40823}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{08A05}
+\pmclassification{msc}{08A70}
+\pmsynonym{quantum operator algebras}{JordanBanachAndJordanLieAlgebras}
+%\pmkeywords{Jordan-Banach}
+%\pmkeywords{Jordan-Lie algebras}
+%\pmkeywords{Jordan-Banach-Lie algebra}
+%\pmkeywords{Jordan algebras in quantum operator theory and quantum algebraic topology}
+%\pmkeywords{Jacobian matrices}
+\pmrelated{Algebras2}
+\pmrelated{CAlgebra3}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{NonAbelianStructures}
+\pmrelated{AbelianCategory}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{Categorical}
+\pmdefines{Jordan algebra}
+\pmdefines{Jordan-Banach algebra}
+\pmdefines{Jordan-Lie algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsubsection{Definitions of Jordan-Banach, Jordan-Lie, and Jordan-Banach-Lie algebras}
+
+Firstly, a specific \emph{algebra} consists of a vector space $E$ over a ground field (typically $\bR$ or $\bC$) 
+equipped with a bilinear and distributive multiplication $\circ$~. Note that $E$ is not 
+necessarily commutative or associative.
+\med
+A \emph{Jordan algebra} (over $\bR$), is an algebra over $\bR$ for which:
+\med 
+
+$ \begin{aligned} S \circ T &= T \circ S~, \\ S \circ (T \circ S^2) &= (S \circ T) \circ S^2 
+\end{aligned}$, 
+
+
+\med
+for all elements $S, T$ of the algebra.
+\med
+It is worthwhile noting now that in the algebraic theory of Jordan algebras, an important 
+role is played by the \emph{Jordan triple product} $\{STW\}$ as defined by:
+
+$ \{STW\} = (S \circ T)\circ W + (T \circ W) \circ S - (S \circ W) \circ T~, $
+\med
+which is linear in each factor and for which $\{STW\} = \{WTS\}$~. Certain examples entail 
+setting $\{STW\} = \frac{1}{2}\{STW + WTS\}$~.
+
+\med
+
+ A \emph{Jordan Lie algebra} is a real vector space $\mathfrak A_{\bR}$
+ together with a \emph{Jordan product} $\circ$ and \emph{Poisson bracket}
+\bigbreak
+ $\{~,~\}$, satisfying~:
+ \begin{itemize}
+\item[1.] for all $S, T \in \mathfrak A_{\bR}$,
+$\begin{aligned} S \circ T &= T \circ S \\ \{S, T \} &= - \{T,
+S\} \end{aligned}$
+\med
+
+\item[2.] the \emph{Leibniz rule} holds
+\bigbreak
+$ \{S, T \circ W \} = \{S, T\} \circ W + T \circ \{S, W\}$ 
+for all $S, T, W \in \mathfrak A_{\bR}$, along with
+
+
+
+\med
+
+\item[3.]
+
+the \emph{Jacobi identity}~:\\
+
+ $ \{S, \{T, W \}\} = \{\{S,T \}, W\} + \{T, \{S, W \}\}$
+
+
+
+\med
+
+\item[4.]
+
+for some $\hslash^2 \in \bR$, there is the \emph{associator identity} ~:
+\bigbreak 
+$(S \circ T) \circ W - S \circ (T \circ W) = \frac{1}{4} \hslash^2 \{\{S, W \}, T \}~.$
+
+
+
+\end{itemize}
+
+
+
+\subsubsection{Poisson algebra}
+
+
+  By a \emph{Poisson algebra} we mean a Jordan algebra in which $\circ$ is associative. The 
+usual algebraic types of morphisms automorphism, isomorphism, etc.) apply to Jordan-Lie 
+(Poisson) algebras (see Landsman, 2003).
+
+
+   Consider the classical configuration space $Q = \bR^3$ of a moving particle whose phase space 
+is the cotangent bundle $T^* \bR^3 \cong \bR^6$, and for which the space of (classical) 
+observables  is taken to be the real vector space of smooth functions
+
+$$\mathfrak A^0_{\bR} = C^{\infty}(T^* R^3, \bR)$$~. The usual pointwise multiplication of 
+functions $fg$ defines a bilinear map on $\mathfrak A^0_{\bR}$, which is seen to be 
+commutative and associative. Further, the Poisson bracket on functions 
+
+$$\{f, g \} := \frac{\del f}{\del p^i}  \frac{\del g}{\del q_i} - \frac{\del
+f}{\del q_i} \frac{\del g}{\del p^i} ~,$$
+
+ which can be easily seen to satisfy the Liebniz rule above. The axioms above then set the stage of passage to quantum mechanical systems which the parameter $k^2$ suggests.
+
+
+\subsubsection{C*--algebras (C*--A), JLB and JBW Algebras} 
+
+An \emph{involution} on a complex algebra $\mathfrak A$ is a real--linear map $T \mapsto T^*$ %%@
+such that for all 
+\bigbreak
+$S, T \in \mathfrak A$ and $\lambda \in \bC$, we have $ T^{**} = T~,~ (ST)^* = T^* S^*~,~ %%@
+(\lambda T)^* = \bar{\lambda} T^*~. $ 
+\bigbreak
+A \emph{*--algebra} is said to be a complex associative algebra together with an involution %%@
+$*$~.
+
+
+\med
+
+A \emph{C*--algebra} is a simultaneously a *--algebra and a Banach space $\mathfrak A$, %%@
+satisfying for all $S, T \in \mathfrak A$~:
+\bigbreak
+
+$ \begin{aligned} \Vert S \circ T \Vert &\leq \Vert S \Vert ~ \Vert T \Vert~, \\ \Vert T^* T %%@
+\Vert^2 & = \Vert T\Vert^2 ~. \end{aligned}$
+\bigbreak
+We can easily see that $\Vert A^* \Vert = \Vert A \Vert$~. By the above axioms a C*--algebra %%@
+is a special case of a Banach algebra where the latter requires the above norm property but %%@
+not the involution (*) property. Given Banach spaces $E, F$ the space $\mathcal L(E, F)$ of %%@
+(bounded) linear operators from $E$ to $F$
+forms a Banach space, where for $E=F$, the space $\mathcal L(E) = \mathcal L(E, E)$ is a %%@
+Banach algebra with respect to the norm \bigbreak
+$\Vert T \Vert := \sup\{ \Vert Tu \Vert : u \in E~,~ \Vert u \Vert= 1 \}~. $
+\bigbreak
+In quantum field theory one may start with a Hilbert space $H$, and consider the Banach %%@
+algebra of bounded linear operators $\mathcal L(H)$ which given to be closed under the usual %%@
+algebraic operations and taking adjoints, forms a $*$--algebra of bounded operators, where the %%@
+adjoint operation functions as the involution, and for $T \in \mathcal L(H)$ we have~: 
+\bigbreak
+
+$ \Vert T \Vert := \sup\{ ( Tu , Tu): u \in H~,~ (u,u) = 1 \}~,$ and $ \Vert Tu \Vert^2 = (Tu, %%@
+Tu) = (u, T^*Tu) \leq \Vert T^* T \Vert~ \Vert u \Vert^2~.$
+\bigbreak
+
+
+By a morphism between C*--algebras $\mathfrak A,\mathfrak B$ we mean a linear map $\phi : %%@
+\mathfrak A \lra \mathfrak B$, such that for all $S, T \in \mathfrak A$, the following hold~: 
+\bigbreak
+$\phi(ST) = \phi(S) \phi(T)~,~ \phi(T^*) = \phi(T)^*~, $ 
+\bigbreak
+where a bijective morphism  is said to be an isomorphism (in which case it is then an %%@
+isometry). A fundamental relation is that any norm-closed $*$--algebra $\mathcal A$ in %%@
+$\mathcal L(H)$ is a C*--algebra, and conversely, any C*--algebra is isomorphic to a %%@
+norm--closed $*$--algebra in $\mathcal L(H)$ for some Hilbert space $H$~.
+
+\med
+
+For a C*--algebra $\mathfrak A$, we say that $T \in \mathfrak A$ is \emph{self--adjoint} if $T %%@
+= T^*$~. Accordingly, the self--adjoint part $\mathfrak A^{sa}$ of $\mathfrak A$ is a real %%@
+vector space since we can decompose $T \in \mathfrak A^{sa}$ as ~:
+\bigbreak
+$ T = T' + T^{''} := \frac{1}{2} (T + T^*) + \iota (\frac{-\iota}{2})(T - T^*)~.$
+\bigbreak
+ A \emph{commutative} C*--algebra is one for which the associative multiplication is %%@
+commutative. Given a commutative C*--algebra $\mathfrak A$, we have $\mathfrak A \cong C(Y)$, %%@
+the algebra of continuous functions on a compact Hausdorff space $Y~$.
+ \med
+A \emph{Jordan--Banach algebra} (a JB--algebra for short) is both a real Jordan algebra and a %%@
+Banach space, where for all $S, T \in \mathfrak A_{\bR}$, we have 
+\bigbreak
+$ \begin{aligned} \Vert S \circ T \Vert &\leq \Vert S \Vert ~ \Vert T \Vert ~, \\ \Vert T %%@
+\Vert^2 &\leq \Vert S^2 + T^2 \Vert ~. \end{aligned}$
+\bigbreak
+A \emph{JLB--algebra} is a JB--algebra $\mathfrak A_{\bR}$ together with a Poisson bracket for %%@
+which it becomes a Jordan--Lie algebra for some $\hslash^2 \geq 0$~. Such  JLB--algebras often %%@
+constitute the real part of several widely studied complex associative algebras.
+\bigbreak
+For the purpose of quantization, there are fundamental relations between $\mathfrak A^{sa}$, %%@
+JLB and Poisson algebras. 
+\med
+%%In fact, if $\mathfrak A$ is a C*--algebra 
+%%and $\hslash \in \bR/{0}$, then $\mathfrak A^{sa}$ is a JLB--algebra when it takes 
+%%its norm from $\mathfrak A$, with $k= \hslash$, and is equipped with the operations~:
+%%\bigbreak
+%%$\begin{aligned} S \circ T &:= \frac{1}{2}{(ST + TS)} ~,{\left\{S,T\right\}}_k &:=\frac{\iota}_k \times [S,T]} ~.$ 
+%%\end{aligned}$
+%%\med
+%%Conversely, given a JLB--algebra $\mathfrak A_{\bR}$ with $k^2 \geq 0$, its 
+%%complexification $\mathfrak A$ is a $C^*$-algebra under the operations~: 
+%%\bigbreak
+%%$\begin{aligned} S T &:= S \circ T - \frac{\iota}{2} k \times \left\{S,T\right\}}_ ~, {(S + \iota T)}^* &:=S-\iota T %%%~. \end{aligned}$
+\bigbreak
+For further details see Landsman (2003) (Thm. 1.1.9).
+
+\med
+\bigbreak
+A JB--algebra which is monotone complete and admits a separating set of normal sets is 
+called a \emph{JBW-algebra}. These appeared in the work of von Neumann who developed a 
+(orthomodular) lattice theory of projections on $\mathcal L(H)$ on which to study quantum 
+logic (see later). BW-algebras have the following property: whereas $\mathfrak A^{sa}$ is a 
+J(L)B--algebra, the self adjoint part of a von Neumann algebra is a JBW--algebra.
+
+\bigbreak
+\med
+
+	A \emph{JC--algebra} is a norm closed real linear subspace of $\mathcal
+L(H)^{sa}$ which is closed under the bilinear product 
+$S \circ T = \frac{1}{2}(ST + TS)$ (non--commutative and nonassociative). Since any norm 
+closed Jordan subalgebra of $\mathcal L(H)^{sa}$ is a JB--algebra, it is natural to specify 
+the exact relationship between JB and JC--algebras, at least in finite dimensions. In order to 
+do this, one introduces the `exceptional' algebra $H_3({\mathbb O})$, the algebra of $3 \times 
+3$ Hermitian matrices with values in the octonians $\mathbb O$~. Then a finite dimensional JB--algebra is a 
+JC--algebra if and only if it does not contain $H_3({\mathbb O})$ as a (direct) summand \cite{AS}. 
+
+
+The above definitions and constructions follow the approach of Alfsen and Schultz (2003) and Landsman (1998).
+
+\begin{thebibliography} {9}
+
+\bibitem{AS}
+Alfsen, E.M. and F. W. Schultz: Geometry of State Spaces of Operator Algebras, Birkh\"auser, Boston-Basel-Berlin.(2003). 
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

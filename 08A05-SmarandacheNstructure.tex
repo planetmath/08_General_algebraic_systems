@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmarandacheNstructure}
+\pmcreated{2013-03-22 14:18:30}
+\pmmodified{2013-03-22 14:18:30}
+\pmowner{jonnathan}{5141}
+\pmmodifier{jonnathan}{5141}
+\pmtitle{Smarandache n-structure}
+\pmrecord{29}{35770}
+\pmprivacy{1}
+\pmauthor{jonnathan}{5141}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A05}
+\pmrelated{FlorentinSmarandache}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In any \PMlinkescapetext{domain} of knowledge, a \emph{Smarandache} $n$-\emph{structure}, for $n \geqslant 2$, on a set $S$ means a weak structure $w_0$ on $S$ such that there exists a chain of proper subsets $P_{n-1} \subset P_{n-2} \subset \cdots \subset  P_2 \subset P_1 \subset  S$ whose corresponding structures satisfy the inverse inclusion chain $w_{n-1} \succ w_{n-2} \succ \dots \succ w_2 \succ w_1 \succ w_0$, where $\succ$ signifies strictly stronger (i.e., structure satisfying more axioms). 
+
+By \emph{proper subset}  one understands a subset different from the empty set, from the idempotent if any, and from the whole set.
+
+Now one defines the \emph{weak structure}:
+
+Let $A$ be a set, $B$ a proper subset of it, $\phi$ an operation on $A$, and $a_1, a_2, \ldots, a_k, a_{k+1}, \ldots, a_{k+m}$ be $k+m$ independent axioms, where $k, m \geqslant 1$. 
+\newline If the operation $\phi$ on the set $A$ satisfies the axioms $a_1, a_2, \ldots, a_k$ and does not satisfy the axioms $a_{k+1}, \ldots, a_{k+m}$, while on the subset $B$  the operation $\phi$ satisfies the axioms $a_1, a_2, \ldots, a_k, a_{k+1}, \ldots, a_{k+m}$, one says that structure $w_A=(A, \phi)$ is \emph{weaker}  than structure $w_B=(B, \phi)$ and one writes $w_A \prec w_B$, or one says that $w_B$ is \emph{stronger}  than structure $w_A$ and one writes $w_B \succ w_A$. 
+\newline But if $\phi$ satisfies the same axioms on $A$ as on $B$ one says that structures $w_A$ and $w_B$ are equal and one writes $w_A=w_B$.
+\newline When $\phi$ satisfies the same axioms or less axioms on $A$ than on $B$ one says that structures $w_A$ is \emph{weaker than or equal} to structure $w_B$ and one writes $w_A \preceq w_B$, or $w_B$ is \emph{stronger than or equal} to $w_B$ and one writes $w_B \succeq w_A$.
+\newline For example a semigroup is a structure weaker than a group structure.
+
+This definition can be extended to structures with many operations $(A, \phi_1, \phi_2, \ldots, \phi_r)$ for $r \geqslant 2$.  Thus, let $A$ be a set and $B$ a proper subset of it.
+\newline a) If  $(A, \phi_{i}) \preceq (B, \phi_{i})$ for all $1 \leq i \leq r$, then $(A, \phi_1, \phi_2, \ldots, \phi_r) \preceq (B, \phi_1, \phi_2, \ldots, \phi_r)$.
+\newline b) If  $\exists i_0 \in \{1, 2, \ldots, r\}$ such that $(A, \phi_{i_0}) \prec (B, \phi_{i_0})$ and $(A, \phi_i) \preceq (B, \phi_i)$ for all $i \ne i_0$, then $(A, \phi_1, \phi_2, \ldots, \phi_r) \prec (B, \phi_1, \phi_2, \ldots, \phi_r)$.
+\newline In this case, for two operations, a ring is a structure weaker than a field structure.
+
+This definition comprises large classes of structures, some more important than others.
+
+As a particular case, in abstract algebra, a \emph{Smarandache 2-algebraic structure} (two levels only of structures in algebra) on a set $S$, is a weak algebraic structure $w_0$ on $S$ such that there exists a proper subset $P$ of $S$, which is embedded with a stronger algebraic structure $w_1$.
+\newline For example: a \emph{Smarandache semigroup} is a semigroup (different from a group) which has a proper subset that is a group.
+\newline Other examples: a \emph{Smarandache groupoid of first order} is a groupoid (different from a semigroup) which has a proper subset that is a semigroup, while a \emph{Smarandache groupoid of second order} is a groupoid (different from a semigroup) which has a proper subset that is a group.  And so on.
+
+References:
+\newline 1. \PMlinkexternal{Digital Library of Science:}{http://www.gallup.unm.edu/~smarandache/eBooks-otherformats.htm}
+\newline 2. W. B. Vasantha Kandasamy, \emph{Smarandache Algebraic Structures}, book \PMlinkescapetext{series}:    (Vol. I: Groupoids;  Vol. II: Semigroups;  Vol. III: Semirings, Semifields, and Semivector Spaces;  Vol. IV: Loops; Vol. V: Rings; Vol. VI: Near-rings; Vol. VII: Non-associative Rings; Vol. VIII: Bialgebraic Structures; Vol. IX: Fuzzy Algebra; Vol. X: Linear Algebra), Am. Res. Press \& Bookman, Martinsville, 2002-2003.
+%%%%%
+%%%%%
+\end{document}

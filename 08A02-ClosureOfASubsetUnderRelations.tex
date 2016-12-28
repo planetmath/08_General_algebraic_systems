@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureOfASubsetUnderRelations}
+\pmcreated{2013-03-22 16:21:26}
+\pmmodified{2013-03-22 16:21:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{closure of a subset under relations}
+\pmrecord{36}{38492}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A02}
+\pmdefines{closed under}
+\pmdefines{closure property}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ be a set and $R$ be an $n$-ary relation on $A$, $n\ge 1$.  A subset $B$ of $A$ is said to be \emph{closed under $R$}, or \emph{$R$-closed}, if, whenever $b_1,\ldots,b_{n-1}\in B$, and $(b_1,\ldots,b_{n-1},b_n)\in R$, then $b_n\in B$.  
+
+Note that if $R$ is unary, then $B$ is $R$-closed iff $R\subseteq B$.
+
+More generally, let $A$ be a set and $\mathcal{R}$ a set of (finitary) relations on $A$.  A subset $B$ is said to be \emph{$\mathcal{R}$-closed} if $B$ is $R$-closed for each $R\in\mathcal{R}$.
+
+Given $B\subseteq A$ with a set of relations $\mathcal{R}$ on $A$, we say that $C\subseteq A$ is an \emph{$\mathcal{R}$-closure} of $B$ if 
+\begin{enumerate}
+\item $B\subseteq C$,
+\item $C$ is $\mathcal{R}$-closed, and 
+\item if $D\subseteq A$ satisfies both 1 and 2, then $C\subseteq D$.
+\end{enumerate}
+
+By condition 3, $C$, if exists, must be unique.  Let us call it the $\mathcal{R}$-closure of $B$, and denote it by $\operatorname{Cl}_{\mathcal{R}}(B)$.  If $\mathcal{R}=\lbrace R\rbrace$, then we call it the $R$-closure of $B$, and denote it by $\operatorname{Cl}_R(B)$ correspondingly.
+
+Here are some examples.
+\begin{enumerate}
+\item Let $A=\mathbb{Z}$, $B=\lbrace 5\rbrace$, and $R$ be the relation that $mRn$ whenever $m$ divides $n$.  Clearly $B$ is not closed under $R$ (for example, $(5,10)\in R$ but $10\notin B$).  Then $\operatorname{Cl}_{R}(B) = 5\mathbb{Z}$.  If $R$ is instead the relation $\le$, then $\operatorname{Cl}_{\le}(B)=\lbrace n\in A\mid n\ge 5\rbrace$.
+\item
+This is an example where $R$ is in fact a function (operation).  Suppose $A=\mathbb{Z}$ and $R$ is the binary operation subtraction $-$.  Suppose $B=\lbrace 3,5\rbrace$.  Then $\operatorname{Cl}_{-}(B)=A$.  To see this, set $C=\operatorname{Cl}_{-}(B)$.  Note that $2=5-3\in C$ so $1=3-2$ as well as $-1=2-3\in C$.  This means that if $n\in C$, both $n-1$ and $n+1\in C$.  By induction, $C=\mathbb{Z}$.  In general, if $B=\lbrace p,q\rbrace$, where $p,q$ are coprime, then $\operatorname{Cl}_{-} (B) =\mathbb{Z}$.  This is essentially the result of the Chinese Remainder Theorem.
+\item
+If $R$ is unary, then the $R$-closure of $B\subseteq A$ is just $B\cup R$.  When every $R\in \mathcal{R}$ is unary, then the $\mathcal{R}$-closure of $B$ in $A$ is $(\bigcup \mathcal{R}) \cup B$.
+\end{enumerate}
+
+\begin{prop} $\operatorname{Cl}_{\mathcal{R}}(B)$ exists for every $B\subseteq A$. \end{prop}
+\begin{proof}
+Let $S_{\mathcal{R}}(B)$ be the set of subsets of $A$ satisfying the defining conditions 1 and 2 of $\mathcal{R}$-closures above, partially ordered by $\subseteq$.  If $\mathcal{C} \subseteq S_{\mathcal{R}}(B)$, then $\bigcap \mathcal{C} \in S_{\mathcal{R}}(B)$.  To see this, we break the statement down into cases:
+\begin{itemize}
+\item 
+In the case when $\mathcal{C}=\varnothing$, we have $\bigcap \mathcal{C} = A\in S_{\mathcal{R}}(B)$.  
+\item
+When $C:=\bigcap \mathcal{C}\ne \varnothing$, pick any $n$-ary relation $R\in \mathcal{R}$.  
+\begin{enumerate}
+\item
+If $n=1$, then, since aach $D\in \mathcal{C}$ is $R$-closed, $R\subseteq D$.  Therefore, $R\subseteq \bigcap \mathcal{C} = \bigcap \lbrace D \mid D \in \mathcal{C}\rbrace = C$.  So $C$ is $R$-closed.
+\item
+If $n>1$, pick elements $c_1,\ldots, c_{n-1}\in C$ such that $(c_1,\ldots, c_n)\in R$.  As each $c_i\in D$ for $i=1,\ldots, n-1$, and $D$ is $R$-closed, $c_n\in D$.  Since $c_n\in D$ for every $D\in \mathcal{C}$, $c_n\in C$ as well.  This shows that $C$ is $R$-closed.  
+\end{enumerate}
+In both cases, $B\subseteq C$ since $B\subseteq D$ for every $D\in \mathcal{C}$.  Therefore, $C\in S_{\mathcal{R}}(B)$.
+\end{itemize}
+Hence, $S_{\mathcal{R}}(B)$ is a complete lattice by virtue of \PMlinkname{this fact}{CriteriaForAPosetToBeACompleteLattice}, which means that $S_{\mathcal{R}}(B)$ has a minimal element, which is none other than the $\mathcal{R}$-closure $\operatorname{Cl}_{\mathcal{R}}(B)$ of $B$.
+\end{proof}
+
+\textbf{Remark}.  It is not hard to see $\operatorname{Cl}_{\mathcal{R}}$ has the following properties:
+\begin{enumerate}
+\item $B\subseteq \operatorname{Cl}_{\mathcal{R}}(B)$,
+\item $\operatorname{Cl}_{\mathcal{R}}(\operatorname{Cl}_{\mathcal{R}}(B))= \operatorname{Cl}_{\mathcal{R}}(B)$, and
+\item if $B\subseteq C$, then $\operatorname{Cl}_{\mathcal{R}}(B)\subseteq \operatorname{Cl}_{\mathcal{R}}(C)$.
+\end{enumerate}
+
+Next, assume that $\mathcal{S}$ is another set of finitary relations on $A$.  Then
+\begin{enumerate}
+\item if $\mathcal{R}\subseteq \mathcal{S}$, then $\operatorname{Cl}_{\mathcal{S}}(B) \subseteq \operatorname{Cl}_{\mathcal{R}}(B)$,
+\item $\operatorname{Cl}_{\mathcal{S}}(\operatorname{Cl}_{\mathcal{R}}(B)) \subseteq  \operatorname{Cl}_{\mathcal{R}\cap\mathcal{S}}(B)$, and 
+\item $\operatorname{Cl}_{\mathcal{S}}(\operatorname{Cl}_{\mathcal{R}}(B))= \operatorname{Cl}_{\mathcal{R}\cap\mathcal{S}}(B)$ if $\mathcal{R}\subseteq \mathcal{S}$ or $\mathcal{S}\subseteq \mathcal{R}$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

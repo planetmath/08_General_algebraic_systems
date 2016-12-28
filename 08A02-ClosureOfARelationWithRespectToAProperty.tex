@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureOfARelationWithRespectToAProperty}
+\pmcreated{2013-03-22 17:36:26}
+\pmmodified{2013-03-22 17:36:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{closure of a relation with respect to a property}
+\pmrecord{15}{40023}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A02}
+\pmrelated{Property2}
+\pmdefines{reflexive closure}
+\pmdefines{symmetric closure}
+\pmdefines{transitive closure}
+\pmdefines{reflexive transitive closure}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{proposition}
+\PMlinkescapeword{words}
+\PMlinkescapeword{closure}
+\PMlinkescapeword{parent}
+
+\subsubsection*{Introduction}
+
+Fix a set $A$.  A \emph{property} $\mathcal{P}$ of $n$-ary relations on a set $A$ may be thought of as some subset of the set of all $n$-ary relations on $A$.  Since an $n$-ary relation is just a subset of $A^n$, $\mathcal{P}\subseteq P(A^n)$, the powerset of $A^n$.  An $n$-ary relation is said to have property $\mathcal{P}$ if $R \in \mathcal{P}$.
+
+For example, the transitive property is a property of binary relations on $A$; it consists of all transitive binary relations on $A$.  Reflexive and symmetric properties are sets of reflexive and symmetric binary relations on $A$ correspondingly.
+
+Let $R$ be an $n$-ary relation on $A$.  By the \emph{closure} of an $n$-ary relation $R$ with respect to property $\mathcal{P}$, or the $\mathcal{P}$-closure of $R$ for short, we mean the smallest relation $S\in \mathcal{P}$ such that $R\subseteq S$.  In other words, if $T\in \mathcal{P}$ and $R\subseteq T$, then $S\subseteq T$.  We write $\operatorname{Cl}_{\mathcal{P}}(R)$ for the $\mathcal{P}$-closure of $R$.  
+
+Given an $n$-ary relation $R$ on $A$, and a property $\mathcal{P}$ on $n$-ary relations on $A$, does $\operatorname{Cl}_{\mathcal{P}}(R)$ always exist?  The answer is no.  For example, let $\mathcal{P}$ be the anti-symmetric property of binary relations on $A$, and $R=A^2$.  For another example, take $\mathcal{P}$ to be the irreflexive property, and $R=\Delta$, the diagonal relation on $A$.
+
+However, if $A^n \in \mathcal{P}$ and $\mathcal{P}$ is closed under arbitrary intersections, then $\mathcal{P}$ is a complete lattice according to \PMlinkname{this fact}{CriteriaForAPosetToBeACompleteLattice}, and, as a result, $\operatorname{Cl}_{\mathcal{P}}(R)$ exists for any $R\subseteq A^n$.
+
+\subsubsection*{Reflexive, Symmetric, and Transitive Closures}
+
+From now on, we concentrate on binary relations on a set $A$.  In particular, we fix a binary relation $R$ on $A$, and let $\mathcal{X}$ the reflexive property, $\mathcal{S}$ the symmetric property, and $\mathcal{T}$ be the transitive property on the binary relations on $A$.
+
+\begin{prop} Arbitrary intersections are closed in $\mathcal{X}$, $\mathcal{S}$, and $\mathcal{T}$.  Furthermore, if $R$ is any binary relation on $A$, then 
+\begin{itemize}
+\item $R^=:=\operatorname{Cl}_{\mathcal{X}}(R)=R\cup \Delta$, where $\Delta$ is the diagonal relation on $A$,
+\item $R^{\leftrightarrow}:=\operatorname{Cl}_{\mathcal{S}}(R)=R\cup R^{-1}$, where $R^{-1}$ is the converse of $R$, and
+\item $R^+:=\operatorname{Cl}_{\mathcal{T}}(R)$ is given by $$\bigcup_{n\in \mathbb{N}} R^n = R\cup (R\circ R) \cup \cdots \cup \underbrace{(R\circ \cdots \circ R)}_{\displaystyle{n}\mbox{-fold power}} \cup \cdots ,$$
+where $\circ$ is the relational composition operator.
+\item $R^*:=R^{=+}=R^{+=}$.
+\end{itemize}
+\end{prop}
+$R^=$, $R^{\leftrightarrow}$, $R^+$, and $R^*$ are called the \emph{reflexive closure}, the \emph{symmetric closure}, the \emph{transitive closure}, and the \emph{reflexive transitive closure} of $R$ respectively.  The last item in the proposition permits us to call $R^*$ the \emph{transitive reflexive closure} of $R$ as well (there is no difference to the order of taking closures).  This is true because $\Delta$ is transitive.
+
+\textbf{Remark}.  In general, however, the order of taking closures of a relation is important.  For example, let $A=\lbrace a,b\rbrace$, and $R=\lbrace (a,b)\rbrace$.  Then $R^{\leftrightarrow +}=A^2\ne \lbrace (a,b),(b,a)\rbrace = R^{+ \leftrightarrow}$.
+%%%%%
+%%%%%
+\end{document}

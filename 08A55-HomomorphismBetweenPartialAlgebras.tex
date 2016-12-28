@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomomorphismBetweenPartialAlgebras}
+\pmcreated{2013-03-22 18:42:57}
+\pmmodified{2013-03-22 18:42:57}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{homomorphism between partial algebras}
+\pmrecord{13}{41482}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{08A55}
+\pmclassification{msc}{03E99}
+\pmclassification{msc}{08A62}
+\pmdefines{homomorphism}
+\pmdefines{full homomorphism}
+\pmdefines{strong homomorphism}
+\pmdefines{isomorphism}
+\pmdefines{strong}
+\pmdefines{homomorphic image}
+\pmdefines{embedding}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsubsection*{Definition}
+
+Like subalgebras of partial algebras, there are also three ways to define homomorphisms between partial algebras.  Similar to the definition of homomorphisms between algebras, a homomorphism $\phi: \boldsymbol{A}\to \boldsymbol{B}$ between two partial algebras of type $\tau$ is a function from $A$ to $B$ that satisfies the equation 
+\begin{equation}
+\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))= f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))
+\end{equation}
+for every $n$-ary function symbol $f\in \tau$.  However, because $f_{\boldsymbol{A}}$ and $f_{\boldsymbol{B}}$ are not everywhere defined in their respective domains, care must be taken as to what the equation means.
+\begin{enumerate}
+\item $\phi$ is a \emph{homomorphism} if, given that $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined, so is $f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))$, and equation (1) is satisifed.
+\item $\phi$ is a \emph{full homomorphism} if it is a homomorphism and, given that $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$ is defined and in $\phi(A)$, for $b_i\in \phi(A)$, there exist $a_i\in A$ with $b_i=\phi(a_i)$, such that $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.
+\item $\phi$ is a \emph{strong homomorphism} if it is a homomorphism and, given that $f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))$ is defined, so is $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$.
+\end{enumerate}
+
+We have the following implications: 
+\begin{quote}
+strong homomorphism $\rightarrow$ full homomorphism $\rightarrow$ homomorphism.
+\end{quote}
+For example, field homomorphisms are strong homomorphisms.
+
+Homomorphisms preserve constants: for each constant symbol $f$ in $\tau$, $\phi(f_{\boldsymbol{A}}) = f_{\boldsymbol{B}}$.  In fact, when restricted to constants, $\phi$ is a bijection between constants of $\boldsymbol{A}$ and constants of $\boldsymbol{B}$.
+
+When $\boldsymbol{A}$ is an algebra (all partial operations are total), a homomorphism from $\boldsymbol{A}$ is always strong, so that all three notions of homomorphisms coincide.
+
+An \emph{isomorphism} is a bijective homomorphism $\phi: \boldsymbol{A}\to \boldsymbol{B}$ such that its inverse $\phi^{-1}: \boldsymbol{B}\to \boldsymbol{A}$ is also a homomorphism.  An \emph{embedding} is an injective homomorphism.  Isomorphisms and full embeddings are strong.
+
+\subsubsection*{Homomorphic Images}
+
+The various types of homomorphisms and the various types of subalgebras are related.  Suppose $\boldsymbol{A}$ and $\boldsymbol{B}$ are partial algebras of type $\tau$.  Let $\phi:A\to B$ be a function, and $C=\phi(A)$.  For each $n$-ary function symbol $f\in \tau$, define $n$-ary partial operation $f_{\boldsymbol{C}}$ on $C$ as follows: 
+\begin{quote}
+for $b_1,\ldots, b_n\in C$, $f_{\boldsymbol{C}}(b_1,\ldots, b_n)$ is defined iff the set $$D:=\lbrace (a_1,\ldots, a_n)\in A^n \mid \phi(a_i)=b_i\rbrace \cap \operatorname{dom}(f_{\boldsymbol{A}})$$ is non-empty, where $\operatorname{dom}(f_{\boldsymbol{A}})$ is the domain of definition of $f_{\boldsymbol{A}}$, and when this is the case, $f_{\boldsymbol{C}}(b_1,\ldots, b_n):=\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))$, for some $(a_1,\ldots, a_n)\in D$.  
+\end{quote}
+If $\phi$ preserves constants (if any), and $f_C$ is non-empty for each $f\in \tau$ then $\boldsymbol{C}$ is a partial algebra of type $\tau$.
+
+Fix an arbitrary $n$-ary symbol $f\in \tau$.  The following are the basic properties of $\boldsymbol{C}$:
+
+\begin{prop} $\phi$ is a homomorphism iff $\boldsymbol{C}$ is a weak subalgebra of $\boldsymbol{B}$. \end{prop}
+\begin{proof}  
+Suppose first that $\phi$ is a homomorphism.  If $n=0$, then $f_{\boldsymbol{A}} \in A$, and $f_{\boldsymbol{B}} = \phi(f_{\boldsymbol{A}}) \in C$.  If $n>0$, then for some $a_1,\ldots, a_n\in A$, $f_{\boldsymbol{A}}(a_1, \ldots, a_n)$ is defined, and consequently $f_{\boldsymbol{B}}(\phi(a_1), \ldots, \phi(a_n))$ is defined, and is equal to $\phi(f_{\boldsymbol{A}}(a_1, \ldots, a_n)) \in C$.  By the definition for $f_{\boldsymbol{C}}$ above, $f_{\boldsymbol{C}}(\phi(a_1), \ldots, \phi(a_n)):=\phi(f_{\boldsymbol{A}}(a_1, \ldots, a_n))$.  This shows that $\boldsymbol{C}$ is a $\tau$-algebra.
+
+To furthermore show that $\boldsymbol{C}$ is a weak subalgebra of $\boldsymbol{B}$, assume $f_{\boldsymbol{C}}(b_1,\ldots, b_n)$ is defined.  Then there are $a_1,\ldots, a_n\in A$ with $b_i=\phi(a_i)$ such that $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  Since $\phi$ is a homomorphism, $f_{\boldsymbol{B}}(\phi(a_1),\ldots,\phi(a_n))$, and hence  $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$, is defined.  Furthermore, $f_C(b_1,\ldots, b_n)=\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))=f_{\boldsymbol{B}}(\phi(a_1),\ldots,\phi(a_n))=f_{\boldsymbol{B}}(b_1,\ldots, b_n)$.  This shows that $\boldsymbol{C}$ is weak.
+
+On the other hand, suppose now that $\boldsymbol{C}$ is a weak subalgebra of $\boldsymbol{B}$.  Suppose $a_1,\ldots, a_n\in A$ and $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  Let $b_i=\phi(a_i)\in C$.  Then, by the definition of $f_{\boldsymbol{C}}$, $f_{\boldsymbol{C}}(b_1,\ldots, b_n)$ is defined and is equal to $\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))$.  Since $\boldsymbol{C}$ is weak, $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$ is defined and is equal to $f_{\boldsymbol{C}}(b_1,\ldots, b_n)$.  As a result, $\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))=f_{\boldsymbol{C}}(b_1,\ldots, b_n)=f_{\boldsymbol{B}}(b_1,\ldots, b_n)= f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))$.  Hence $\phi$ is a homomorphism.
+\end{proof}
+
+\begin{prop} $\phi$ is a full homomorphism iff $\boldsymbol{C}$ is a relative subalgebra of $\boldsymbol{B}$. \end{prop}
+\begin{proof}
+Suppose first that $\phi$ is full.  Since $\phi$ is a homomorphism, $\boldsymbol{C}$ is weak.  Suppose $b_1,\ldots, b_n\in C$ such that $f_{\boldsymbol{A}}(b_1,\ldots, b_n)$ is defined and is in $C$.  Since $\phi$ is full, there are $a_i\in A$ such that $b_i = \phi(a_i)$ and $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined, and $\phi(f_{\boldsymbol{A}}(a_1,\ldots,a_n))=f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))=f_{\boldsymbol{B}}(b_1,\ldots, b_n)$, so that $f_{\boldsymbol{B}}(b_1,\ldots,b_n)$ is defined and thus $\boldsymbol{C}$ is a relative subalgebra of $\boldsymbol{B}$.
+
+Conversely, suppose that $\boldsymbol{C}$ is a relative subalgebra of $\boldsymbol{B}$.  Then $\boldsymbol{C}$ is a weak subalgebra of $\boldsymbol{B}$ and $\phi$ is a homomorphism.  To show that $\phi$ is full, suppose that $b_i\in C$ such that $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$ is defined in $C$.  Then $f_{\boldsymbol{C}}(b_1,\ldots, b_n)$ is defined in $C$ and is equal to $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$.  This means that there are $a_i\in A$ such that $b_i=\phi(a_i)$, and $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined, showing that $f_{\boldsymbol{A}}$ is full.
+\end{proof}
+
+\begin{prop} $\phi$ is a strong homomorphism iff $\boldsymbol{C}$ is a subalgebra of $\boldsymbol{B}$. \end{prop}
+\begin{proof}
+Suppose first that $\phi$ is strong.  Since $\phi$ is full, $\boldsymbol{C}$ is a relative subalgebra of $\boldsymbol{B}$.  Suppose now that for $b_i\in C$, $f_{\boldsymbol{B}}(b_1,\ldots, b_n)$ is defined.  Since $b_i=\phi(a_i)$ for some $a_i \in A$, and since $\phi$ is strong, $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is defined.  This means that $f_{\boldsymbol{B}}(b_1,\ldots, b_n)= f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))=\phi(f_{\boldsymbol{A}}(a_1,\ldots, a_n))$, which is in $C$.  So $\boldsymbol{C}$ is a subalgebra of $\boldsymbol{B}$.
+
+Going the other direction, suppose now that $\boldsymbol{C}$ is a subalgebra of $\boldsymbol{B}$.  Since $\boldsymbol{C}$ is a relative subalgebra of $\boldsymbol{B}$, $\phi$ is full.  To show that $\phi$ is strong, suppose $f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))$ is defined.  Then $f_{\boldsymbol{C}}(\phi(a_1),\ldots, \phi(a_n))$ is defined and is equal to $f_{\boldsymbol{B}}(\phi(a_1),\ldots, \phi(a_n))$. By definition of $f_{\boldsymbol{C}}$, $f_{\boldsymbol{A}}(a_1,\ldots, a_n)$ is therefore defined.  So $\phi$ is strong.
+\end{proof}
+
+\textbf{Definition}.  Let $\boldsymbol{A}$ and $\boldsymbol{B}$ be partial algebras of type $\tau$.  If $\phi:\boldsymbol{A}\to \boldsymbol{B}$ is a homomorphism, then $\boldsymbol{C}$, as defined above, is a partial algebra of type $\tau$, and is called the \emph{homomorphic image} of $A$ via $\phi$, and is sometimes written $\phi(\boldsymbol{A})$.
+
+\begin{thebibliography}{7}
+\bibitem{gg} G. Gr\"{a}tzer: {\em Universal Algebra}, 2nd Edition, Springer, New York (1978).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
