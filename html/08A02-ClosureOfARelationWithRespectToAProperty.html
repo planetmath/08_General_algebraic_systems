@@ -1,0 +1,171 @@
+<!DOCTYPE html><html>
+<head>
+<title>closure of a relation with respect to a property</title>
+<!--Generated on Fri Feb  9 13:59:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">closure of a relation with respect to a property</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Introduction</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Fix a set <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. A <em class="ltx_emph ltx_font_italic">property</em> <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> of <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relations on a set <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> may be thought of as some subset of the set of all <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relations on <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Since an <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation is just a subset of <math id="S0.SS0.SSSx1.p1.m8" class="ltx_Math" alttext="A^{n}" display="inline"><msup><mi>A</mi><mi>n</mi></msup></math>, <math id="S0.SS0.SSSx1.p1.m9" class="ltx_Math" alttext="\mathcal{P}\subseteq P(A^{n})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⊆</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the powerset of <math id="S0.SS0.SSSx1.p1.m10" class="ltx_Math" alttext="A^{n}" display="inline"><msup><mi>A</mi><mi>n</mi></msup></math>. An <math id="S0.SS0.SSSx1.p1.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation is said to have property <math id="S0.SS0.SSSx1.p1.m12" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> if <math id="S0.SS0.SSSx1.p1.m13" class="ltx_Math" alttext="R\in\mathcal{P}" display="inline"><mrow><mi>R</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">For example, the transitive property is a property of binary relations on <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>; it consists of all transitive binary relations on <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Reflexive and symmetric properties are sets of reflexive and symmetric binary relations on <math id="S0.SS0.SSSx1.p2.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> correspondingly.</p>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p3.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be an <math id="S0.SS0.SSSx1.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation on <math id="S0.SS0.SSSx1.p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. By the <em class="ltx_emph ltx_font_italic">closure</em> of an <math id="S0.SS0.SSSx1.p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation <math id="S0.SS0.SSSx1.p3.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> with respect to property <math id="S0.SS0.SSSx1.p3.m6" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>, or the <math id="S0.SS0.SSSx1.p3.m7" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>-closure of <math id="S0.SS0.SSSx1.p3.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> for short, we mean the smallest relation <math id="S0.SS0.SSSx1.p3.m9" class="ltx_Math" alttext="S\in\mathcal{P}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math> such that <math id="S0.SS0.SSSx1.p3.m10" class="ltx_Math" alttext="R\subseteq S" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>S</mi></mrow></math>. In other words, if <math id="S0.SS0.SSSx1.p3.m11" class="ltx_Math" alttext="T\in\mathcal{P}" display="inline"><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math> and <math id="S0.SS0.SSSx1.p3.m12" class="ltx_Math" alttext="R\subseteq T" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>T</mi></mrow></math>, then <math id="S0.SS0.SSSx1.p3.m13" class="ltx_Math" alttext="S\subseteq T" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>T</mi></mrow></math>. We write <math id="S0.SS0.SSSx1.p3.m14" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{P}}(R)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒫</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> for the <math id="S0.SS0.SSSx1.p3.m15" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>-closure of <math id="S0.SS0.SSSx1.p3.m16" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para">
+<p class="ltx_p">Given an <math id="S0.SS0.SSSx1.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation <math id="S0.SS0.SSSx1.p4.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> on <math id="S0.SS0.SSSx1.p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and a property <math id="S0.SS0.SSSx1.p4.m4" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> on <math id="S0.SS0.SSSx1.p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relations on <math id="S0.SS0.SSSx1.p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, does <math id="S0.SS0.SSSx1.p4.m7" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{P}}(R)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒫</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> always exist? The answer is no. For example, let <math id="S0.SS0.SSSx1.p4.m8" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> be the anti-symmetric property of binary relations on <math id="S0.SS0.SSSx1.p4.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and <math id="S0.SS0.SSSx1.p4.m10" class="ltx_Math" alttext="R=A^{2}" display="inline"><mrow><mi>R</mi><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></math>. For another example, take <math id="S0.SS0.SSSx1.p4.m11" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> to be the irreflexive property, and <math id="S0.SS0.SSSx1.p4.m12" class="ltx_Math" alttext="R=\Delta" display="inline"><mrow><mi>R</mi><mo>=</mo><mi mathvariant="normal">Δ</mi></mrow></math>, the diagonal relation on <math id="S0.SS0.SSSx1.p4.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p5" class="ltx_para">
+<p class="ltx_p">However, if <math id="S0.SS0.SSSx1.p5.m1" class="ltx_Math" alttext="A^{n}\in\mathcal{P}" display="inline"><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math> and <math id="S0.SS0.SSSx1.p5.m2" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> is closed under arbitrary intersections, then <math id="S0.SS0.SSSx1.p5.m3" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> is a complete lattice according to this fact (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CriteriaForAPosetToBeACompleteLattice</span>), and, as a result, <math id="S0.SS0.SSSx1.p5.m4" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{P}}(R)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒫</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> exists for any <math id="S0.SS0.SSSx1.p5.m5" class="ltx_Math" alttext="R\subseteq A^{n}" display="inline"><mrow><mi>R</mi><mo>⊆</mo><msup><mi>A</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Reflexive, Symmetric, and Transitive Closures</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">From now on, we concentrate on binary relations on a set <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. In particular, we fix a binary relation <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> on <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and let <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="\mathcal{X}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒳</mi></math> the reflexive property, <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> the symmetric property, and <math id="S0.SS0.SSSx2.p1.m6" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> be the transitive property on the binary relations on <math id="S0.SS0.SSSx2.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Arbitrary intersections are closed in <math id="Thmprop1.p1.m1" class="ltx_Math" alttext="\mathcal{X}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">X</mi></math>, <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">S</mi></math>, and <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">T</mi></math>. Furthermore, if <math id="Thmprop1.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is any binary relation on <math id="Thmprop1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="R^{=}:=\operatorname{Cl}_{\mathcal{X}}(R)=R\cup\Delta" display="inline"><mrow><msup><mi>R</mi><mo>=</mo></msup><mo>:=</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒳</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>∪</mo><mi mathvariant="normal">Δ</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic">, where </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math><span class="ltx_text ltx_font_italic"> is the diagonal relation on </span><math id="I1.i1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math><span class="ltx_text ltx_font_italic">,</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="R^{\leftrightarrow}:=\operatorname{Cl}_{\mathcal{S}}(R)=R\cup R^{-1}" display="inline"><mrow><msup><mi>R</mi><mo>↔</mo></msup><mo>:=</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>∪</mo><msup><mi>R</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math><span class="ltx_text ltx_font_italic">, where </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="R^{-1}" display="inline"><msup><mi>R</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math><span class="ltx_text ltx_font_italic"> is the converse of </span><math id="I1.i2.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math><span class="ltx_text ltx_font_italic">, and</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="R^{+}:=\operatorname{Cl}_{\mathcal{T}}(R)" display="inline"><mrow><msup><mi>R</mi><mo>+</mo></msup><mo>:=</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒯</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is given by</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\bigcup_{n\in\mathbb{N}}R^{n}=R\cup(R\circ R)\cup\cdots\cup\underbrace{(R\circ%
+\cdots\circ R)}_{\displaystyle{n}\mbox{-fold power}}\cup\cdots," display="block"><mrow><mrow><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></munder><msup><mi>R</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mi>R</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>∘</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi mathvariant="normal">⋯</mi><mo>∪</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false" stretchy="false">(</mo><mrow><mi>R</mi><mo movablelimits="false">∘</mo><mi mathvariant="normal">⋯</mi><mo movablelimits="false">∘</mo><mi>R</mi></mrow><mo movablelimits="false" stretchy="false">)</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi mathsize="142%">n</mi><mo>⁢</mo><mtext mathsize="142%" mathvariant="italic">-fold power</mtext></mrow></munder><mo>∪</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math><span class="ltx_text ltx_font_italic"> is the relational composition operator.</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="R^{*}:=R^{=+}=R^{+=}" display="inline"><mrow><msup><mi>R</mi><mo>*</mo></msup><mo>:=</mo><msup><mi>R</mi><mrow><mi></mi><mo>=</mo><mo>+</mo></mrow></msup><mo>=</mo><msup><mi>R</mi><mrow><mi></mi><mo>+</mo><mo>=</mo></mrow></msup></mrow></math><span class="ltx_text ltx_font_italic">.
+</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="R^{=}" display="inline"><msup><mi>R</mi><mo>=</mo></msup></math>, <math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="R^{\leftrightarrow}" display="inline"><msup><mi>R</mi><mo>↔</mo></msup></math>, <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="R^{+}" display="inline"><msup><mi>R</mi><mo>+</mo></msup></math>, and <math id="S0.SS0.SSSx2.p2.m4" class="ltx_Math" alttext="R^{*}" display="inline"><msup><mi>R</mi><mo>*</mo></msup></math> are called the <em class="ltx_emph ltx_font_italic">reflexive closure</em>, the <em class="ltx_emph ltx_font_italic">symmetric closure</em>, the <em class="ltx_emph ltx_font_italic">transitive closure</em>, and the <em class="ltx_emph ltx_font_italic">reflexive transitive closure</em> of <math id="S0.SS0.SSSx2.p2.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> respectively. The last item in the proposition permits us to call <math id="S0.SS0.SSSx2.p2.m6" class="ltx_Math" alttext="R^{*}" display="inline"><msup><mi>R</mi><mo>*</mo></msup></math> the <em class="ltx_emph ltx_font_italic">transitive reflexive closure</em> of <math id="S0.SS0.SSSx2.p2.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> as well (there is no difference to the order of taking closures). This is true because <math id="S0.SS0.SSSx2.p2.m8" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> is transitive.</p>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. In general, however, the order of taking closures of a relation is important. For example, let <math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="A=\{a,b\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="R=\{(a,b)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="S0.SS0.SSSx2.p3.m3" class="ltx_Math" alttext="R^{\leftrightarrow+}=A^{2}\neq\{(a,b),(b,a)\}=R^{+\leftrightarrow}" display="inline"><mrow><msup><mi>R</mi><mrow><mi></mi><mo>↔</mo><mo>+</mo></mrow></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup><mo>≠</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><msup><mi>R</mi><mrow><mi></mi><mo>+</mo><mo>↔</mo></mrow></msup></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">closure of a relation with respect to a property</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ClosureOfARelationWithRespectToAProperty</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:36:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:36:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Property2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">reflexive closure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">symmetric closure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">transitive closure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">reflexive transitive closure</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 13:59:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

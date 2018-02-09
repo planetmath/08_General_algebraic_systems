@@ -1,0 +1,233 @@
+<!DOCTYPE html><html>
+<head>
+<title>closure of a subset under relations</title>
+<!--Generated on Fri Feb  9 13:59:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">closure of a subset under relations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set and <math id="p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be an <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation on <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="p1.m5" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math>. A subset <math id="p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is said to be <em class="ltx_emph ltx_font_italic">closed under <math id="p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></em>, or <em class="ltx_emph ltx_font_italic"><math id="p1.m9" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed</em>, if, whenever <math id="p1.m10" class="ltx_Math" alttext="b_{1},\ldots,b_{n-1}\in B" display="inline"><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>∈</mo><mi>B</mi></mrow></math>, and <math id="p1.m11" class="ltx_Math" alttext="(b_{1},\ldots,b_{n-1},b_{n})\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>, then <math id="p1.m12" class="ltx_Math" alttext="b_{n}\in B" display="inline"><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>∈</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Note that if <math id="p2.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is unary, then <math id="p2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is <math id="p2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed iff <math id="p2.m4" class="ltx_Math" alttext="R\subseteq B" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">More generally, let <math id="p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set and <math id="p3.m2" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> a set of (finitary) relations on <math id="p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. A subset <math id="p3.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is said to be <em class="ltx_emph ltx_font_italic"><math id="p3.m5" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">R</mi></math>-closed</em> if <math id="p3.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is <math id="p3.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed for each <math id="p3.m8" class="ltx_Math" alttext="R\in\mathcal{R}" display="inline"><mrow><mi>R</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Given <math id="p4.m1" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math> with a set of relations <math id="p4.m2" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> on <math id="p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, we say that <math id="p4.m4" class="ltx_Math" alttext="C\subseteq A" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>A</mi></mrow></math> is an <em class="ltx_emph ltx_font_italic"><math id="p4.m5" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">R</mi></math>-closure</em> of <math id="p4.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> if
+</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>-closed, and</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="D\subseteq A" display="inline"><mrow><mi>D</mi><mo>⊆</mo><mi>A</mi></mrow></math> satisfies both 1 and 2, then <math id="I1.i3.p1.m2" class="ltx_Math" alttext="C\subseteq D" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mi>D</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">By condition 3, <math id="p5.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, if exists, must be unique. Let us call it the <math id="p5.m2" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>-closure of <math id="p5.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and denote it by <math id="p5.m4" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>. If <math id="p5.m5" class="ltx_Math" alttext="\mathcal{R}=\{R\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></mrow></math>, then we call it the <math id="p5.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closure of <math id="p5.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and denote it by <math id="p5.m8" class="ltx_Math" alttext="\operatorname{Cl}_{R}(B)" display="inline"><mrow><msub><mi>Cl</mi><mi>R</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> correspondingly.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Here are some examples.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I2.i1.p1.m1" class="ltx_Math" alttext="A=\mathbb{Z}" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>ℤ</mi></mrow></math>, <math id="I2.i1.p1.m2" class="ltx_Math" alttext="B=\{5\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="I2.i1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be the relation that <math id="I2.i1.p1.m4" class="ltx_Math" alttext="mRn" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>n</mi></mrow></math> whenever <math id="I2.i1.p1.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> divides <math id="I2.i1.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Clearly <math id="I2.i1.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is not closed under <math id="I2.i1.p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (for example, <math id="I2.i1.p1.m9" class="ltx_Math" alttext="(5,10)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math> but <math id="I2.i1.p1.m10" class="ltx_Math" alttext="10\notin B" display="inline"><mrow><mn>10</mn><mo>∉</mo><mi>B</mi></mrow></math>). Then <math id="I2.i1.p1.m11" class="ltx_Math" alttext="\operatorname{Cl}_{R}(B)=5\mathbb{Z}" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi>R</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>5</mn><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>. If <math id="I2.i1.p1.m12" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is instead the relation <math id="I2.i1.p1.m13" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>, then <math id="I2.i1.p1.m14" class="ltx_Math" alttext="\operatorname{Cl}_{\leq}(B)=\{n\in A\mid n\geq 5\}" display="inline"><mrow><mrow><msub><mi>Cl</mi><mo>≤</mo></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><mi>A</mi></mrow><mo>∣</mo><mrow><mi>n</mi><mo>≥</mo><mn>5</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">This is an example where <math id="I2.i2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is in fact a function (operation). Suppose <math id="I2.i2.p1.m2" class="ltx_Math" alttext="A=\mathbb{Z}" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>ℤ</mi></mrow></math> and <math id="I2.i2.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the binary operation subtraction <math id="I2.i2.p1.m4" class="ltx_Math" alttext="-" display="inline"><mo>-</mo></math>. Suppose <math id="I2.i2.p1.m5" class="ltx_Math" alttext="B=\{3,5\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="I2.i2.p1.m6" class="ltx_Math" alttext="\operatorname{Cl}_{-}(B)=A" display="inline"><mrow><mrow><msub><mi>Cl</mi><mo>-</mo></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math>. To see this, set <math id="I2.i2.p1.m7" class="ltx_Math" alttext="C=\operatorname{Cl}_{-}(B)" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><msub><mi>Cl</mi><mo>-</mo></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Note that <math id="I2.i2.p1.m8" class="ltx_Math" alttext="2=5-3\in C" display="inline"><mrow><mn>2</mn><mo>=</mo><mrow><mn>5</mn><mo>-</mo><mn>3</mn></mrow><mo>∈</mo><mi>C</mi></mrow></math> so <math id="I2.i2.p1.m9" class="ltx_Math" alttext="1=3-2" display="inline"><mrow><mn>1</mn><mo>=</mo><mrow><mn>3</mn><mo>-</mo><mn>2</mn></mrow></mrow></math> as well as <math id="I2.i2.p1.m10" class="ltx_Math" alttext="-1=2-3\in C" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>2</mn><mo>-</mo><mn>3</mn></mrow><mo>∈</mo><mi>C</mi></mrow></math>. This means that if <math id="I2.i2.p1.m11" class="ltx_Math" alttext="n\in C" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>C</mi></mrow></math>, both <math id="I2.i2.p1.m12" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> and <math id="I2.i2.p1.m13" class="ltx_Math" alttext="n+1\in C" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>∈</mo><mi>C</mi></mrow></math>. By induction, <math id="I2.i2.p1.m14" class="ltx_Math" alttext="C=\mathbb{Z}" display="inline"><mrow><mi>C</mi><mo>=</mo><mi>ℤ</mi></mrow></math>. In general, if <math id="I2.i2.p1.m15" class="ltx_Math" alttext="B=\{p,q\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">}</mo></mrow></mrow></math>, where <math id="I2.i2.p1.m16" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> are coprime, then <math id="I2.i2.p1.m17" class="ltx_Math" alttext="\operatorname{Cl}_{-}(B)=\mathbb{Z}" display="inline"><mrow><mrow><msub><mi>Cl</mi><mo>-</mo></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>ℤ</mi></mrow></math>. This is essentially the result of the Chinese Remainder Theorem.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.i3.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is unary, then the <math id="I2.i3.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closure of <math id="I2.i3.p1.m3" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math> is just <math id="I2.i3.p1.m4" class="ltx_Math" alttext="B\cup R" display="inline"><mrow><mi>B</mi><mo>∪</mo><mi>R</mi></mrow></math>. When every <math id="I2.i3.p1.m5" class="ltx_Math" alttext="R\in\mathcal{R}" display="inline"><mrow><mi>R</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math> is unary, then the <math id="I2.i3.p1.m6" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>-closure of <math id="I2.i3.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> in <math id="I2.i3.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <math id="I2.i3.p1.m9" class="ltx_Math" alttext="(\bigcup\mathcal{R})\cup B" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop1.p1.m1" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> exists for every <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">⊆</mo><mi>A</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let <math id="p7.m1" class="ltx_Math" alttext="S_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the set of subsets of <math id="p7.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfying the defining conditions 1 and 2 of <math id="p7.m3" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>-closures above, partially ordered by <math id="p7.m4" class="ltx_Math" alttext="\subseteq" display="inline"><mo>⊆</mo></math>. If <math id="p7.m5" class="ltx_Math" alttext="\mathcal{C}\subseteq S_{\mathcal{R}}(B)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>⊆</mo><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p7.m6" class="ltx_Math" alttext="\bigcap\mathcal{C}\in S_{\mathcal{R}}(B)" display="inline"><mrow><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>∈</mo><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. To see this, we break the statement down into cases:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">In the case when <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\mathcal{C}=\varnothing" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, we have <math id="I3.i1.p1.m2" class="ltx_Math" alttext="\bigcap\mathcal{C}=A\in S_{\mathcal{R}}(B)" display="inline"><mrow><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>=</mo><mi>A</mi><mo>∈</mo><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">When <math id="I3.i2.p1.m1" class="ltx_Math" alttext="C:=\bigcap\mathcal{C}\neq\varnothing" display="inline"><mrow><mi>C</mi><mo>:=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, pick any <math id="I3.i2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation <math id="I3.i2.p1.m3" class="ltx_Math" alttext="R\in\mathcal{R}" display="inline"><mrow><mi>R</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math>.
+</p>
+<ol id="I3.I1" class="ltx_enumerate">
+<li id="I3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.I1.i1.p1.m1" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, then, since aach <math id="I3.I1.i1.p1.m2" class="ltx_Math" alttext="D\in\mathcal{C}" display="inline"><mrow><mi>D</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> is <math id="I3.I1.i1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed, <math id="I3.I1.i1.p1.m4" class="ltx_Math" alttext="R\subseteq D" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>D</mi></mrow></math>. Therefore, <math id="I3.I1.i1.p1.m5" class="ltx_Math" alttext="R\subseteq\bigcap\mathcal{C}=\bigcap\{D\mid D\in\mathcal{C}\}=C" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mrow><mo stretchy="false">{</mo><mi>D</mi><mo>∣</mo><mrow><mi>D</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mi>C</mi></mrow></math>. So <math id="I3.I1.i1.p1.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is <math id="I3.I1.i1.p1.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed.</p>
+</div>
+</li>
+<li id="I3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.I1.i2.p1.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, pick elements <math id="I3.I1.i2.p1.m2" class="ltx_Math" alttext="c_{1},\ldots,c_{n-1}\in C" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>∈</mo><mi>C</mi></mrow></math> such that <math id="I3.I1.i2.p1.m3" class="ltx_Math" alttext="(c_{1},\ldots,c_{n})\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>. As each <math id="I3.I1.i2.p1.m4" class="ltx_Math" alttext="c_{i}\in D" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>∈</mo><mi>D</mi></mrow></math> for <math id="I3.I1.i2.p1.m5" class="ltx_Math" alttext="i=1,\ldots,n-1" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math>, and <math id="I3.I1.i2.p1.m6" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is <math id="I3.I1.i2.p1.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed, <math id="I3.I1.i2.p1.m8" class="ltx_Math" alttext="c_{n}\in D" display="inline"><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>∈</mo><mi>D</mi></mrow></math>. Since <math id="I3.I1.i2.p1.m9" class="ltx_Math" alttext="c_{n}\in D" display="inline"><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>∈</mo><mi>D</mi></mrow></math> for every <math id="I3.I1.i2.p1.m10" class="ltx_Math" alttext="D\in\mathcal{C}" display="inline"><mrow><mi>D</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math>, <math id="I3.I1.i2.p1.m11" class="ltx_Math" alttext="c_{n}\in C" display="inline"><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>∈</mo><mi>C</mi></mrow></math> as well. This shows that <math id="I3.I1.i2.p1.m12" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is <math id="I3.I1.i2.p1.m13" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-closed.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">In both cases, <math id="I3.i2.p1.m4" class="ltx_Math" alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math> since <math id="I3.i2.p1.m5" class="ltx_Math" alttext="B\subseteq D" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>D</mi></mrow></math> for every <math id="I3.i2.p1.m6" class="ltx_Math" alttext="D\in\mathcal{C}" display="inline"><mrow><mi>D</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math>. Therefore, <math id="I3.i2.p1.m7" class="ltx_Math" alttext="C\in S_{\mathcal{R}}(B)" display="inline"><mrow><mi>C</mi><mo>∈</mo><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Hence, <math id="p7.m7" class="ltx_Math" alttext="S_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a complete lattice by virtue of this fact (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CriteriaForAPosetToBeACompleteLattice</span>), which means that <math id="p7.m8" class="ltx_Math" alttext="S_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>S</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a minimal element, which is none other than the <math id="p7.m9" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>-closure <math id="p7.m10" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="p7.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. It is not hard to see <math id="p8.m1" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}" display="inline"><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub></math> has the following properties:</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="B\subseteq\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}(\operatorname{Cl}_{\mathcal{R}}(B))=%
+\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I4.i3.p1.m1" class="ltx_Math" alttext="B\subseteq C" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow></math>, then <math id="I4.i3.p1.m2" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{R}}(B)\subseteq\operatorname{Cl}_{\mathcal{R}}(C)" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Next, assume that <math id="p9.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is another set of finitary relations on <math id="p9.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I5.i1.p1.m1" class="ltx_Math" alttext="\mathcal{R}\subseteq\mathcal{S}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></math>, then <math id="I5.i1.p1.m2" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{S}}(B)\subseteq\operatorname{Cl}_{\mathcal{R}}(B)" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i2.p1.m1" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{S}}(\operatorname{Cl}_{\mathcal{R}}(B))\subseteq%
+\operatorname{Cl}_{\mathcal{R}\cap\mathcal{S}}(B)" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>Cl</mi><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>∩</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i3.p1.m1" class="ltx_Math" alttext="\operatorname{Cl}_{\mathcal{S}}(\operatorname{Cl}_{\mathcal{R}}(B))=%
+\operatorname{Cl}_{\mathcal{R}\cap\mathcal{S}}(B)" display="inline"><mrow><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Cl</mi><mi class="ltx_font_mathcaligraphic">ℛ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>Cl</mi><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>∩</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if <math id="I5.i3.p1.m2" class="ltx_Math" alttext="\mathcal{R}\subseteq\mathcal{S}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></math> or <math id="I5.i3.p1.m3" class="ltx_Math" alttext="\mathcal{S}\subseteq\mathcal{R}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">closure of a subset under relations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ClosureOfASubsetUnderRelations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:21:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:21:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">closed under</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">closure property</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 13:59:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

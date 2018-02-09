@@ -1,0 +1,271 @@
+<!DOCTYPE html><html>
+<head>
+<title>categorical algebra</title>
+<!--Generated on Fri Feb  9 14:04:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">categorical algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction: An Outline of Categorical Algebra</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">This topic entry provides an outline of an important mathematical field called <span class="ltx_text ltx_font_italic">categorical algebra</span>; although specific definitions are in use for various applications of categorical algebra to specific algebraic structures, they do not cover the entire field. In the most general sense, <em class="ltx_emph ltx_font_italic">categorical algebras</em>– as introduced by Mac Lane in 1965 – can be described as the study of representations of algebraic structures, either concrete or abstract, in terms of categories, functors and natural transformations.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">In a narrow sense, a <em class="ltx_emph ltx_font_italic">categorical algebra</em> is an associative algebra, defined for any locally finite category and a commutative ring with unity. This notion may be considered as a generalization of both the concept of group algebra and that of an incidence algebra, much as the concept of category generalizes the notions of group and partially ordered set.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Extensions of categorical algebra</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Thus, ultimately, since categories are interpretations of the <em class="ltx_emph ltx_font_italic">axiomatic elementary theory of abstract categories (ETAC)</em>, so are categorical algebras.</p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">The general definition of representation introduced above can be still further extended by introducing <em class="ltx_emph ltx_font_italic">supercategorical algebras as interpretations of ETAS</em>, as explained next.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Mac Lane (1976) wrote in his <span class="ltx_text ltx_font_italic">Bull. AMS</span> review cited here as a verbatim quotation:</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">“On some occasions I have been tempted to try to define what algebra is,
+can, or should be - most recently in concluding a survey [72] on Recent
+advances in algebra. But no such formal definitions hold valid for long, since
+algebra and its various subfields steadily change under the influence of ideas
+and problems coming not just from logic and geometry, but from analysis,
+other parts of mathematics, and extra mathematical sources. The progress of
+mathematics does indeed depend on many interlocking, unexpected and
+multiform developments.”</em></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Basic definitions</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">algebraic representation</em> is generally defined as a <em class="ltx_emph ltx_font_italic">morphism <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> from an abstract algebraic structure <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="\mathcal{A}_{S}" display="inline"><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi><mi>S</mi></msub></math> to a concrete algebraic structure <math id="S0.SS3.p1.m3" class="ltx_Math" alttext="A_{c}" display="inline"><msub><mi>A</mi><mi>c</mi></msub></math></em>, a Hilbert space <math id="S0.SS3.p1.m4" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>, or a family of linear operator spaces.</p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">The key notion of representable functor (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RepresentableFunctor</span>) was first reported by Alexander Grothendieck in 1960.</p>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Thus, when the latter concept is extended to categorical algebra, one has a <em class="ltx_emph ltx_font_italic">representable</em> functor <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> from an arbitrary category <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> to the category of sets <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="Set" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></math> if <math id="S0.Thmdefinition1.p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> admits a <em class="ltx_emph ltx_font_italic">functor representation</em> defined as follows. A <em class="ltx_emph ltx_font_italic">functor representation of <math id="S0.Thmdefinition1.p1.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math></em> is defined as a pair, <math id="S0.Thmdefinition1.p1.m6" class="ltx_Math" alttext="({R},\phi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></math>, which consists of an object <math id="S0.Thmdefinition1.p1.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> of <math id="S0.Thmdefinition1.p1.m8" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and a family <math id="S0.Thmdefinition1.p1.m9" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> of equivalences <math id="S0.Thmdefinition1.p1.m10" class="ltx_Math" alttext="\phi(C):{\rm Hom}_{\mathcal{C}}(R,C)\cong S(C)" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><msub><mi>Hom</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, which is natural in C, with C being any object in <math id="S0.Thmdefinition1.p1.m11" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. When the functor <math id="S0.Thmdefinition1.p1.m12" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> has such a representation, it is also said to be <em class="ltx_emph ltx_font_italic">represented by the object <math id="S0.Thmdefinition1.p1.m13" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></em> of <math id="S0.Thmdefinition1.p1.m14" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. For each object <math id="S0.Thmdefinition1.p1.m15" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> of <math id="S0.Thmdefinition1.p1.m16" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>
+one writes <math id="S0.Thmdefinition1.p1.m17" class="ltx_Math" alttext="h_{R}:\mathcal{C}{\longrightarrow}Set" display="inline"><mrow><msub><mi>h</mi><mi>R</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>⟶</mo><mrow><mi>S</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math> for the covariant <math id="S0.Thmdefinition1.p1.m18" class="ltx_Math" alttext="{\rm Hom}" display="inline"><mi>Hom</mi></math>–functor <math id="S0.Thmdefinition1.p1.m19" class="ltx_Math" alttext="h_{R}(C)\cong{\rm Hom}_{\mathcal{C}}(R,C)" display="inline"><mrow><mrow><msub><mi>h</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><msub><mi>Hom</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. A <em class="ltx_emph ltx_font_italic">representation</em> <math id="S0.Thmdefinition1.p1.m20" class="ltx_Math" alttext="(R,\phi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></math> of <math id="S0.Thmdefinition1.p1.m21" class="ltx_Math" alttext="{S}" display="inline"><mi>S</mi></math> is therefore <em class="ltx_emph ltx_font_italic">a natural equivalence of functors</em>:</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\phi:h_{R}\cong{S}~{}." display="block"><mrow><mrow><mi>ϕ</mi><mo>:</mo><mrow><msub><mi>h</mi><mi>R</mi></msub><mo>≅</mo><mpadded width="+3.3pt"><mi>S</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(0.1)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S0.Thmremark1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.1</span>.</h6>
+<div id="S0.Thmremark1.p1" class="ltx_para">
+<p class="ltx_p">The equivalence classes of such functor representations (defined as natural equivalences) determine directly an algebraic (<em class="ltx_emph ltx_font_italic">groupoid</em>) structure.</p>
+</div>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Note:</h2>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">See also in Expositions the entry about abstract and concrete algebras.</p>
+</div>
+</section>
+<section id="S0.SS5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.5 </span>Application: Quantum Categories</h2>
+
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Saunders Mac Lane: Categorical algebra., <span class="ltx_text ltx_font_italic">Bull. AMS</span>, <span class="ltx_text ltx_font_bold">71</span> (1965), 40-106., Zbl 0161.01601, MR 0171826,
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Saunders Mac Lane: Topology and Logic as a Source of Algebras., <span class="ltx_text ltx_font_italic">Bull. AMS</span>, <span class="ltx_text ltx_font_bold">82</span>, Number 1, 1-36,
+January 1, 1976.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+<span class="ltx_text ltx_font_typewriter">http://en.wikipedia.org/wiki/Categorical_algebra</span>Categorical algebra- basic definitions
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">categorical algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:13:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:13:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">79</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A70</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">algebraic categories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicCategoryOfLMnLogicAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NonAbelianStructures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AbelianCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AxiomsForAnAbelianCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneralizedVanKampenTheoremsHigherDimensional</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AxiomaticTheoryOfSupercategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalOntology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NonCommutingGraphOfAGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NonAbelianStructures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">algebraic representation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">functor representation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">representable functor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of algebraic structures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">category of logic algebras</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 14:04:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

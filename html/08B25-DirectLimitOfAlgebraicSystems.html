@@ -1,0 +1,260 @@
+<!DOCTYPE html><html>
+<head>
+<title>direct limit of algebraic systems</title>
+<!--Generated on Fri Feb  9 14:05:54 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">direct limit of algebraic systems</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">An immediate generalization of the concept of the direct limit of a direct family of sets is the direct limit of a direct family of algebraic systems.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Direct Family of Algebraic Systems</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">The definition is almost identical to that of a direct family of sets, except that functions <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\phi_{ij}" display="inline"><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are now homomorphisms. For completeness, we will spell out the definition in its entirety.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="\mathcal{A}=\{A_{i}\mid i\in I\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> be a family of algebraic systems of the same type (say, they are all <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>-algebras), indexed by a non-empty set <math id="S0.SS0.SSSx1.p2.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. <math id="S0.SS0.SSSx1.p2.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is said to be a <em class="ltx_emph ltx_font_italic">direct family</em> if</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a directed set,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">whenever <math id="I1.i2.p1.m1" class="ltx_Math" alttext="i\leq j" display="inline"><mrow><mi>i</mi><mo>≤</mo><mi>j</mi></mrow></math> in <math id="I1.i2.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, there is a homomorphism <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\phi_{ij}:A_{i}\to A_{j}" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>:</mo><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>→</mo><msub><mi>A</mi><mi>j</mi></msub></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\phi_{ii}" display="inline"><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></math> is the identity on <math id="I1.i3.p1.m2" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>,</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i4.p1.m1" class="ltx_Math" alttext="i\leq j\leq k" display="inline"><mrow><mi>i</mi><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>k</mi></mrow></math>, then <math id="I1.i4.p1.m2" class="ltx_Math" alttext="\phi_{jk}\circ\phi_{ij}=\phi_{ik}" display="inline"><mrow><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>∘</mo><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>=</mo><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">An example of this is a direct family of sets. A homomorphism between two sets is just a function between the sets.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Direct Limit of Algebraic Systems</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be a direct family of algebraic systems <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>, indexed by <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> (<math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math>). Take the disjoint union of the underlying sets of each algebraic system, and call it <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Next, a binary relation <math id="S0.SS0.SSSx2.p1.m6" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is defined on <math id="S0.SS0.SSSx2.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> as
+follows:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">given that <math id="S0.SS0.SSSx2.p1.m8" class="ltx_Math" alttext="a\in A_{i}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math> and <math id="S0.SS0.SSSx2.p1.m9" class="ltx_Math" alttext="b\in A_{j}" display="inline"><mrow><mi>b</mi><mo>∈</mo><msub><mi>A</mi><mi>j</mi></msub></mrow></math>, <math id="S0.SS0.SSSx2.p1.m10" class="ltx_Math" alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math> iff there is <math id="S0.SS0.SSSx2.p1.m11" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math> such that <math id="S0.SS0.SSSx2.p1.m12" class="ltx_Math" alttext="\phi_{ik}(a)=\phi_{jk}(b)" display="inline"><mrow><mrow><msub><mi>ϕ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</blockquote>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">It is shown here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DirectLimitOfSets</span>) that <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, so we can take the quotient <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="A/\sim" display="inline"><mrow><mi>A</mi><mo>/</mo><mo>∼</mo></mrow></math>, and denote it by <math id="S0.SS0.SSSx2.p2.m4" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math>. Elements of <math id="S0.SS0.SSSx2.p2.m5" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> are denoted by <math id="S0.SS0.SSSx2.p2.m6" class="ltx_Math" alttext="[a]_{I}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mi>I</mi></msub></math> or <math id="S0.SS0.SSSx2.p2.m7" class="ltx_Math" alttext="[a]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> when there is no confusion, where <math id="S0.SS0.SSSx2.p2.m8" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>. So <math id="S0.SS0.SSSx2.p2.m9" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> is just the direct limit of <math id="S0.SS0.SSSx2.p2.m10" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> <em class="ltx_emph ltx_font_italic">considered as sets</em>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p">Next, we want to turn <math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> into an <math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>-algebra. Corresponding to each set of <math id="S0.SS0.SSSx2.p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary operations <math id="S0.SS0.SSSx2.p3.m4" class="ltx_Math" alttext="\omega_{i}" display="inline"><msub><mi>ω</mi><mi>i</mi></msub></math> defined on <math id="S0.SS0.SSSx2.p3.m5" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> for all <math id="S0.SS0.SSSx2.p3.m6" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math>, we define an <math id="S0.SS0.SSSx2.p3.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary operation <math id="S0.SS0.SSSx2.p3.m8" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> on <math id="S0.SS0.SSSx2.p3.m9" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> as follows:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">for <math id="S0.SS0.SSSx2.p3.m10" class="ltx_Math" alttext="i=1,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>, pick <math id="S0.SS0.SSSx2.p3.m11" class="ltx_Math" alttext="a_{i}\in A_{j(i)}" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><msub><mi>A</mi><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math>, <math id="S0.SS0.SSSx2.p3.m12" class="ltx_Math" alttext="j(i)\in I" display="inline"><mrow><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>I</mi></mrow></math>. Let <math id="S0.SS0.SSSx2.p3.m13" class="ltx_Math" alttext="J:=\{j(i)\mid i=1,\ldots,n\}" display="inline"><mrow><mi>J</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Since <math id="S0.SS0.SSSx2.p3.m14" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is directed and <math id="S0.SS0.SSSx2.p3.m15" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is finite, <math id="S0.SS0.SSSx2.p3.m16" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> has an upper bound <math id="S0.SS0.SSSx2.p3.m17" class="ltx_Math" alttext="j\in I" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>I</mi></mrow></math>. Let <math id="S0.SS0.SSSx2.p3.m18" class="ltx_Math" alttext="\alpha_{i}=\phi_{j(i)j}(a_{i})" display="inline"><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>=</mo><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Define
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\omega([a_{1}],\ldots,[a_{n}]):=[\omega_{j}(\alpha_{1},\ldots,\alpha_{n})]." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">[</mo><mrow><msub><mi>ω</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</blockquote>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop1.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math><span class="ltx_text ltx_font_italic"> is a well-defined <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary operation on <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S0.SS0.SSSx2.p4" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S0.SS0.SSSx2.p4.m1" class="ltx_Math" alttext="[b_{1}]=[a_{1}],\ldots,[b_{n}]=[a_{n}]" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. Let <math id="S0.SS0.SSSx2.p4.m2" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math> be defined as above, and let <math id="S0.SS0.SSSx2.p4.m3" class="ltx_Math" alttext="a:=\omega_{j}(\alpha_{1},\ldots,\alpha_{n})\in A_{j}" display="inline"><mrow><mi>a</mi><mo>:=</mo><mrow><msub><mi>ω</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msub><mi>A</mi><mi>j</mi></msub></mrow></math>. Similarly, <math id="S0.SS0.SSSx2.p4.m4" class="ltx_Math" alttext="\beta_{i}" display="inline"><msub><mi>β</mi><mi>i</mi></msub></math> are defined: <math id="S0.SS0.SSSx2.p4.m5" class="ltx_Math" alttext="\beta_{i}:=\phi_{k(i)k}(b_{i})\in A_{k}" display="inline"><mrow><msub><mi>β</mi><mi>i</mi></msub><mo>:=</mo><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msub><mi>A</mi><mi>k</mi></msub></mrow></math>, where <math id="S0.SS0.SSSx2.p4.m6" class="ltx_Math" alttext="b_{i}\in A_{k(i)}" display="inline"><mrow><msub><mi>b</mi><mi>i</mi></msub><mo>∈</mo><msub><mi>A</mi><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math>. Let <math id="S0.SS0.SSSx2.p4.m7" class="ltx_Math" alttext="b:=\omega_{k}(\beta_{1},\ldots,\beta_{n})\in A_{k}" display="inline"><mrow><mi>b</mi><mo>:=</mo><mrow><msub><mi>ω</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msub><mi>A</mi><mi>k</mi></msub></mrow></math>. We want to show that <math id="S0.SS0.SSSx2.p4.m8" class="ltx_Math" alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p5" class="ltx_para">
+<p class="ltx_p">Since <math id="S0.SS0.SSSx2.p5.m1" class="ltx_Math" alttext="a_{i}\sim b_{i}" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∼</mo><msub><mi>b</mi><mi>i</mi></msub></mrow></math>, <math id="S0.SS0.SSSx2.p5.m2" class="ltx_Math" alttext="\alpha_{i}\sim\beta_{i}" display="inline"><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>∼</mo><msub><mi>β</mi><mi>i</mi></msub></mrow></math>. So there is <math id="S0.SS0.SSSx2.p5.m3" class="ltx_Math" alttext="c_{i}:=\phi_{j\ell(i)}(\alpha_{i})=\phi_{k\ell(i)}(\beta_{i})\in A_{\ell(i)}" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>:=</mo><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msub><mi>A</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math>. Let <math id="S0.SS0.SSSx2.p5.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> be the upper bound of the set <math id="S0.SS0.SSSx2.p5.m5" class="ltx_Math" alttext="\{\ell(1),\ldots,\ell(n)\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></math> and define <math id="S0.SS0.SSSx2.p5.m6" class="ltx_Math" alttext="\gamma_{i}:=\phi_{\ell(i)\ell}(c_{i})\in A_{\ell}" display="inline"><mrow><msub><mi>γ</mi><mi>i</mi></msub><mo>:=</mo><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msub><mi>A</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></math>. Then</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\phi_{j\ell}(a)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\phi_{j\ell}\big{(}\omega_{j}(\alpha_{1},\ldots,\alpha_{n})\big{)}" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>ω</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\omega_{\ell}\big{(}\phi_{j\ell}(\alpha_{1}),\ldots,\phi_{j\ell}(%
+\alpha_{n})\big{)}" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\omega_{\ell}\big{(}\phi_{\ell(1)\ell}\circ\phi_{j\ell(1)}(\alpha%
+_{1}),\ldots,\phi_{\ell(n)\ell}\circ\phi_{j\ell(n)}(\alpha_{n})\big{)}" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>∘</mo><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>∘</mo><msub><mi>ϕ</mi><mrow><mi>j</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\omega_{\ell}\big{(}\phi_{\ell(1)\ell}(c_{1}),\ldots,\phi_{\ell(n%
+)\ell}(c_{n})\big{)}" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\omega_{\ell}\big{(}\phi_{\ell(1)\ell}\circ\phi_{k\ell(1)}(\beta_%
+{1}),\ldots,\phi_{\ell(n)\ell}\circ\phi_{k\ell(n)}(\beta_{n})\big{)}" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>∘</mo><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mrow><msub><mi>ϕ</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>∘</mo><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\omega_{\ell}\big{(}\phi_{k\ell}(\beta_{1}),\ldots,\phi_{k\ell}(%
+\beta_{n})\big{)}" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\phi_{k\ell}\big{(}\omega_{k}(\beta_{1},\ldots,\beta_{n})\big{)}" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>ω</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\phi_{k\ell}(b)," display="inline"><mrow><mrow><msub><mi>ϕ</mi><mrow><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which shows that <math id="S0.SS0.SSSx2.p5.m7" class="ltx_Math" alttext="a\sim b" display="inline"><mrow><mi>a</mi><mo>∼</mo><mi>b</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S0.SS0.SSSx2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="S0.SS0.SSSx2.p6.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be a direct family of algebraic systems of the same type (say <math id="S0.SS0.SSSx2.p6.m2" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>) indexed by <math id="S0.SS0.SSSx2.p6.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. The <math id="S0.SS0.SSSx2.p6.m4" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>-algebra <math id="S0.SS0.SSSx2.p6.m5" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> constructed above is called the <em class="ltx_emph ltx_font_italic">direct limit</em> of <math id="S0.SS0.SSSx2.p6.m6" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. <math id="S0.SS0.SSSx2.p6.m7" class="ltx_Math" alttext="A_{\infty}" display="inline"><msub><mi>A</mi><mi mathvariant="normal">∞</mi></msub></math> is alternatively written <math id="S0.SS0.SSSx2.p6.m8" class="ltx_Math" alttext="\varinjlim A_{i}" display="inline"><mrow><munder accentunder="true"><mi>lim</mi><mo>→</mo></munder><mo>⁡</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. Dually, one can define an <em class="ltx_emph ltx_font_italic">inverse family of algebraic systems</em>, and its inverse limit. The inverse limit of an inverse family <math id="S0.SS0.SSSx2.p7.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is written <math id="S0.SS0.SSSx2.p7.m2" class="ltx_Math" alttext="A^{\infty}" display="inline"><msup><mi>A</mi><mi mathvariant="normal">∞</mi></msup></math> or <math id="S0.SS0.SSSx2.p7.m3" class="ltx_Math" alttext="\varprojlim A_{i}" display="inline"><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">direct limit of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DirectLimitOfAlgebraicSystems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08B25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">direct system of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse system of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projective system of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DirectLimitOfSets</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">direct family of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse family of algebraic systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">inverse limit of algebraic systems</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 14:05:54 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

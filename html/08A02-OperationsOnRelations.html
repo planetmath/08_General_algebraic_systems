@@ -1,0 +1,351 @@
+<!DOCTYPE html><html>
+<head>
+<title>operations on relations</title>
+<!--Generated on Fri Feb  9 13:59:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">operations on relations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Recall that an <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation (<math id="p2.m2" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>) is a subset of a product of some <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sets. In this definition, any <math id="p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation for which <math id="p2.m5" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> is automatically an <math id="p2.m6" class="ltx_Math" alttext="(n-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>-ary relation, and consequently a binary relation. On the other hand, a unary, or <math id="p2.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>-ary relation, being the subset <math id="p2.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of some set <math id="p2.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, can be viewed as a binary relation (either realized as <math id="p2.m10" class="ltx_Math" alttext="B\times B" display="inline"><mrow><mi>B</mi><mo>×</mo><mi>B</mi></mrow></math> or <math id="p2.m11" class="ltx_Math" alttext="\Delta_{B}:=\{(b,b)\mid b\in B\}" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>B</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>) on <math id="p2.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Hence, we shall concentrate our discussion on the most important kind of relations, the binary relations, in this entry.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Compositions, Inverses, and Complements</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\rho\subseteq A\times B" display="inline"><mrow><mi>ρ</mi><mo>⊆</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow></math> and <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="\sigma\subseteq B\times C" display="inline"><mrow><mi>σ</mi><mo>⊆</mo><mrow><mi>B</mi><mo>×</mo><mi>C</mi></mrow></mrow></math> be two binary relations. We define the <em class="ltx_emph ltx_font_italic">composition</em> of <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> and <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, the <em class="ltx_emph ltx_font_italic">inverse</em> (or <em class="ltx_emph ltx_font_italic">converse</em>) and the <em class="ltx_emph ltx_font_italic">complement</em> of <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> by</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\rho\circ\sigma:=\{(a,c)\mid(a,b)\in\rho\mbox{ and }(b,c)\in\sigma\mbox{ for %
+some }b\in B\}" display="inline"><mrow><mrow><mi>ρ</mi><mo>∘</mo><mi>σ</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ρ</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>σ</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\rho^{-1}:=\{(b,a)\mid(a,b)\in\rho\}" display="inline"><mrow><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>ρ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\rho^{\prime}:=\{(a,b)\mid(a,b)\notin\rho\}" display="inline"><mrow><msup><mi>ρ</mi><mo>′</mo></msup><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>ρ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="\rho\circ\sigma,\rho^{-1}" display="inline"><mrow><mrow><mi>ρ</mi><mo>∘</mo><mi>σ</mi></mrow><mo>,</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> and <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="\rho^{\prime}" display="inline"><msup><mi>ρ</mi><mo>′</mo></msup></math> are binary relations of <math id="S0.SS0.SSSx1.p1.m8" class="ltx_Math" alttext="A\times C,B\times A" display="inline"><mrow><mrow><mi>A</mi><mo>×</mo><mi>C</mi></mrow><mo>,</mo><mrow><mi>B</mi><mo>×</mo><mi>A</mi></mrow></mrow></math> and <math id="S0.SS0.SSSx1.p1.m9" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math> respectively.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Properties</span>.
+Suppose <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="\rho,\sigma,\tau" display="inline"><mrow><mi>ρ</mi><mo>,</mo><mi>σ</mi><mo>,</mo><mi>τ</mi></mrow></math> are binary relations of <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="A\times B,B\times C,C\times D" display="inline"><mrow><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow><mo>,</mo><mrow><mi>B</mi><mo>×</mo><mi>C</mi></mrow><mo>,</mo><mrow><mi>C</mi><mo>×</mo><mi>D</mi></mrow></mrow></math> respectively.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Associativity of relational compositions: <math id="I2.i1.p1.m1" class="ltx_Math" alttext="(\rho\circ\sigma)\circ\tau=\rho\circ(\sigma\circ\tau)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>∘</mo><mi>σ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>τ</mi></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>∘</mo><mi>τ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="(\rho\circ\sigma)^{-1}=\sigma^{-1}\circ\rho^{-1}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>∘</mo><mi>σ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><msup><mi>σ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">For the rest of the remarks, we assume <math id="I2.i3.p1.m1" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>. Define the <em class="ltx_emph ltx_font_italic">power</em> of <math id="I2.i3.p1.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> recursively by <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\rho^{1}=\rho" display="inline"><mrow><msup><mi>ρ</mi><mn>1</mn></msup><mo>=</mo><mi>ρ</mi></mrow></math>, and <math id="I2.i3.p1.m4" class="ltx_Math" alttext="\rho^{n+1}=\rho\circ\rho^{n}" display="inline"><mrow><msup><mi>ρ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mi>ρ</mi><mo>∘</mo><msup><mi>ρ</mi><mi>n</mi></msup></mrow></mrow></math>. By 1 above, <math id="I2.i3.p1.m5" class="ltx_Math" alttext="\rho^{n+m}=\rho^{n}\circ\rho^{m}" display="inline"><mrow><msup><mi>ρ</mi><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow></msup><mo>=</mo><mrow><msup><mi>ρ</mi><mi>n</mi></msup><mo>∘</mo><msup><mi>ρ</mi><mi>m</mi></msup></mrow></mrow></math> for <math id="I2.i3.p1.m6" class="ltx_Math" alttext="m,n\in\mathbb{N}" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>.
+</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="\rho^{-n}" display="inline"><msup><mi>ρ</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></math> may be also be defined, in terms of <math id="I2.i4.p1.m2" class="ltx_Math" alttext="\rho^{-1}" display="inline"><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> for <math id="I2.i4.p1.m3" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">However, <math id="I2.i5.p1.m1" class="ltx_Math" alttext="\rho^{n+m}\neq\rho^{n}\circ\rho^{m}" display="inline"><mrow><msup><mi>ρ</mi><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow></msup><mo>≠</mo><mrow><msup><mi>ρ</mi><mi>n</mi></msup><mo>∘</mo><msup><mi>ρ</mi><mi>m</mi></msup></mrow></mrow></math> for <em class="ltx_emph ltx_font_italic">all</em> integers, since <math id="I2.i5.p1.m2" class="ltx_Math" alttext="\rho^{-1}\circ\rho\neq\rho\circ\rho^{-1}" display="inline"><mrow><mrow><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mi>ρ</mi></mrow><mo>≠</mo><mrow><mi>ρ</mi><mo>∘</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> in general.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p">Nevertheless, we may define <math id="I2.i6.p1.m1" class="ltx_Math" alttext="\Delta:=\{(a,a)\mid a\in A\}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. This is called the <em class="ltx_emph ltx_font_italic">identity</em> or <em class="ltx_emph ltx_font_italic">diagonal relation</em> on <math id="I2.i6.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. It has the property that <math id="I2.i6.p1.m3" class="ltx_Math" alttext="\Delta\circ\rho=\rho\circ\Delta=\rho" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>∘</mo><mi>ρ</mi></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>∘</mo><mi mathvariant="normal">Δ</mi></mrow><mo>=</mo><mi>ρ</mi></mrow></math>. For this, we may define, for every relation <math id="I2.i6.p1.m4" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> on <math id="I2.i6.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="I2.i6.p1.m6" class="ltx_Math" alttext="\rho^{0}:=\Delta" display="inline"><mrow><msup><mi>ρ</mi><mn>0</mn></msup><mo>:=</mo><mi mathvariant="normal">Δ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I2.i7.p1.m1" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> be the set of all binary relations on a set <math id="I2.i7.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then <math id="I2.i7.p1.m3" class="ltx_Math" alttext="(\mathcal{R},\circ)" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>,</mo><mo>∘</mo><mo stretchy="false">)</mo></mrow></math> is a monoid (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Monoid</span>) with <math id="I2.i7.p1.m4" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> as the identity element.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p3.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> be a binary relation on a set <math id="S0.SS0.SSSx1.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, below are some special relations definable from <math id="S0.SS0.SSSx1.p3.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is reflexive if <math id="I3.i1.p1.m2" class="ltx_Math" alttext="\Delta\subseteq\rho" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⊆</mo><mi>ρ</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is symmetric if <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\rho=\rho^{-1}" display="inline"><mrow><mi>ρ</mi><mo>=</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is anti-symmetric if <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\rho\cap\rho^{-1}\subseteq\Delta" display="inline"><mrow><mrow><mi>ρ</mi><mo>∩</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>⊆</mo><mi mathvariant="normal">Δ</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i4.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is transitive if <math id="I3.i4.p1.m2" class="ltx_Math" alttext="\rho\circ\rho\subseteq\rho" display="inline"><mrow><mrow><mi>ρ</mi><mo>∘</mo><mi>ρ</mi></mrow><mo>⊆</mo><mi>ρ</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i5.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is a pre-order if it is reflexive and transitive</p>
+</div>
+</li>
+<li id="I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i6.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is a partial order if it is a pre-order and is anti-symmetric</p>
+</div>
+</li>
+<li id="I3.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i7.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is an equivalence if it is a pre-order and is symmetric</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Of these, only reflexivity is preserved by <math id="S0.SS0.SSSx1.p3.m4" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> and both symmetry and anti-symmetry are preserved by the inverse operation.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Other Operations</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">Some operations on binary relations yield unary relations. The most common ones are the following:</p>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">Given a binary relation <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="\rho\in A\times B" display="inline"><mrow><mi>ρ</mi><mo>∈</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow></math>, and an elements <math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math>, define</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\rho(a,\cdot):=\{y\mid(a,y)\in\rho\}\quad\mbox{ and }\quad\rho(\cdot,b):=\{x%
+\mid(x,b)\in\rho\}." display="block"><mrow><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>ρ</mi></mrow><mo stretchy="false">}</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mtext> and </mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>ρ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="\rho(a,\cdot)\subseteq B" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>B</mi></mrow></math> is called the <em class="ltx_emph ltx_font_italic">section of <math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> in <math id="S0.SS0.SSSx2.p3.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> based at <math id="S0.SS0.SSSx2.p3.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math></em>, and <math id="S0.SS0.SSSx2.p3.m5" class="ltx_Math" alttext="\rho(\cdot,b)\subseteq A" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>A</mi></mrow></math> is the <em class="ltx_emph ltx_font_italic">section of <math id="S0.SS0.SSSx2.p3.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> in <math id="S0.SS0.SSSx2.p3.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> (based) at <math id="S0.SS0.SSSx2.p3.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math></em>. When the base points are not mentioned, we simply say a section of <math id="S0.SS0.SSSx2.p3.m9" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> in <math id="S0.SS0.SSSx2.p3.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> or <math id="S0.SS0.SSSx2.p3.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, or an <math id="S0.SS0.SSSx2.p3.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>-section or a <math id="S0.SS0.SSSx2.p3.m13" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>-section of <math id="S0.SS0.SSSx2.p3.m14" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p4" class="ltx_para">
+<p class="ltx_p">Finally, we define the domain and range of a binary relation <math id="S0.SS0.SSSx2.p4.m1" class="ltx_Math" alttext="\rho\subseteq A\times B" display="inline"><mrow><mi>ρ</mi><mo>⊆</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow></math>, to be</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="\operatorname{dom}(\rho):=\{a\mid(a,b)\in\rho\mbox{ for some }b\in B\}" display="inline"><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ρ</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="\operatorname{ran}(\rho):=\{b\mid(a,b)\in\rho\mbox{ for some }a\in A\}." display="inline"><mrow><mrow><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>ρ</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">respectively. When <math id="S0.SS0.SSSx2.p4.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is a function, the domain and range of <math id="S0.SS0.SSSx2.p4.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> coincide with the domain of range of <math id="S0.SS0.SSSx2.p4.m4" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> as a function.</p>
+</div>
+<div id="S0.SS0.SSSx2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>. Given a binary relation <math id="S0.SS0.SSSx2.p5.m1" class="ltx_Math" alttext="\rho\subseteq A\times B" display="inline"><mrow><mi>ρ</mi><mo>⊆</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow></math>.</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i1.p1.m1" class="ltx_Math" alttext="\rho(a,\cdot)" display="inline"><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math>, realized as a binary relation <math id="I5.i1.p1.m2" class="ltx_Math" alttext="\{a\}\times\rho(a,\cdot)" display="inline"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow><mo>×</mo><mi>ρ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math> can be viewed as the composition of <math id="I5.i1.p1.m3" class="ltx_Math" alttext="\Delta_{a}\circ\rho" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>a</mi></msub><mo>∘</mo><mi>ρ</mi></mrow></math>, where <math id="I5.i1.p1.m4" class="ltx_Math" alttext="\Delta_{a}=\{(a,a)\}" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>a</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Similarly, <math id="I5.i1.p1.m5" class="ltx_Math" alttext="\rho\circ\Delta_{b}=\rho(\cdot,b)\times\{b\}" display="inline"><mrow><mrow><mi>ρ</mi><mo>∘</mo><msub><mi mathvariant="normal">Δ</mi><mi>b</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i2.p1.m1" class="ltx_Math" alttext="\operatorname{dom}(\rho)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the disjoint union of <math id="I5.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>-sections of <math id="I5.i2.p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> and <math id="I5.i2.p1.m4" class="ltx_Math" alttext="\operatorname{ran}(\rho)" display="inline"><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the disjoint union of <math id="I5.i2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>-sections of <math id="I5.i2.p1.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>.</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i3.p1.m1" class="ltx_Math" alttext="\operatorname{dom}(\rho^{-1})=\operatorname{ran}(\rho)" display="inline"><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I5.i3.p1.m2" class="ltx_Math" alttext="\operatorname{ran}(\rho^{-1})=\operatorname{dom}(\rho)" display="inline"><mrow><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I5.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i4.p1.m1" class="ltx_Math" alttext="\rho\circ\rho^{-1}=\operatorname{dom}(\rho)\times\operatorname{dom}(\rho)" display="inline"><mrow><mrow><mi>ρ</mi><mo>∘</mo><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="I5.i4.p1.m2" class="ltx_Math" alttext="\rho^{-1}\circ\rho=\operatorname{ran}(\rho)\times\operatorname{ran}(\rho)" display="inline"><mrow><mrow><msup><mi>ρ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mi>ρ</mi></mrow><mo>=</mo><mrow><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I5.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I5.i5.p1.m1" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>, then <math id="I5.i5.p1.m2" class="ltx_Math" alttext="\operatorname{dom}(\rho)\times A=\rho\circ A^{2}" display="inline"><mrow><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi>A</mi></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>∘</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></mrow></math> and <math id="I5.i5.p1.m3" class="ltx_Math" alttext="\operatorname{ran}(\rho)=A^{2}\circ\rho" display="inline"><mrow><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>∘</mo><mi>ρ</mi></mrow></mrow></math>.
+</p>
+</div>
+</li>
+<li id="I5.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I5.i6.p1" class="ltx_para">
+<p class="ltx_p">The composition of binary relations can be generalized: let <math id="I5.i6.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be a subset of <math id="I5.i6.p1.m2" class="ltx_Math" alttext="A_{1}\times\cdots\times A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math> and <math id="I5.i6.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a subset of <math id="I5.i6.p1.m4" class="ltx_Math" alttext="B_{1}\times\cdots\times B_{m}" display="inline"><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>B</mi><mi>m</mi></msub></mrow></math>, where <math id="I5.i6.p1.m5" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math> are positive integers. Further, we assume that <math id="I5.i6.p1.m6" class="ltx_Math" alttext="A_{n}=B_{1}=C" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mi>C</mi></mrow></math>. Define <math id="I5.i6.p1.m7" class="ltx_Math" alttext="R\circ S" display="inline"><mrow><mi>R</mi><mo>∘</mo><mi>S</mi></mrow></math>, as a subset of <math id="I5.i6.p1.m8" class="ltx_Math" alttext="A_{1}\times\cdots\times A_{n-1}\times B_{2}\times\cdots B_{m}" display="inline"><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>×</mo><msub><mi>B</mi><mn>2</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi></mrow><mo>⁢</mo><msub><mi>B</mi><mi>m</mi></msub></mrow></math>, to be the set</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\{(a_{1},\ldots,a_{n-1},b_{2},\ldots,b_{m})\mid\exists c\in C\mbox{ with }(a_{%
+1},\ldots,a_{n-1},c)\in R\mbox{ and }(c,b_{2},\ldots,b_{m})\in S\}." display="block"><mrow><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mrow><mo>∃</mo><mi>c</mi></mrow><mo>∈</mo><mrow><mi>C</mi><mo>⁢</mo><mtext> with </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="I5.i6.p1.m9" class="ltx_Math" alttext="m=n=2" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>, then we have the familiar composition of binary relations. If <math id="I5.i6.p1.m10" class="ltx_Math" alttext="m=1" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="I5.i6.p1.m11" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>, then <math id="I5.i6.p1.m12" class="ltx_Math" alttext="R\circ S=\{a\mid(a,c)\in R\mbox{ and }c\in S\}" display="inline"><mrow><mrow><mi>R</mi><mo>∘</mo><mi>S</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>c</mi></mrow><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. The case where <math id="I5.i6.p1.m13" class="ltx_Math" alttext="m=2" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></math> and <math id="I5.i6.p1.m14" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math> is similar. If <math id="I5.i6.p1.m15" class="ltx_Math" alttext="m=n=1" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, then <math id="I5.i6.p1.m16" class="ltx_Math" alttext="R\circ S=\{\mbox{ true }\}" display="inline"><mrow><mrow><mi>R</mi><mo>∘</mo><mi>S</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mtext> true </mtext><mo stretchy="false">}</mo></mrow></mrow></math> if <math id="I5.i6.p1.m17" class="ltx_Math" alttext="R\cap S\neq\varnothing" display="inline"><mrow><mrow><mi>R</mi><mo>∩</mo><mi>S</mi></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. Otherwise, it is set to <math id="I5.i6.p1.m18" class="ltx_Math" alttext="\{\mbox{ false }\}" display="inline"><mrow><mo stretchy="false">{</mo><mtext> false </mtext><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">operations on relations</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OperationsOnRelations</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:26:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:26:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03E20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">relation composition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">converse of a relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">diagonal relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneralAssociativity</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RelationAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">power of a relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">relational composition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse of a relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">section</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">domain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">range</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">identity relation</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 13:59:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

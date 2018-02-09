@@ -1,0 +1,141 @@
+<!DOCTYPE html><html>
+<head>
+<title>algebraic categories without free objects</title>
+<!--Generated on Fri Feb  9 14:05:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">algebraic categories without free objects</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">An initial object is always a free object. So in the context of algebraic
+systems with a trivial object, such as groups, or modules, there is always
+at least one free object. However, we usually dismiss this example as it
+does not lead to any useful results such as the existence of presentations.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">However, there are many ways in which a cateogry of algebraic objects can
+fail to include non-trivial free objects.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Restriction to finite sets</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The restriction of a category which naturally includes infinite objects
+can often be restricted to just the finite objects and in so doing often
+remove all non-trivial free objects.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The category of finite groups has only the trivial free object. Indeed,
+even the rank 1 free group, the integers <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is already infinite.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, finite modules of in a module category over an infinite
+ring are never free. For examples use the rings <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{Z}_{m}[x]" display="inline"><mrow><msub><mi>ℤ</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></math>,
+etc.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">However, this is not always the case. For example, if we consider finite
+<math id="S1.p2.m1" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi>ℤ</mi><mi>p</mi></msub></math>-modules (vector spaces) each of these are free.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Homomorphism restrictions</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">In the category of rings with 1 it is often beneficial to force all ring
+homomorphisms to be unital. However, this restriction can prevent
+the construction of free objects.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S2.p2.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a free ring in the category of rings with positive characteristic. Then we ask, what is the characteristic of <math id="S2.p2.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>?</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">If it is <math id="S2.p3.m1" class="ltx_Math" alttext="m&gt;0" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mn>0</mn></mrow></math> then we choose another ring <math id="S2.p3.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> of a different characteristic,
+a characteristic relatively prime to <math id="S2.p3.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, and then there can be no
+unital homomorphism from <math id="S2.p3.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> to <math id="S2.p3.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. So <math id="S2.p3.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> must have characteristic 0.
+In contrast to the above examples we have not excluded infinite objects
+in this restriction. This example is even more powerful than those
+above as it also exclude the existance of an initial object, so indeed
+NO free objects exist in this category.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">If we return to the full category of unital rings we observe
+every ring is a <math id="S2.p4.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>-algebra we can use the free associative
+algebras <math id="S2.p4.m2" class="ltx_Math" alttext="\mathbb{Z}\langle X\rangle" display="inline"><mrow><mi>ℤ</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> does exist here.</p>
+</div>
+<div id="S2.p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">algebraic categories without free objects</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicCategoriesWithoutFreeObjects</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:51:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:51:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 08B20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 14:05:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

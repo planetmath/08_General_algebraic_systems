@@ -1,0 +1,273 @@
+<!DOCTYPE html><html>
+<head>
+<title>free associative algebra</title>
+<!--Generated on Fri Feb  9 14:05:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">free associative algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Fix a commutative unital ring <math id="p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and a set <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Then a <math id="p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra <math id="p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is
+said to be <em class="ltx_emph ltx_font_italic">free on <math id="p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math></em> if there exists an injection <math id="p1.m6" class="ltx_Math" alttext="\iota:X\rightarrow F" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>F</mi></mrow></mrow></math> such that for all functions <math id="p1.m7" class="ltx_Math" alttext="f:X\rightarrow A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> where <math id="p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an <math id="p1.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra
+determine a unique algebra homomorphism <math id="p1.m10" class="ltx_Math" alttext="\hat{f}:F\rightarrow A" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><mi>F</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> such that
+<math id="p1.m11" class="ltx_Math" alttext="\iota\hat{f}=f" display="inline"><mrow><mrow><mi>ι</mi><mo>⁢</mo><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></mrow><mo>=</mo><mi>f</mi></mrow></math>. This is an example of a universal mapping property for
+free associative algebras and in categorical settings is often explained
+with the following commutative diagram:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\xymatrix{&amp;X\ar[ld]_{\iota}\ar[rd]^{f}&amp;\\
+F\ar[rr]^{\hat{f}}&amp;&amp;A.}" display="block"><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>X</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>l</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mi>ι</mi></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mi>f</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>F</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To prove that free associative algebras exist in the category of all
+associative algebras we provide a couple standard constructions. It
+is a standard categorical procedure to conclude any two free objects
+on the same set are naturally equivalent and thus each construction
+below is equivalent.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Tensor algebra</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S1.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> a commutative unital ring. Then take <math id="S1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to be
+any free <math id="S1.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-module with basis <math id="S1.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and injection <math id="S1.p1.m6" class="ltx_Math" alttext="\iota:X\rightarrow M" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>M</mi></mrow></mrow></math>.
+Then we may form the tensor algebra of <math id="S1.p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="T(M)=\bigoplus_{i\in\mathbb{N}}T^{i}(M),\qquad T^{i}(M)=M^{\otimes i}=%
+\bigotimes_{j=1}^{i}M." display="block"><mrow><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>i</mi><mo>∈</mo><mi>ℕ</mi></mrow></munder><mrow><msup><mi>T</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msup><mi>T</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>M</mi><mrow><mi></mi><mo>⊗</mo><mi>i</mi></mrow></msup><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>i</mi></munderover><mi>M</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">[Note, <math id="S1.p1.m8" class="ltx_Math" alttext="0\in\mathbb{N}" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>ℕ</mi></mrow></math> and the empty tensor we define as <math id="S1.p1.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.]
+Furthermore, define the injection <math id="S1.p1.m10" class="ltx_Math" alttext="\iota^{\prime}:X\rightarrow T(M)" display="inline"><mrow><msup><mi>ι</mi><mo>′</mo></msup><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> as the map <math id="S1.p1.m11" class="ltx_Math" alttext="\iota:X\rightarrow M" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>M</mi></mrow></mrow></math> followed by the embedding of <math id="S1.p1.m12" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> into <math id="S1.p1.m13" class="ltx_Math" alttext="T(M)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">To make <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> concrete use the set of all functions <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="f:X\rightarrow K" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>K</mi></mrow></mrow></math>, or
+equivalently, the direct product <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="\prod_{X}K" display="inline"><mrow><msub><mo largeop="true" mathvariant="normal" symmetric="true">∏</mo><mi>X</mi></msub><mi>K</mi></mrow></math>. Then the tensor algebra
+of <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the free algebra on <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</span></p>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm2.p1.m1" class="ltx_Math" alttext="(T(M),\iota^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><msup><mi>ι</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></math><span class="ltx_text ltx_font_italic"> is a free associative algebra on <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Given any associative <math id="S1.p2.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra <math id="S1.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and function <math id="S1.p2.m3" class="ltx_Math" alttext="f:X\rightarrow A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>, then
+<math id="S1.p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a <math id="S1.p2.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-module and <math id="S1.p2.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is free on <math id="S1.p2.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> so <math id="S1.p2.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> extends to a unique
+<math id="S1.p2.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-linear homomorphism <math id="S1.p2.m10" class="ltx_Math" alttext="\hat{f}:M\rightarrow A" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Next we define <math id="S1.p3.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-multilinear maps <math id="S1.p3.m2" class="ltx_Math" alttext="f^{(i)}:M^{i}\rightarrow A" display="inline"><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>:</mo><mrow><msup><mi>M</mi><mi>i</mi></msup><mo>→</mo><mi>A</mi></mrow></mrow></math> by</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="f^{(i)}(m_{1},\dots,m_{i})=f(m_{1})\cdots f(m_{i})." display="block"><mrow><mrow><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then by the universal mapping property of tensor products (used inductively)
+we have a unique <math id="S1.p3.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-linear map <math id="S1.p3.m4" class="ltx_Math" alttext="\hat{f}^{(i)}:T^{i}(M)\rightarrow A" display="inline"><mrow><msup><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>:</mo><mrow><mrow><msup><mi>T</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>A</mi></mrow></mrow></math> for which</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\hat{f}^{(i)}(m_{1}\otimes\cdots\otimes m_{i})=f(m_{1})\cdots f(m_{i})." display="block"><mrow><mrow><mrow><msup><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>⊗</mo><mi mathvariant="normal">⋯</mi><mo>⊗</mo><msub><mi>m</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we have a unique algebra homomorphism
+<math id="S1.p3.m5" class="ltx_Math" alttext="\hat{f}^{(\infty)}:T(M)\rightarrow A" display="inline"><mrow><msup><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></msup><mo>:</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>A</mi></mrow></mrow></math> such that <math id="S1.p3.m6" class="ltx_Math" alttext="\iota\hat{f}=f" display="inline"><mrow><mrow><mi>ι</mi><mo>⁢</mo><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></mrow><mo>=</mo><mi>f</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">This construction provides an obvious grading on the free algebra where
+the homogeneous components are</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="T^{n}(M)=M^{\otimes n}=\bigotimes_{j=1}^{n}M." display="block"><mrow><mrow><mrow><msup><mi>T</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>M</mi><mrow><mi></mi><mo>⊗</mo><mi>n</mi></mrow></msup><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>M</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Non-commutative polynomials</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">An alternative construction is to model the methods of constructing free
+groups and semi-groups, that is, to use words on the set <math id="S2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. We will
+denote the result of this construction by <math id="S2.p1.m2" class="ltx_Math" alttext="K\langle X\rangle" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> and we will
+find many parallels to polynomial algebras with indeterminants in <math id="S2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p2.m1" class="ltx_Math" alttext="FM\langle X\rangle" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> be the set of all words on <math id="S2.p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. This makes
+<math id="S2.p2.m3" class="ltx_Math" alttext="FM\langle X\rangle" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> a free monoid with identity the empty word and
+associative product the juxtaposition of words. Then define
+<math id="S2.p2.m4" class="ltx_Math" alttext="K\langle X\rangle" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> as the <math id="S2.p2.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-semi-group algebra on <math id="S2.p2.m6" class="ltx_Math" alttext="FM\langle X\rangle" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>.
+This means <math id="S2.p2.m7" class="ltx_Math" alttext="K\langle X\rangle" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> is the free <math id="S2.p2.m8" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-modules oN <math id="S2.p2.m9" class="ltx_Math" alttext="FM\langle X\rangle" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>
+and the product is defined as:</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\left(\sum_{w\in FM\langle X\rangle}l_{w}w\right)\left(\sum_{v\in FM\langle X%
+\rangle}l_{v}v\right)=\sum_{w,v\in FM\langle X\rangle}l_{v}l_{w}wv." display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>w</mi><mo>∈</mo><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></munder><mrow><msub><mi>l</mi><mi>w</mi></msub><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>v</mi><mo>∈</mo><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></munder><mrow><msub><mi>l</mi><mi>v</mi></msub><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mi>w</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></munder><mrow><msub><mi>l</mi><mi>v</mi></msub><mo>⁢</mo><msub><mi>l</mi><mi>w</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">For example, <math id="S2.p3.m1" class="ltx_Math" alttext="\mathbb{Q}\langle x,y\rangle" display="inline"><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> contains elements of the form</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="x^{2}+4yxy,\qquad-7xy+2yx,\qquad 1+x+xy+xyx+x^{2}y+x^{2}y^{2}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mo>-</mo><mrow><mn>7</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">This model of a free associative algebra encourages a mapping to polynomial
+rings. Indeed, <math id="S2.p4.m1" class="ltx_Math" alttext="K\langle X\rangle\rightarrow K[X]" display="inline"><mrow><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>→</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is uniquely determined by
+the free property applied to the natural inclusion of <math id="S2.p4.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> into <math id="S2.p4.m3" class="ltx_Math" alttext="K[X]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+What we realize this mapping in a practical fashion we note that this simply
+allows all indeterminants to commute. It follows from this that <math id="S2.p4.m4" class="ltx_Math" alttext="K[X]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> is
+a free commutative associaitve algebra.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">For example, under this map we translate the above elements into:</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="x^{2}+4xy^{2},\qquad-5xy,\qquad 1+x+xy+2x^{2}y+x^{2}y^{2}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">We also note that the grading detected in the tensor algebra construction
+persists in the non-commuting polynomial model. In particular, we say an
+element in <math id="S2.p6.m1" class="ltx_Math" alttext="K\langle X\rangle" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> is homogeneous if it contained in
+<math id="S2.p6.m2" class="ltx_Math" alttext="FM\langle X\rangle" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>. Then the degree of a homogeneous element is the
+length of the word. Then the <math id="S2.p6.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-linear span of elements of degree <math id="S2.p6.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>
+form the <math id="S2.p6.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>-th graded component of <math id="S2.p6.m6" class="ltx_Math" alttext="K\langle X\rangle" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">We note that the free properties of both of these constructions depend
+in turn on the free properties of modules, the universal property of
+tensors and free semi-groups. An inspection of the common construction
+of tensors and free modules reveals both of these have universal properties
+implied from the universal mapping property of free semi-groups. Thus
+we may assert that free of associative algebras are a direct result of
+the existence of free semi-groups.</span></p>
+</div>
+<div id="Thmthm3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For non-associative algebras such as Lie and Jordan algebras, the
+universal properties are more subtle.</span></p>
+</div>
+</div>
+<div id="S2.p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">free associative algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FreeAssociativeAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:51:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:51:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08B20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algebras</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">free associative algebra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 14:05:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

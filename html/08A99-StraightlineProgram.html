@@ -1,0 +1,204 @@
+<!DOCTYPE html><html>
+<head>
+<title>straight-line program</title>
+<!--Generated on Fri Feb  9 14:05:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">straight-line program</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a set <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, a <em class="ltx_emph ltx_font_upright">straight-line program</em> (SLP) is a family of functions <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\mathcal{F}=\{f_{i}:1\leq i\leq m\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>f</mi><mi>i</mi></msub><mo mathvariant="normal">:</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>i</mi><mo mathvariant="normal">≤</mo><mi>m</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math></span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f_{i}:S^{n+i}\rightarrow S" display="block"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>:</mo><mrow><msup><mi>S</mi><mrow><mi>n</mi><mo>+</mo><mi>i</mi></mrow></msup><mo>→</mo><mi>S</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some fixed <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">N</mi></mrow></math>. An SLP is <em class="ltx_emph ltx_font_upright">evaluated</em> on a tuple
+<math id="Thmthm1.p1.m4" class="ltx_Math" alttext="(s_{1},\dots,s_{n})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> by recursion in the following way: <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="f_{1}" display="inline"><msub><mi>f</mi><mn mathvariant="normal">1</mn></msub></math> is evaluated
+on <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="(s_{1},\dots,s_{n})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> as a function. The remaining evaluations are
+recursive. So <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="f_{2}(s_{1},\dots,s_{n})" display="inline"><mrow><msub><mi>f</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> denotes</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="f_{2}(s_{1},\dots,s_{n}):=f_{2}(s_{1},\dots,s_{n},f_{1}(s_{1},\dots,s_{n}))." display="block"><mrow><mrow><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo>,</mo><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">and in general</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="f_{i+1}(s_{1},\dots,s_{n}):=f_{i+1}(s_{1},\dots,s_{n},f_{1}(s_{1},\dots,s_{n})%
+,\dots,f_{i}(s_{1},\dots,s_{n}))." display="block"><mrow><mrow><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo>,</mo><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The final output <math id="Thmthm1.p1.m8" class="ltx_Math" alttext="f_{m}(s_{1},\dots,s_{n})" display="inline"><mrow><msub><mi>f</mi><mi>m</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is denoted <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="\mathcal{F}(s_{1},\dots,s_{n})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.
+In this way we treat <math id="Thmthm1.p1.m10" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> as function from <math id="Thmthm1.p1.m11" class="ltx_Math" alttext="S^{n}\rightarrow S" display="inline"><mrow><msup><mi>S</mi><mi>n</mi></msup><mo mathvariant="normal">→</mo><mi>S</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">SLPs arrise from the multiple meansings of expressions of the sort <math id="p2.m1" class="ltx_Math" alttext="a^{n}" display="inline"><msup><mi>a</mi><mi>n</mi></msup></math>
+in a some algebraic structure <math id="p2.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. First of all, one can formally treat <math id="p2.m3" class="ltx_Math" alttext="a^{n}" display="inline"><msup><mi>a</mi><mi>n</mi></msup></math> as the word <math id="p2.m4" class="ltx_Math" alttext="a\cdots a" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>a</mi></mrow></math> in <math id="p2.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Secondly this can be interpreted as the actual result of this mulitplication.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In the former meaning, actually storing a word of the form <math id="p3.m1" class="ltx_Math" alttext="a^{n}" display="inline"><msup><mi>a</mi><mi>n</mi></msup></math> as
+<math id="p3.m2" class="ltx_Math" alttext="a\cdots a" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>a</mi></mrow></math> is difficult hence it is abreviated. Other examples include
+words such as <math id="p3.m3" class="ltx_Math" alttext="a^{10}(bc)^{6}" display="inline"><mrow><msup><mi>a</mi><mn>10</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mn>6</mn></msup></mrow></math> where the values of <math id="p3.m4" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> are continually changing or even unknown. Here an SLP can encode this word in such a way
+that if we replace <math id="p3.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> by <math id="p3.m6" class="ltx_Math" alttext="bc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math>, then the resulting new word would result
+simply by evaluation the SLP at the input <math id="p3.m7" class="ltx_Math" alttext="(bc,b,c)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></math> instead of <math id="p3.m8" class="ltx_Math" alttext="(a,b,c)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the second treatment where we whish to actually evaluate <math id="p4.m1" class="ltx_Math" alttext="a^{n}" display="inline"><msup><mi>a</mi><mi>n</mi></msup></math> and the like,
+we find the problem of understanding what <math id="p4.m2" class="ltx_Math" alttext="a^{n}" display="inline"><msup><mi>a</mi><mi>n</mi></msup></math> means as a program.
+Certainly we may have <math id="p4.m3" class="ltx_Math" alttext="a^{4}=(aa)(aa)=a(a(aa))" display="inline"><mrow><msup><mi>a</mi><mn>4</mn></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> etc. However this equivalence
+neglects the problem of selecting a method of computing the result. Usually
+an efficient method is desired. An SLP developed from simple functions
+such as <math id="p4.m4" class="ltx_Math" alttext="f(x)=x^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math> and <math id="p4.m5" class="ltx_Math" alttext="f(x,y)=x+y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mrow></math> formally address this problem.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The term <em class="ltx_emph ltx_font_italic">straight-line</em> reflects the fact that evaluating an SLP can
+be achieved by a program which does not branch or loop so its execution is
+a straight-line. It is common for SLPs to be built entirely from simple
+functions such as <math id="p5.m1" class="ltx_Math" alttext="f(x,y)=x+y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mrow></math> or <math id="p5.m2" class="ltx_Math" alttext="f(x)=x\times x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>×</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Because each element <math id="p6.m1" class="ltx_Math" alttext="f_{i}" display="inline"><msub><mi>f</mi><mi>i</mi></msub></math> of an SLP is evaluated externally only on <math id="p6.m2" class="ltx_Math" alttext="s_{1},\dots,s_{n}" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub></mrow></math> and the remaining inputs come internally from previous <math id="p6.m3" class="ltx_Math" alttext="f_{j}" display="inline"><msub><mi>f</mi><mi>j</mi></msub></math>,
+<math id="p6.m4" class="ltx_Math" alttext="1\leq j\leq i" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>i</mi></mrow></math>, it is convient to write definitions for <math id="p6.m5" class="ltx_Math" alttext="f_{i}" display="inline"><msub><mi>f</mi><mi>i</mi></msub></math> as taking
+inputs only from <math id="p6.m6" class="ltx_Math" alttext="(s_{1},\dots,s_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> and implicitly allowing for the use of
+the outputs of previous <math id="p6.m7" class="ltx_Math" alttext="f_{j}" display="inline"><msub><mi>f</mi><mi>j</mi></msub></math>’s.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">SLPs can be defined in contexts other than semigroups including rings, modules, and polynomials. Although they arise naturally to compress computations, they are also useful in describing smaller bounds for many combinatorial theorems related to algebraic objects.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">It is possible for a function <math id="p8.m1" class="ltx_Math" alttext="f:S^{n}\rightarrow S" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>S</mi><mi>n</mi></msup><mo>→</mo><mi>S</mi></mrow></mrow></math> to be defined equivalently by multiple SLPs and so a notion of equality of SLPs is stronger than equivalence of final outputs.
+</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Two SLPs <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="\mathcal{F}=\{f_{i}:1\leq i\leq m\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>f</mi><mi>i</mi></msub><mo mathvariant="normal">:</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>i</mi><mo mathvariant="normal">≤</mo><mi>m</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math> and <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="\mathcal{G}=\{g_{i}:1\leq i\leq k\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>g</mi><mi>i</mi></msub><mo mathvariant="normal">:</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>i</mi><mo mathvariant="normal">≤</mo><mi>k</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math> are <em class="ltx_emph ltx_font_upright">equivalent</em> if <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> and <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi></math> can be evaluated
+on the same inputs and for every input <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="(s_{1},\dots,s_{n})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, <math id="Thmthm2.p1.m6" class="ltx_Math" alttext="\mathcal{F}(s_{1},\dots,s_{n})=\mathcal{G}(s_{1},\dots,s_{n})" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>s</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>s</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.
+When and SLP <math id="Thmthm2.p1.m7" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> is equivalent to a trivial SLP <math id="Thmthm2.p1.m8" class="ltx_Math" alttext="\{f:S^{n}\rightarrow S\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><mi>f</mi><mo mathvariant="normal">:</mo><mrow><msup><mi>S</mi><mi>n</mi></msup><mo mathvariant="normal">→</mo><mi>S</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></math> we say that <math id="Thmthm2.p1.m9" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> is an <em class="ltx_emph ltx_font_upright">SLP representation</em> of <math id="Thmthm2.p1.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</span></p>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Every function <math id="p9.m1" class="ltx_Math" alttext="f:S^{n}\rightarrow S" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>S</mi><mi>n</mi></msup><mo>→</mo><mi>S</mi></mrow></mrow></math> can be expressed as an SLP trivially by
+<math id="p9.m2" class="ltx_Math" alttext="\mathcal{F}=\{f\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow></mrow></math>. However, this SLP is typically the least optimal for the actual evaluation of the output for a given input. This leads to a hierarchy imposed on equivalent SLPs based on their associated computational length.</p>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If an SLP represents an algebraic expression (alternatively a word in the generators) in the semigroup <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> then the
+<em class="ltx_emph ltx_font_upright">computational length</em> or simply <em class="ltx_emph ltx_font_upright">length</em> of the SLP is the maximum number of multiplications in the semigroup performed to evaluate the expression
+using the SLP.</span></p>
+</div>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">It is evident that the trivial SLP of an algebraic expression has length equal to the length of the word.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">straight-line program</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">StraightlineProgram</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:16:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:16:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">word</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Word</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">straight-line program</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SLP</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SLP representation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 14:05:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

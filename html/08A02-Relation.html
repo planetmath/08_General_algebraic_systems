@@ -1,0 +1,293 @@
+<!DOCTYPE html><html>
+<head>
+<title>relation</title>
+<!--Generated on Fri Feb  9 13:59:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">relation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Binary Relations</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Before describing what a <em class="ltx_emph ltx_font_italic">relation</em> is generally, let us define a more specific kind of a relation: a <em class="ltx_emph ltx_font_italic">binary relation</em>. Basically, a binary relation <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> involves objects coming from two collections <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, where the objects are paired up so that each pair consists of an object from <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and an object from <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">More formally, a <em class="ltx_emph ltx_font_italic">binary relation</em> is a subset <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> of the Cartesian product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CartesianProduct</span>) of two sets <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S0.SS0.SSSx1.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. One may write</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="a\&gt;R\&gt;b" display="block"><mrow><mpadded width="+2.2pt"><mi>a</mi></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><mi>b</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">to indicate that the ordered pair <math id="S0.SS0.SSSx1.p2.m4" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is an element of <math id="S0.SS0.SSSx1.p2.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. A subset of <math id="S0.SS0.SSSx1.p2.m6" class="ltx_Math" alttext="A\times A" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>A</mi></mrow></math> is simply called a binary relation on <math id="S0.SS0.SSSx1.p2.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. If <math id="S0.SS0.SSSx1.p2.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a binary relation on <math id="S0.SS0.SSSx1.p2.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then we write</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="a_{1}\&gt;R\&gt;a_{2}\&gt;R\&gt;a_{3}\&gt;\cdots\&gt;a_{n-1}\&gt;R\&gt;a_{n}" display="block"><mrow><mpadded width="+2.2pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>a</mi><mn>3</mn></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi mathvariant="normal">⋯</mi></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">to mean <math id="S0.SS0.SSSx1.p2.m10" class="ltx_Math" alttext="a_{1}\&gt;R\&gt;a_{2},a_{2}\&gt;R\&gt;a_{3},\ldots," display="inline"><mrow><mrow><mrow><mpadded width="+2.2pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mpadded width="+2.2pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mn>3</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo></mrow></math> and <math id="S0.SS0.SSSx1.p2.m11" class="ltx_Math" alttext="a_{n-1}\&gt;R\&gt;a_{n}" display="inline"><mrow><mpadded width="+2.2pt"><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><mi>R</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">Given a binary relation <math id="S0.SS0.SSSx1.p3.m1" class="ltx_Math" alttext="R\subseteq A\times B" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow></math>, the <em class="ltx_emph ltx_font_italic">domain</em> <math id="S0.SS0.SSSx1.p3.m2" class="ltx_Math" alttext="\operatorname{dom}(R)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="S0.SS0.SSSx1.p3.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the set of elements in <math id="S0.SS0.SSSx1.p3.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> forming parts of the pairs in <math id="S0.SS0.SSSx1.p3.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. In other words,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{dom}(R):=\{x\in A\mid(x,y)\in R\mbox{ for some }y\in B\}" display="block"><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the <em class="ltx_emph ltx_font_italic">range</em> <math id="S0.SS0.SSSx1.p3.m6" class="ltx_Math" alttext="\operatorname{ran}(R)" display="inline"><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="S0.SS0.SSSx1.p3.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the set of parts of pairs of <math id="S0.SS0.SSSx1.p3.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> coming from <math id="S0.SS0.SSSx1.p3.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\operatorname{ran}(R):=\{y\in B\mid(x,y)\in R\mbox{ for some }x\in A\}." display="block"><mrow><mrow><mrow><mi>ran</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para">
+<p class="ltx_p">An example of a binary relation is the less-than relation on the integers, i.e.,
+<math id="S0.SS0.SSSx1.p4.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math> <math id="S0.SS0.SSSx1.p4.m2" class="ltx_Math" alttext="\subseteq\mathbb{Z}\times\mathbb{Z}" display="inline"><mrow><mi></mi><mo>⊆</mo><mrow><mi>ℤ</mi><mo>×</mo><mi>ℤ</mi></mrow></mrow></math>. <math id="S0.SS0.SSSx1.p4.m3" class="ltx_Math" alttext="(1,2)\in" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi></mi></mrow></math> <math id="S0.SS0.SSSx1.p4.m4" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>, but <math id="S0.SS0.SSSx1.p4.m5" class="ltx_Math" alttext="(2,1)\notin" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi></mi></mrow></math> <math id="S0.SS0.SSSx1.p4.m6" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In set theory, a binary relation is simply a set of ordered pairs (of sets or classes, depending on the axiom system used). Notice that, unlike the previous definition, sets (or classes) <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are not specified in advance. Given a (binary) relation <math id="I1.i1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, the domain of <math id="I1.i1.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the set (or class) of elements <math id="I1.i1.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> such that <math id="I1.i1.p1.m6" class="ltx_Math" alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math> for some <math id="I1.i1.p1.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and the range of <math id="I1.i1.p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the set (or class) or elements <math id="I1.i1.p1.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that <math id="I1.i1.p1.m10" class="ltx_Math" alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math> for some <math id="I1.i1.p1.m11" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. The union and the domain and the range of <math id="I1.i1.p1.m12" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is called the <em class="ltx_emph ltx_font_italic">field</em> of <math id="I1.i1.p1.m13" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">It may be possible to define a relation over a class. For example, if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is the class of all sets, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\in" display="inline"><mo>∈</mo></math> can be thought of as a binary relation on <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In term rewriting theory, a binary relation on a set is sometimes called a <em class="ltx_emph ltx_font_italic">reduction</em>, and is written <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\to" display="inline"><mo>→</mo></math>. This is to signify that <math id="I1.i3.p1.m2" class="ltx_Math" alttext="a\to b" display="inline"><mrow><mi>a</mi><mo>→</mo><mi>b</mi></mrow></math> means that the element <math id="I1.i3.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is being “reduced” to <math id="I1.i3.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> via <math id="I1.i3.p1.m5" class="ltx_Math" alttext="\to" display="inline"><mo>→</mo></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Arbitrary Relations</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">From the definition of a binary relation, we can easily generalize it to that of an arbitrary relation. Since a binary relation involves two sets, an arbitrary relation involves an arbitrary collection of sets. More specifically, a <em class="ltx_emph ltx_font_italic">relation</em> <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a subset of some Cartesian product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/GeneralizedCartesianProduct</span>) of a collection of sets. In symbol, this is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="R\subseteq\prod_{i\in I}A_{i}" display="block"><mrow><mi>R</mi><mo>⊆</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where each <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> is a set, indexed by some set <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">From this more general definition, we see that a binary relation is just a relation where <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> has two elements. In addition, an <em class="ltx_emph ltx_font_italic"><math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation</em> is a relation where the cardinality of <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is <math id="S0.SS0.SSSx2.p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (<math id="S0.SS0.SSSx2.p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> finite). In symbol, we have</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="R\subseteq\prod_{i=1}^{n}A_{i}." display="block"><mrow><mrow><mi>R</mi><mo>⊆</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is not hard to see that any <math id="S0.SS0.SSSx2.p2.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation where <math id="S0.SS0.SSSx2.p2.m7" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> can be viewed as a binary relation in <math id="S0.SS0.SSSx2.p2.m8" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> different ways, for</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="R\subseteq A_{1}\times A_{2}\times\cdots\times A_{n}=\prod_{i=1}^{j}A_{i}%
+\times\prod_{i=j+1}^{n}A_{i}," display="block"><mrow><mrow><mi>R</mi><mo>⊆</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>×</mo><msub><mi>A</mi><mn>2</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>j</mi></munderover><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>×</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSSx2.p2.m9" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> ranges from <math id="S0.SS0.SSSx2.p2.m10" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> through <math id="S0.SS0.SSSx2.p2.m11" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p">A common name for a <math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>-ary relation is a <em class="ltx_emph ltx_font_italic">ternary relation</em>. It is also possible to have a <em class="ltx_emph ltx_font_italic"><math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math>-ary relation</em>, or commonly known as a <em class="ltx_emph ltx_font_italic">unary relation</em>, which is nothing but a subset of some set.
+</p>
+</div>
+<div id="S0.SS0.SSSx2.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Following from the first remark from the previous section, relations of higher arity can be inductively defined: for <math id="I2.i1.p1.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, an <math id="I2.i1.p1.m2" class="ltx_Math" alttext="(n+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>-ary relation is a binary relation whose domain is an <math id="I2.i1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation. In this setting, a “unary relation” and relations whose arity is of “arbitrary” cardinality are not defined.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">A relation can also be viewed as a function (which itself is a relation). Let <math id="I2.i2.p1.m1" class="ltx_Math" alttext="R\subseteq A:=\prod_{i\in I}A_{i}" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>A</mi><mo>:=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow></math>. As a subset of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="I2.i2.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> can be identified with the characteristic function</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\chi_{R}:A\to\{0,1\}," display="block"><mrow><mrow><msub><mi>χ</mi><mi>R</mi></msub><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I2.i2.p1.m4" class="ltx_Math" alttext="\chi_{R}(x)=1" display="inline"><mrow><mrow><msub><mi>χ</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> iff <math id="I2.i2.p1.m5" class="ltx_Math" alttext="x\in R" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>R</mi></mrow></math> and <math id="I2.i2.p1.m6" class="ltx_Math" alttext="\chi_{R}(x)=0" display="inline"><mrow><mrow><msub><mi>χ</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> otherwise. Therefore, an <math id="I2.i2.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation is equivalent to an <math id="I2.i2.p1.m8" class="ltx_Math" alttext="(n+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>-ary characteristic function. From this, one may say that a <math id="I2.i2.p1.m9" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>-ary, or a <em class="ltx_emph ltx_font_italic">nullary relation</em> is a unary characteristic function. In other words, a nullary relation is just a an element in <math id="I2.i2.p1.m10" class="ltx_Math" alttext="\{0,1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math> (or truth/falsity).</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:43:28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:43:28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">33</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03E20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 82C35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Poset</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialOrder</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TotalOrder</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrderingRelation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">WellFoundedRelation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Property2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroundedRelation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RelationBetweenObjects</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">unary relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">binary relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ternary relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="S0.SS0.SSSx2.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">domain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">range</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">nullary relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">field</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 13:59:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
